@@ -1,0 +1,958 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services | TOTO Development - High-Impact Digital Solutions</title>
+<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#00FC43',
+              dark: '#031f0a',
+              hover: '#19ff56',
+              surface: '#0a140b',
+              glow: 'rgba(0, 252, 67, 0.15)',
+              border: 'rgba(0, 252, 67, 0.25)'
+            },
+            obsidian: {
+              950: '#030504',
+              900: '#070a08',
+              850: '#0b100d',
+              800: '#121a15',
+              700: '#1f2b23'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'glow-sm': '0 0 20px rgba(0, 252, 67, 0.2)',
+            'glow-md': '0 0 35px rgba(0, 252, 67, 0.28)',
+            'glow-lg': '0 0 55px rgba(0, 252, 67, 0.35)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles: Atmospheric Glows & Typography -->
+<style data-purpose="custom-layout">
+    body {
+      background-color: #030504;
+      color: #e5e7eb;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+    .custom-radial-glow-left {
+      background: radial-gradient(circle at 10% 40%, rgba(0, 252, 67, 0.12) 0%, rgba(3, 5, 4, 0) 65%);
+    }
+    .custom-radial-glow-right {
+      background: radial-gradient(circle at 90% 40%, rgba(0, 252, 67, 0.12) 0%, rgba(3, 5, 4, 0) 65%);
+    }
+    .custom-grid-glow {
+      background-image: radial-gradient(circle at 50% 50%, rgba(0, 252, 67, 0.08) 0%, rgba(11, 16, 13, 0.8) 100%);
+    }
+    /* Hide scrollbars for smooth tab scrolling on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="selection:bg-[#00FC43] selection:text-[#030504] antialiased">
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-4 md:py-6 pointer-events-none" data-purpose="floating-navigation">
+<nav class="pointer-events-auto flex items-center justify-between w-full max-w-6xl px-4 md:px-7 py-3 bg-[#080d09]/85 backdrop-blur-xl border border-white/10 rounded-full shadow-2xl transition-all duration-300 hover:border-[#00FC43]/30">
+<!-- Brand Logo -->
+<a aria-label="TOTO Development Home" class="flex items-center gap-3 group" href="#">
+<img alt="TOTO Development Logo" class="w-8 h-8 md:w-9 md:h-9 rounded-full object-cover ring-2 ring-[#00FC43]/50 group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBR3OkoxHo35H1JT1OIUxunKyJG2xJ-P_HsdLKaS4XF77GtTvQvdcD596zlP8yDXIEeDKYthRHvFzjkgTF_wFNElWlVbwdUg1e5eElPdUVmrAfOZlqY8ovkLV8azN5sSyME23kEJTsDEb8gvOyflKznvF0Pyq9bJRAxEohnGt8OaEZfVK54QIUYDoRSAEKFKtULcornfsoNKwNcc8yeDXwp0Prj844mm0uuXm5mod4ogBUb7jOyL5SjICOEMjqmcah8oeg">
+<span class="text-white font-bold tracking-tight text-base md:text-lg">
+          TOTO <span class="text-[#00FC43]">Development</span>
+</span>
+</a>
+<!-- Desktop Nav Items -->
+<div class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-300">
+<a class="hover:text-white transition-colors" href="#about">About</a>
+<a class="relative text-[#00FC43] font-semibold flex items-center gap-1.5" href="#services">
+          Services
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+</a>
+<a class="hover:text-white transition-colors" href="#work">Portfolio</a>
+<a class="hover:text-white transition-colors" href="#process">Process</a>
+<a class="hover:text-white transition-colors" href="#faq">FAQ</a>
+<a class="hover:text-white transition-colors" href="#contact">Contact</a>
+</div>
+<!-- Action Button -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center justify-center px-5 py-2.5 text-xs md:text-sm font-semibold tracking-wide text-[#030504] bg-[#00FC43] hover:bg-[#19ff56] rounded-full shadow-[0_0_15px_rgba(0,252,67,0.4)] hover:shadow-[0_0_25px_rgba(0,252,67,0.6)] transition-all duration-300 active:scale-95" href="#contact">
+          Ask for a quote
+        </a>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative flex flex-col justify-center items-center pt-28 pb-12 px-4 md:px-6 bg-[#030504] overflow-hidden" data-purpose="hero-banner">
+<!-- Atmospheric Ambient Glows -->
+<div aria-hidden="true" class="absolute inset-0 custom-radial-glow-left pointer-events-none"></div>
+<div aria-hidden="true" class="absolute inset-0 custom-radial-glow-right pointer-events-none"></div>
+<div aria-hidden="true" class="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#00FC43]/10 blur-[140px] pointer-events-none"></div>
+<div class="relative max-w-5xl mx-auto text-center z-10">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 rounded-full bg-[#0b140d]/90 border border-[#00FC43]/30 text-xs md:text-sm font-medium text-gray-300 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#00FC43] animate-pulse"></span>
+<span class="">What we build</span>
+</div>
+<!-- Main Title -->
+<h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal tracking-tight text-white font-serif leading-[1.08] mb-6">
+        Digital Services Designed <br class="hidden sm:inline">
+        for Real <span class="italic text-[#00FC43] font-serif font-normal drop-shadow-[0_0_20px_rgba(0,252,67,0.25)]">Business</span> Outcomes
+      </h1>
+<!-- Subtitle Description -->
+<p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-8 text-balance">
+        TOTO Development is a full-service technology and growth agency that designs and builds custom web platforms, B2B lead generation engines, digital marketing frameworks, and brand systems for businesses that treat technology as a growth engine — not an overhead cost.
+      </p>
+<!-- CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 mb-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#00FC43] text-[#030504] font-semibold text-base shadow-[0_0_25px_rgba(0,252,67,0.45)] hover:shadow-[0_0_35px_rgba(0,252,67,0.7)] hover:bg-[#19ff56] transition-all duration-300 active:scale-95" href="#contact">
+<span class="">Get a free proposal</span>
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-black/40 border border-white/20 hover:border-[#00FC43] text-white hover:text-[#00FC43] font-medium text-base backdrop-blur-md transition-all duration-300" href="#services">
+<span class="">Explore services</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: MetricsSection -->
+<section class="relative bg-[#030504] pb-16 px-4 md:px-6" data-purpose="statistics-overview">
+<div class="max-w-6xl mx-auto">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+<!-- Metric Card 1 -->
+<div class="p-7 md:p-8 rounded-2xl bg-[#090f0a] border border-white/5 hover:border-[#00FC43]/30 transition-all duration-300 group luxury-card-glow">
+<div class="text-5xl lg:text-6xl font-serif text-[#00FC43] font-normal mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
+            80+
+          </div>
+<p class="text-sm md:text-base text-gray-300 font-light leading-snug">
+            Projects delivered on time &amp; within scope
+          </p>
+</div>
+<!-- Metric Card 2 -->
+<div class="p-7 md:p-8 rounded-2xl bg-[#090f0a] border border-white/5 hover:border-[#00FC43]/30 transition-all duration-300 group luxury-card-glow">
+<div class="text-5xl lg:text-6xl font-serif text-[#00FC43] font-normal mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
+            50+
+          </div>
+<p class="text-sm md:text-base text-gray-300 font-light leading-snug">
+            Businesses served across global markets
+          </p>
+</div>
+<!-- Metric Card 3 -->
+<div class="p-7 md:p-8 rounded-2xl bg-[#090f0a] border border-white/5 hover:border-[#00FC43]/30 transition-all duration-300 group luxury-card-glow">
+<div class="text-5xl lg:text-6xl font-serif text-[#00FC43] font-normal mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
+            98%
+          </div>
+<p class="text-sm md:text-base text-gray-300 font-light leading-snug">
+            Client satisfaction &amp; repeat retention rate
+          </p>
+</div>
+<!-- Metric Card 4 -->
+<div class="p-7 md:p-8 rounded-2xl bg-[#090f0a] border border-white/5 hover:border-[#00FC43]/30 transition-all duration-300 group luxury-card-glow">
+<div class="text-5xl lg:text-6xl font-serif text-[#00FC43] font-normal mb-3 tracking-tight group-hover:translate-x-1 transition-transform">
+            2yr+
+          </div>
+<p class="text-sm md:text-base text-gray-300 font-light leading-snug">
+            Average client strategic partnership duration
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: MetricsSection -->
+<!-- BEGIN: CategoryNavigationStrip -->
+<section class="sticky top-20 z-40 bg-[#060a07]/90 border-y border-[#00FC43]/15 backdrop-blur-xl px-4 py-3" data-purpose="category-navigation">
+<div class="max-w-6xl mx-auto flex items-center justify-start md:justify-center gap-2 md:gap-4 overflow-x-auto no-scrollbar py-1">
+<!-- Nav Pill 1: Web Dev -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-semibold whitespace-nowrap bg-[#00FC43] text-[#030504] shadow-[0_0_12px_rgba(0,252,67,0.3)]" href="#services-web">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">Web Development</span>
+</a>
+<!-- Nav Pill 2: Lead Gen -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5 transition-all" href="#services-leadgen">
+<svg class="w-4 h-4 text-[#00FC43]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">B2B Lead Generation</span>
+</a>
+<!-- Nav Pill 3: Digital Marketing -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5 transition-all" href="#services-marketing">
+<svg class="w-4 h-4 text-[#00FC43]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">Digital Marketing</span>
+</a>
+<!-- Nav Pill 4: Brand Design -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5 transition-all" href="#services-core">
+<svg class="w-4 h-4 text-[#00FC43]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 21a4 4 0 01-4-4 4 4 0 014-4 4 4 0 014 4 4 4 0 01-4 4zm0 0l1.293-1.293a1 1 0 011.414 0L12 22" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">Brand Design</span>
+</a>
+<!-- Nav Pill 5: Video & Motion -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5 transition-all" href="#services-core">
+<svg class="w-4 h-4 text-[#00FC43]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">Video &amp; Motion</span>
+</a>
+<!-- Nav Pill 6: SEO & Growth -->
+<a class="flex items-center gap-2 px-4 py-2 rounded-full text-xs md:text-sm font-medium whitespace-nowrap text-gray-300 hover:text-white hover:bg-white/5 transition-all" href="#services-core">
+<svg class="w-4 h-4 text-[#00FC43]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">SEO &amp; Growth</span>
+</a>
+</div>
+</section>
+<!-- END: CategoryNavigationStrip -->
+<!-- BEGIN: SixCoreServicesSection (Pristine Light Theme) -->
+<section class="relative text-gray-900 py-24 md:py-32 px-4 md:px-6 bg-[#030504]" data-purpose="six-core-services" id="services-core">
+<div class="max-w-6xl mx-auto">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+<div class="inline-flex items-center justify-center px-4 py-1.5 mb-6 rounded-full border border-[#00FC43]/30 text-xs md:text-sm font-medium text-[#00FC43] bg-[#0a150c]">Six Core Services</div>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-serif tracking-tight mb-6 text-white">
+          Everything a Growing Business <br class="hidden sm:inline">
+          Needs <span class="italic font-serif text-[#00FC43] bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-green-500">Under One Roof</span>
+</h2>
+<p class="text-base sm:text-lg font-normal leading-relaxed text-gray-400">
+          TOTO Development offers six integrated service lines covering the complete modern digital ecosystem. Whether you need one specialized track or all six executing synergistically, every project follows our senior-led, outcome-measured model.
+        </p>
+</div>
+<!-- Core 6 Grid: Black High-Contrast Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
+<!-- Card 1: Web Design & Development -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            Web Development
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Fast, SEO-optimised, and conversion-engineered websites and web apps built with Next.js &amp; React — guaranteed 95+ Lighthouse performance scores.
+          </p>
+</div>
+<!-- Card 2: B2B Lead Generation -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            B2B Lead Generation
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Targeted prospect identification, decision-maker intelligence, and verified email databases that consistently feed your enterprise sales pipeline.
+          </p>
+</div>
+<!-- Card 3: Digital Marketing -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            Digital Marketing
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Data-backed multi-channel campaigns, performance paid acquisition, funnel architecture, and automated nurture sequences that yield real ROI.
+          </p>
+</div>
+<!-- Card 4: Brand Strategy & Design -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            Brand Identity Design
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Strategy-first brand identities — comprehensive design guidelines, typography, design systems, and sales collateral that radiate industry authority.
+          </p>
+</div>
+<!-- Card 5: Video & Motion Graphics -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            Video &amp; Motion Graphics
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            Commercial-grade product walkthroughs, 3D motion animations, social micro-content, and cinematic brand narratives that halt scroll behavior.
+          </p>
+</div>
+<!-- Card 6: SEO & Digital Growth -->
+<div class="relative group p-8 rounded-2xl bg-[#070b08] text-white border border-black/10 overflow-hidden hover:border-[#00FC43]/40 transition-all duration-300 shadow-xl luxury-card-glow">
+<div class="absolute -right-16 -top-16 w-36 h-36 bg-[#00FC43]/10 rounded-full blur-2xl group-hover:bg-[#00FC43]/20 transition-all"></div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl md:text-2xl font-semibold mb-3 tracking-tight text-white group-hover:text-[#00FC43] transition-colors">
+            SEO &amp; Digital Growth
+          </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed">
+            AI-search model discoverability (GEO), semantic entity indexing, schema architectures, and ongoing technical audits that secure top rankings.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SixCoreServicesSection -->
+<!-- BEGIN: DetailedServiceWebDev (Dark Bento Section) -->
+<section class="relative bg-[#030504] py-24 md:py-32 px-4 md:px-6 border-t border-white/5" data-purpose="web-development-details" id="services-web">
+<div class="max-w-6xl mx-auto">
+<!-- Section Header with Actions -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+<div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1 mb-4 rounded-full bg-[#0a150c] border border-[#00FC43]/30 text-xs font-semibold text-[#00FC43]">
+            Web Engineering
+          </div>
+<h2 class="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+            Modern Web Platforms Built for <br class="hidden sm:inline">
+<span class="italic font-serif text-[#00FC43]">Speed &amp; Conversion</span>
+</h2>
+</div>
+<div class="flex items-center gap-3">
+<a class="px-6 py-3 rounded-full bg-[#00FC43] text-[#030504] font-semibold text-sm hover:bg-[#19ff56] shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all" href="#contact">
+            Start your web project ↗
+          </a>
+<a class="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:border-white/30 text-white font-medium text-sm transition-all" href="#work">
+            View details ↗
+          </a>
+</div>
+</div>
+<!-- Bento Grid (Alternating 60/40 and 40/60) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Bento 1 (Large - 7 cols) -->
+<div class="lg:col-span-7 p-8 md:p-10 rounded-3xl bg-[#070b08] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl md:text-3xl font-semibold text-white mb-4 group-hover:text-[#00FC43] transition-colors">
+              Custom Business Website Development Built for Search &amp; AI Discovery
+            </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              TOTO Development builds company websites, marketing platforms, and client portals using React and Next.js — engineered for speed and AI model discoverability (GEO). Every page includes strict semantic hierarchy, JSON-LD structured schema data, and lightning-fast Core Web Vitals.
+            </p>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">React / Next.js</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Technical SEO</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Schema Markup</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#00FC43]/10 border border-[#00FC43]/30 text-[#00FC43]">GEO Ready</span>
+</div>
+</div>
+<!-- Bento 2 (Small - 5 cols) -->
+<div class="lg:col-span-5 p-8 md:p-10 rounded-3xl bg-[#070b08] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-[#00FC43] transition-colors">
+              E-Commerce Development
+            </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              High-converting custom digital stores engineered on headless frameworks with custom cart architecture, instant checkout sequences, frictionless payment gateways, and automated stock sync.
+            </p>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Headless Commerce</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Stripe / Shopify</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Product SEO</span>
+</div>
+</div>
+<!-- Bento 3 (Small - 5 cols) -->
+<div class="lg:col-span-5 p-8 md:p-10 rounded-3xl bg-[#070b08] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl font-semibold text-white mb-4 group-hover:text-[#00FC43] transition-colors">
+              Enterprise Web Platforms &amp; SaaS
+            </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              Multi-tenant customer portals, employee dashboards, and internal business management tooling built with microservice backends, SSO OAuth2, and granular role-based access controls.
+            </p>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Multi-Tenant SaaS</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">SSO / OAuth</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Node / PostgreSQL</span>
+</div>
+</div>
+<!-- Bento 4 (Large - 7 cols) -->
+<div class="lg:col-span-7 p-8 md:p-10 rounded-3xl bg-[#070b08] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-12 h-12 rounded-xl bg-[#0f2113] border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-6">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-2xl md:text-3xl font-semibold text-white mb-4 group-hover:text-[#00FC43] transition-colors">
+              Performance &amp; SEO Remediation
+            </h3>
+<p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8">
+              Existing website slow, poorly ranked, or leaking customers before they convert? We conduct rigorous audits — Core Web Vitals, crawl budget diagnostics, content cannibalization, and semantic markup — resolving performance bottlenecks within 60 days.
+            </p>
+</div>
+<!-- Tech Tags -->
+<div class="flex flex-wrap gap-2 pt-4 border-t border-white/5">
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Core Web Vitals</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Lighthouse 95+</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-black border border-white/10 text-gray-300">Speed Optimization</span>
+<span class="px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#00FC43]/10 border border-[#00FC43]/30 text-[#00FC43]">Guaranteed KPI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DetailedServiceWebDev -->
+<!-- BEGIN: DetailedServiceLeadGen (B2B Lead Generation Grid) -->
+<section class="relative bg-[#070c08] py-24 md:py-32 px-4 md:px-6 border-t border-[#00FC43]/10" data-purpose="lead-generation-details" id="services-leadgen">
+<div class="max-w-6xl mx-auto">
+<!-- Section Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+<div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1 mb-4 rounded-full bg-[#0d1a10] border border-[#00FC43]/30 text-xs font-semibold text-[#00FC43]">
+            B2B Revenue Pipeline
+          </div>
+<h2 class="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+            Targeted Lead Generation Built for <br class="hidden sm:inline">
+<span class="italic font-serif text-[#00FC43]">B2B Deal Acceleration</span>
+</h2>
+</div>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#00FC43] text-[#030504] font-semibold text-sm hover:bg-[#19ff56] shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all" href="#contact">
+<span class="">Get custom lead list</span>
+<svg class="w-4 h-4 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</a>
+</div>
+<!-- 4 Lead Generation Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Lead Card 1 -->
+<div class="p-7 rounded-2xl bg-[#030504] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#0e1f12] text-[#00FC43] flex items-center justify-center font-bold mb-5">01</div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">ICP Prospect Research</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Granular research targeting your Ideal Customer Profile across specific industries, annual revenue bands, headcount, and technology stacks.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">Custom TAM</span>
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">Firmographics</span>
+</div>
+</div>
+<!-- Lead Card 2 -->
+<div class="p-7 rounded-2xl bg-[#030504] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#0e1f12] text-[#00FC43] flex items-center justify-center font-bold mb-5">02</div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">Decision-Maker Mapping</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Pinpoint Founders, C-Suite, VPs, and Department Heads. No generic info@ emails; only actual decision-makers with buying power.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">C-Suite</span>
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">Direct Dials</span>
+</div>
+</div>
+<!-- Lead Card 3 -->
+<div class="p-7 rounded-2xl bg-[#030504] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#0e1f12] text-[#00FC43] flex items-center justify-center font-bold mb-5">03</div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">Triple-Verification</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Every contact record is tested through automated SMTP pings and manual verification to guarantee under 2% bounce rates for cold outreach.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">&lt; 2% Bounce</span>
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">SMTP Verified</span>
+</div>
+</div>
+<!-- Lead Card 4 -->
+<div class="p-7 rounded-2xl bg-[#030504] border border-white/10 hover:border-[#00FC43]/40 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#0e1f12] text-[#00FC43] flex items-center justify-center font-bold mb-5">04</div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">CRM Ready Formats</h3>
+<p class="text-gray-400 text-sm leading-relaxed mb-6">
+              Cleanly structured datasets formatted precisely for instant one-click import into HubSpot, Salesforce, Apollo, or outreach cold sequences.
+            </p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-4 border-t border-white/5">
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">HubSpot / Apollo</span>
+<span class="text-[11px] font-medium px-2.5 py-1 rounded-md bg-[#090f0b] text-gray-300">Custom Columns</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: DetailedServiceLeadGen -->
+<!-- BEGIN: BlueprintProcessSection (Obsidian Timeline) -->
+<section class="relative bg-[#030504] py-24 md:py-32 px-4 md:px-6 overflow-hidden" data-purpose="execution-process" id="process">
+<div class="max-w-6xl mx-auto">
+<!-- Process Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+<div class="inline-flex items-center justify-center px-4 py-1.5 mb-5 rounded-full border border-[#00FC43]/30 text-xs md:text-sm font-medium text-[#00FC43] bg-[#08150a]">
+          How We Work
+        </div>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-serif tracking-tight text-white mb-6">
+          The TOTO Development <span class="italic font-serif text-[#00FC43]">Blueprint Process</span>
+</h2>
+<p class="text-base sm:text-lg text-gray-400 font-light leading-relaxed">
+          Every service engagement follows the same five-phase process — regardless of service track or project size. This consistency is how we achieve a 98% on-time delivery rate across 80+ projects.
+        </p>
+</div>
+<!-- 5 Process Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-5 mb-14">
+<!-- Step 01 -->
+<div class="p-6 rounded-2xl bg-[#080d09] border border-white/10 hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2113] text-[#00FC43] border border-[#00FC43]/20 mb-5">
+              Step 01
+            </div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">
+              Discovery &amp; Audit
+            </h3>
+<p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+              We audit your current state — technology, competitors, data architecture, and business goals — documenting every finding before touching code.
+            </p>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="p-6 rounded-2xl bg-[#080d09] border border-white/10 hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2113] text-[#00FC43] border border-[#00FC43]/20 mb-5">
+              Step 02
+            </div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">
+              Strategy &amp; Specs
+            </h3>
+<p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+              Technical architecture, information hierarchy, SEO keyword frameworks, and lead targeting parameters approved in writing before execution.
+            </p>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="p-6 rounded-2xl bg-[#080d09] border border-white/10 hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2113] text-[#00FC43] border border-[#00FC43]/20 mb-5">
+              Step 03
+            </div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">
+              Design &amp; Validation
+            </h3>
+<p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+              High-fidelity interactive UI prototypes and messaging frameworks tested thoroughly. Zero surprises, zero re-work during engineering.
+            </p>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="p-6 rounded-2xl bg-[#080d09] border border-white/10 hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2113] text-[#00FC43] border border-[#00FC43]/20 mb-5">
+              Step 04
+            </div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">
+              Build &amp; QA Test
+            </h3>
+<p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+              Senior developers build with performance, security, and responsiveness. Automated regression checks ensure bug-free staging previews.
+            </p>
+</div>
+</div>
+<!-- Step 05 -->
+<div class="p-6 rounded-2xl bg-[#080d09] border border-white/10 hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<div>
+<div class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2113] text-[#00FC43] border border-[#00FC43]/20 mb-5">
+              Step 05
+            </div>
+<h3 class="text-xl font-semibold text-white mb-3 group-hover:text-[#00FC43] transition-colors">
+              Launch &amp; Grow
+            </h3>
+<p class="text-xs md:text-sm text-gray-400 leading-relaxed">
+              Seamless zero-downtime deployment, automated analytics tracking, and continuous 90-day post-launch optimization for ongoing conversion.
+            </p>
+</div>
+</div>
+</div>
+<!-- Connecting Progress Timeline Bar -->
+<div class="relative w-full max-w-5xl mx-auto flex items-center pt-4">
+<div class="w-8 h-8 rounded-full bg-[#00FC43] flex items-center justify-center text-[#030504] shadow-[0_0_15px_#00FC43] z-10 shrink-0">
+<svg class="w-4 h-4 font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path></svg>
+</div>
+<div class="w-full h-0.5 bg-gradient-to-r from-[#00FC43] via-[#00FC43]/60 to-[#00FC43]/10"></div>
+<div class="w-3 h-3 rounded-full bg-[#00FC43]/40 border border-[#00FC43] shrink-0"></div>
+</div>
+</div>
+</section>
+<!-- END: BlueprintProcessSection -->
+<!-- BEGIN: PortfolioShowcaseSection (Contrasting Clean Light Theme) -->
+<section class="relative text-gray-900 py-24 md:py-32 px-4 md:px-6 bg-[#030504]" data-purpose="work-portfolio" id="work">
+<div class="max-w-6xl mx-auto">
+<!-- Section Header -->
+<div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+<div class="inline-flex items-center justify-center px-4 py-1.5 mb-5 rounded-full border border-[#00FC43]/30 text-xs md:text-sm font-medium text-[#00FC43] bg-[#0a150c]">Recent Work</div>
+<h2 class="text-4xl sm:text-5xl md:text-6xl font-normal font-serif tracking-tight mb-6 text-white">
+          Real Projects. Measurable <span class="italic font-serif text-[#00FC43] bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-green-600">Outcomes.</span>
+</h2>
+<p class="text-base sm:text-lg font-normal leading-relaxed text-gray-400">
+          A selection of what TOTO Development has engineered — and the specific business results and performance benchmarks delivered for our clients.
+        </p>
+</div>
+<!-- 2-Column Large Case Studies -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10">
+<!-- Case Study 1 -->
+<article class="rounded-3xl bg-[#090e0a] text-white border border-black/10 overflow-hidden shadow-2xl hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<!-- Top Mockup Visual -->
+<div class="relative bg-gradient-to-br from-[#0c160f] to-[#040805] p-6 sm:p-10 border-b border-white/10 flex items-center justify-center overflow-hidden">
+<div class="w-full h-64 sm:h-72 rounded-xl bg-[#060b07] border border-white/10 p-4 shadow-inner relative flex flex-col justify-between">
+<div class="flex items-center gap-2 border-b border-white/10 pb-3">
+<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+<div class="w-3 h-3 rounded-full bg-[#00FC43]"></div>
+<span class="text-xs text-gray-500 ml-2 font-mono">dashboard.platform.app</span>
+</div>
+<div class="grid grid-cols-3 gap-3 my-auto">
+<div class="h-20 bg-white/5 rounded-lg border border-white/5 p-3 flex flex-col justify-between">
+<span class="text-[10px] text-gray-400">Total Pipeline</span>
+<span class="text-base font-bold text-[#00FC43]">$1.42M</span>
+</div>
+<div class="h-20 bg-white/5 rounded-lg border border-white/5 p-3 flex flex-col justify-between">
+<span class="text-[10px] text-gray-400">Response Rate</span>
+<span class="text-base font-bold text-white">28.4%</span>
+</div>
+<div class="h-20 bg-white/5 rounded-lg border border-white/5 p-3 flex flex-col justify-between">
+<span class="text-[10px] text-gray-400">Active Deals</span>
+<span class="text-base font-bold text-[#00FC43]">142</span>
+</div>
+</div>
+<div class="h-8 bg-[#00FC43]/10 rounded flex items-center justify-between px-3 text-xs text-[#00FC43] font-mono">
+<span class="">Rendering latency: 12ms</span>
+<span class="">Status: Optimal</span>
+</div>
+</div>
+</div>
+<!-- Bottom Content -->
+<div class="p-8 sm:p-10 flex flex-col justify-between flex-grow">
+<div>
+<span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2413] text-[#00FC43] border border-[#00FC43]/30 mb-4">
+                Interactive B2B Sales Platform
+              </span>
+<h3 class="text-2xl sm:text-3xl font-semibold mb-3 tracking-tight group-hover:text-[#00FC43] transition-colors">
+                Interactive Product Demonstration &amp; Enterprise Sales Enablement
+              </h3>
+<p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
+                We developed an interactive sales showcase and automated demo system enabling real-time product trial simulations, decreasing sales cycle durations and increasing qualified demo closures.
+              </p>
+</div>
+<!-- Quantitative Metrics Strip -->
+<div class="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
+<div>
+<div class="text-3xl font-serif text-[#00FC43] font-normal mb-1">↓ 60%</div>
+<div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Faster Demo Rendering</div>
+</div>
+<div>
+<div class="text-3xl font-serif text-[#00FC43] font-normal mb-1">&lt; 30 sec</div>
+<div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Instance Spawn Time</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Case Study 2 -->
+<article class="rounded-3xl bg-[#090e0a] text-white border border-black/10 overflow-hidden shadow-2xl hover:border-[#00FC43]/50 transition-all flex flex-col justify-between group luxury-card-glow">
+<!-- Top Mockup Visual -->
+<div class="relative bg-gradient-to-br from-[#0c160f] to-[#040805] p-6 sm:p-10 border-b border-white/10 flex items-center justify-center overflow-hidden">
+<div class="w-full h-64 sm:h-72 rounded-xl bg-[#060b07] border border-white/10 p-4 shadow-inner relative flex flex-col justify-between">
+<div class="flex items-center gap-2 border-b border-white/10 pb-3">
+<div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+<div class="w-3 h-3 rounded-full bg-[#00FC43]"></div>
+<span class="text-xs text-gray-500 ml-2 font-mono">portal.academy-eval.com</span>
+</div>
+<div class="space-y-2.5 my-auto">
+<div class="w-full bg-white/5 h-10 rounded-lg border border-white/5 flex items-center justify-between px-3">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-[#00FC43]/20 flex items-center justify-center text-[#00FC43] text-xs">✓</div>
+<span class="text-xs text-gray-300">Concurrent Sessions Active</span>
+</div>
+<span class="text-xs font-mono text-[#00FC43]">80,412</span>
+</div>
+<div class="w-full bg-white/5 h-10 rounded-lg border border-white/5 flex items-center justify-between px-3">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-full bg-[#00FC43]/20 flex items-center justify-center text-[#00FC43] text-xs">✓</div>
+<span class="text-xs text-gray-300">Automated Grading Engine</span>
+</div>
+<span class="text-xs font-mono text-emerald-400">99.98% Accuracy</span>
+</div>
+</div>
+<div class="h-8 bg-[#00FC43]/10 rounded flex items-center justify-between px-3 text-xs text-[#00FC43] font-mono">
+<span class="">Infrastructure: Kubernetes Multi-Region</span>
+</div>
+</div>
+</div>
+<!-- Bottom Content -->
+<div class="p-8 sm:p-10 flex flex-col justify-between flex-grow">
+<div>
+<span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#0e2413] text-[#00FC43] border border-[#00FC43]/30 mb-4">
+                Enterprise Education &amp; SaaS
+              </span>
+<h3 class="text-2xl sm:text-3xl font-semibold mb-3 tracking-tight group-hover:text-[#00FC43] transition-colors">
+                Scalable Online Examination &amp; Digital Assessment Platform
+              </h3>
+<p class="text-gray-400 text-sm sm:text-base leading-relaxed mb-8">
+                TOTO Development engineered a high-capacity educational testing platform serving 80,000+ simultaneous students with instant automated evaluation, anti-cheat detection, and continuous uptime.
+              </p>
+</div>
+<!-- Quantitative Metrics Strip -->
+<div class="grid grid-cols-2 gap-4 pt-6 border-t border-white/10">
+<div>
+<div class="text-3xl font-serif text-[#00FC43] font-normal mb-1">80k+</div>
+<div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Concurrent Peak Users</div>
+</div>
+<div>
+<div class="text-3xl font-serif text-[#00FC43] font-normal mb-1">↓ 90%</div>
+<div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Manual Grading Effort</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: PortfolioShowcaseSection -->
+<!-- BEGIN: FAQSection (Obsidian Accordion) -->
+<section class="relative bg-[#030504] py-24 md:py-32 px-4 md:px-6 border-t border-white/5" data-purpose="faq-section" id="faq">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<div class="inline-flex items-center gap-2 px-3.5 py-1 mb-4 rounded-full bg-[#0d1a10] border border-[#00FC43]/30 text-xs font-semibold text-[#00FC43]">
+          Got Questions?
+        </div>
+<h2 class="text-3xl sm:text-5xl font-serif font-normal text-white tracking-tight">
+          Frequently Asked <span class="italic font-serif text-[#00FC43]">Questions</span>
+</h2>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group rounded-2xl bg-[#080d09] border border-white/10 p-6 [&amp;_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-[#00FC43]/40 luxury-card-glow-subtle">
+<summary class="flex cursor-pointer items-center justify-between text-white font-medium text-lg">
+<span class="">What are your typical project delivery timelines?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] group-open:rotate-180 transition-transform duration-200">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+            Most custom marketing websites and brand design initiatives take between 4 to 6 weeks from kickoff to deployment. Complex custom web applications, SaaS dashboards, or full-scale lead generation engine setups typically range between 8 to 12 weeks with weekly sprint demos.
+          </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group rounded-2xl bg-[#080d09] border border-white/10 p-6 [&amp;_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-[#00FC43]/40 luxury-card-glow-subtle">
+<summary class="flex cursor-pointer items-center justify-between text-white font-medium text-lg">
+<span class="">How does TOTO Development verify B2B lead databases?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] group-open:rotate-180 transition-transform duration-200">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+            We use a 3-layer validation process: live SMTP handshake verification, MX record validation, and human cross-checking against active business registries. This allows us to offer a strict guarantee of under 2% bounce rates on all delivered lists.
+          </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group rounded-2xl bg-[#080d09] border border-white/10 p-6 [&amp;_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-[#00FC43]/40 luxury-card-glow-subtle">
+<summary class="flex cursor-pointer items-center justify-between text-white font-medium text-lg">
+<span class="">What modern tech stack do you build web platforms with?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] group-open:rotate-180 transition-transform duration-200">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+            Our core modern stack revolves around Next.js, React, Tailwind CSS, TypeScript, Node.js, and PostgreSQL, deployed across modern edge infrastructure such as Vercel, AWS, or Cloudflare. We tailor frameworks to ensure maximal performance, security, and scalability.
+          </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group rounded-2xl bg-[#080d09] border border-white/10 p-6 [&amp;_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-[#00FC43]/40 luxury-card-glow-subtle">
+<summary class="flex cursor-pointer items-center justify-between text-white font-medium text-lg">
+<span class="">Do you offer fixed-price quotes or hourly retainers?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] group-open:rotate-180 transition-transform duration-200">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+            We primarily operate on transparent, fixed-scope milestones so you have predictable budget requirements with zero hidden surprises. For ongoing growth, marketing, or maintenance, we offer dedicated monthly sprint retainers.
+          </div>
+</details>
+<!-- FAQ 5 -->
+<details class="group rounded-2xl bg-[#080d09] border border-white/10 p-6 [&amp;_summary::-webkit-details-marker]:none transition-all duration-300 hover:border-[#00FC43]/40 luxury-card-glow-subtle">
+<summary class="flex cursor-pointer items-center justify-between text-white font-medium text-lg">
+<span class="">What happens after our product or campaign is launched?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] group-open:rotate-180 transition-transform duration-200">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-gray-400 text-sm md:text-base leading-relaxed border-t border-white/5 pt-4">
+            Every build comes backed with 90 days of complimentary warranty coverage and active performance monitoring. We track user behavioral metrics, fix edge-case bugs immediately, and ensure your team is trained to manage the CMS or tooling easily.
+          </div>
+</details>
+</div>
+</div>
+</section>
+<!-- END: FAQSection -->
+<!-- BEGIN: CallToActionBanner -->
+<section class="relative bg-[#050805] py-24 md:py-32 px-4 md:px-6 overflow-hidden border-t border-[#00FC43]/20" data-purpose="final-cta" id="contact">
+<div aria-hidden="true" class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-[500px] h-[500px] rounded-full bg-[#00FC43]/15 blur-[120px]"></div>
+</div>
+<div class="relative max-w-4xl mx-auto text-center z-10">
+<h2 class="text-4xl sm:text-6xl font-serif text-white font-normal mb-6 tracking-tight">
+        Not Sure Which Service Your <br class="hidden sm:inline">
+        Business <span class="italic font-serif text-[#00FC43]">Needs Most?</span>
+</h2>
+<p class="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        Tell us about your business goals and current roadblocks. We will conduct a free audit and help you identify the highest-ROI digital solution and execution roadmap.
+      </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-9 py-4 rounded-full bg-[#00FC43] text-[#030504] font-bold text-base hover:bg-[#19ff56] shadow-[0_0_30px_rgba(0,252,67,0.5)] hover:shadow-[0_0_45px_rgba(0,252,67,0.8)] transition-all duration-300 active:scale-95" href="mailto:contact@totodevelopment.com">
+<span class="">Get a Free Consultation ↗</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center px-9 py-4 rounded-full bg-white/5 border border-white/20 hover:border-[#00FC43] text-white hover:text-[#00FC43] font-medium text-base backdrop-blur-md transition-all duration-300" href="#work">
+          Explore Our Work
+        </a>
+</div>
+</div>
+</section>
+<!-- END: CallToActionBanner -->
+<!-- BEGIN: MainFooter -->
+<footer class="relative overflow-hidden text-gray-400 text-sm pt-28 pb-12 px-4 md:px-8 border-t border-[#00FC43]/20" data-purpose="site-footer" style="background: radial-gradient(130% 75% at 50% 100%, rgba(0, 252, 67, 0.28) 0%, rgba(0, 252, 67, 0.1) 40%, rgba(4, 8, 4, 0.95) 80%), rgb(3, 6, 3);">
+  <!-- Giant Watermark Logo in Background -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-x-0 top-10 flex items-center justify-center opacity-15 select-none z-0">
+    <div class="flex items-center gap-6 md:gap-10">
+      <svg class="w-24 h-24 md:w-36 md:h-36 text-white shrink-0" viewBox="0 0 100 100" fill="currentColor">
+        <path d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 14c19.9 0 36 16.1 36 36S69.9 86 50 86 14 69.9 14 50s16.1-36 36-36zm-8 20l-12 12 14 14-14 14 12 12 14-14 14 14 12-12-14-14 14-14-12-12-14 14-14-14z"></path>
+      </svg>
+      <span class="text-6xl sm:text-8xl md:text-9xl font-bold tracking-tight text-white whitespace-nowrap">TOTO Development</span>
+    </div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto z-10">
+    <!-- 3 Location Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7 mb-20">
+      <!-- USA Office -->
+      <div class="p-8 rounded-3xl bg-[#060b07]/60 backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-2xl hover:shadow-[0_0_30px_rgba(0,252,67,0.15)] group">
+        <div class="w-10 h-7 mb-5 overflow-hidden rounded shadow flex items-center justify-center">
+          <!-- USA Flag SVG -->
+          <svg class="w-full h-full object-cover" viewBox="0 0 7410 3900" xmlns="http://www.w3.org/2000/svg">
+            <rect width="7410" height="3900" fill="#b22234"></rect>
+            <path d="M0,450H7410M0,1050H7410M0,1650H7410M0,2250H7410M0,2850H7410M0,3450H7410" stroke="#fff" stroke-width="300"></path>
+            <rect width="2964" height="2100" fill="#3c3b6e"></rect>
+            <g fill="#fff">
+              <g id="s18"><g id="s9"><g id="s5"><g id="s4"><path id="s" d="M247,90 317,307h228L360,441l70,217-183-134-183,134 70-217-185-134h228z" transform="scale(0.35)"></path><use href="#s" y="420"></use><use href="#s" y="840"></use><use href="#s" y="1260"></use></g><use href="#s" y="1680"></use></g><use href="#s4" x="247" y="210"></use></g><use href="#s9" x="494"></use></g><use href="#s18" x="988"></use><use href="#s9" x="1976"></use><use href="#s5" x="2470"></use>
+            </g>
+          </svg>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-3 tracking-wide">USA</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 font-light">
+          STE 60005, 30 N Gould st,<br>
+          Sheridan, WY 82801
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-gray-300 hover:text-[#00FC43] text-sm transition-colors mb-1">consult@totodevelopment.com</a>
+        <a href="tel:+13074001899" class="text-gray-400 hover:text-white text-sm transition-colors">+1 (307) 400-1899</a>
+      </div>
+
+      <!-- Dubai Office -->
+      <div class="p-8 rounded-3xl bg-[#060b07]/60 backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-2xl hover:shadow-[0_0_30px_rgba(0,252,67,0.15)] group">
+        <div class="w-10 h-7 mb-5 overflow-hidden rounded shadow flex items-center justify-center">
+          <!-- UAE Flag SVG -->
+          <svg class="w-full h-full object-cover" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+            <rect width="600" height="100" fill="#00732f"></rect>
+            <rect y="100" width="600" height="100" fill="#ffffff"></rect>
+            <rect y="200" width="600" height="100" fill="#000000"></rect>
+            <rect width="150" height="300" fill="#ff0000"></rect>
+          </svg>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-3 tracking-wide">Dubai</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 font-light">
+          Dubai Food District, Shop No. 40, Building<br>
+          01, Al Aweer, Ras Al Khor, Dubai, UAE
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-gray-300 hover:text-[#00FC43] text-sm transition-colors mb-1">consult@totodevelopment.com</a>
+        <a href="tel:+971556144097" class="text-gray-400 hover:text-white text-sm transition-colors">+971 55 614 4097</a>
+      </div>
+
+      <!-- Dhaka Office -->
+      <div class="p-8 rounded-3xl bg-[#060b07]/60 backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-2xl hover:shadow-[0_0_30px_rgba(0,252,67,0.15)] group">
+        <div class="w-10 h-7 mb-5 overflow-hidden rounded shadow flex items-center justify-center">
+          <!-- Bangladesh Flag SVG -->
+          <svg class="w-full h-full object-cover" viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+            <rect width="1000" height="600" fill="#006a4e"></rect>
+            <circle cx="450" cy="300" r="200" fill="#f42a41"></circle>
+          </svg>
+        </div>
+        <h3 class="text-xl font-medium text-white mb-3 tracking-wide">Dhaka</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4 font-light">
+          Ventura Iconia, Level 3, House 37, Road 11,<br>
+          Block H, Banani C/A, Dhaka, Bangladesh
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-gray-300 hover:text-[#00FC43] text-sm transition-colors mb-1">consult@totodevelopment.com</a>
+        <a href="tel:+8801611814937" class="text-gray-400 hover:text-white text-sm transition-colors">+880 16118 14937</a>
+      </div>
+    </div>
+
+    <!-- Bottom Divider Bar -->
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <!-- Copyright Notice -->
+      <div class="text-xs md:text-sm text-gray-300 tracking-normal font-light">
+        © 2022–2026 TOTO Development LLC, All Rights Reserved.
+      </div>
+
+      <!-- Circular Social Glass Buttons -->
+      <div class="flex items-center gap-3">
+        <!-- Facebook -->
+        <a aria-label="Facebook" href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00FC43] border border-white/10 hover:border-[#00FC43] text-white hover:text-[#030504] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,252,67,0.5)]">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        </a>
+        <!-- Instagram -->
+        <a aria-label="Instagram" href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00FC43] border border-white/10 hover:border-[#00FC43] text-white hover:text-[#030504] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,252,67,0.5)]">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a aria-label="LinkedIn" href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00FC43] border border-white/10 hover:border-[#00FC43] text-white hover:text-[#030504] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,252,67,0.5)]">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+        </a>
+        <!-- X (Twitter) -->
+        <a aria-label="X" href="#" class="w-9 h-9 rounded-full bg-white/10 hover:bg-[#00FC43] border border-white/10 hover:border-[#00FC43] text-white hover:text-[#030504] flex items-center justify-center transition-all duration-300 shadow-sm hover:shadow-[0_0_15px_rgba(0,252,67,0.5)]">
+          <svg class="w-4 h-4 fill-currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+</body></html>

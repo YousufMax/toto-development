@@ -1,0 +1,1080 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head></head><body class="bg-[#050507] text-zinc-100 font-sans antialiased selection:bg-[#00FC43] selection:text-black overflow-x-hidden"><svg class="inline-defs-container" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"></svg>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us — TOTO Development | Scalable Digital Solutions</title>
+<!-- Tailwind CSS v3 with Forms & Container Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Playfair Display & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script data-purpose="tailwind-config" id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            accent: '#00FC43',
+            accentHover: '#00e03a',
+            accentDim: '#00851e',
+            accentGlow: 'rgba(0, 252, 67, 0.35)',
+            bgDark: '#050507',
+            surfaceDark: '#080d09',
+            cardDark: '#0d130e',
+            cardBorder: 'rgba(0, 252, 67, 0.25)',
+          }
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        },
+        boxShadow: {
+          'neon-sm': '0 0 15px -2px rgba(0, 252, 67, 0.35)',
+          'neon-md': '0 0 30px -3px rgba(0, 252, 67, 0.4)',
+          'neon-lg': '0 0 50px -5px rgba(0, 252, 67, 0.45)',
+          'card-glow': '0 10px 40px -10px rgba(0, 252, 67, 0.25)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .glow-text {
+    text-shadow: 0 0 25px rgba(0, 252, 67, 0.55), 0 0 10px rgba(0, 252, 67, 0.4);
+  }
+  .hero-radial-glow {
+    background: radial-gradient(ellipse 900px 550px at 50% 12%, rgba(0, 252, 67, 0.18), rgba(0, 252, 67, 0.05) 50%, transparent 80%);
+  }
+  .card-ambient-green {
+    background: linear-gradient(180deg, rgba(16, 28, 18, 0.75) 0%, rgba(9, 17, 10, 0.95) 70%, rgba(0, 252, 67, 0.12) 100%);
+  }
+</style>
+
+
+<!-- BEGIN: Floating Glass Navigation -->
+<header class="fixed top-5 inset-x-0 z-50 flex justify-center px-4 pointer-events-none" data-purpose="main-header">
+<div class="pointer-events-auto max-w-5xl w-full bg-[#0a0f0b]/85 backdrop-blur-xl border border-white/10 rounded-full px-5 py-2.5 flex items-center justify-between shadow-[0_10px_35px_rgba(0,0,0,0.8)] border-[#00FC43]/20">
+<!-- Brand Logo Container -->
+<a aria-label="TOTO Development Home" class="flex items-center gap-2.5 group" href="#">
+<img alt="TOTO Development Logo" class="w-8 h-8 rounded-full object-cover border border-[#00FC43]/50 group-hover:border-[#00FC43] shadow-[0_0_12px_rgba(0,252,67,0.3)] transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIAmndrSoYV_f3USI4WtzqZGlkOE_GVfydt1AuVXeoQrjQ3J6giE46kNyfsKsBLh0yrhu6TJcBu9RJWXbrYeJTkKDQSYmC1dNpJC4au1VRXH2njl5kfVwsYaymGjCLsTCSpm-GLTd5HZq_msDfDSxYvLrn6e-ezAGsvsaqm_ymEyUldEbiCQB89bSJNF_oK28sEJUPZblbhRBQATK4dQVWFeWWglI3Enjs7iEgZTTukLBNVIlLv6AXHgVat34YYypWJZ0">
+<div class="flex items-baseline">
+<span class="text-white font-bold tracking-tight text-base">TOTO</span>
+<span class="text-[#00FC43] font-semibold text-xs tracking-wider uppercase ml-1.5 glow-text">Development</span>
+</div>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+<a class="text-[#00FC43] font-semibold flex items-center gap-1.5" href="#about">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+        About
+      </a>
+<a class="hover:text-white hover:text-[#00FC43] transition-colors" href="#services">Services</a>
+<a class="hover:text-white transition-colors" href="#portfolio">Portfolio</a>
+<a class="hover:text-white transition-colors" href="#pricing">Pricing</a>
+<a class="hover:text-white transition-colors" href="#contact">Contact</a>
+</nav>
+<!-- Action Button -->
+<div class="flex items-center gap-3">
+<a class="relative group inline-flex items-center gap-1.5 bg-[#00FC43] text-[#050507] hover:bg-[#00e03a] px-4 sm:px-5 py-2 rounded-full text-xs sm:text-sm font-bold tracking-wide transition-all shadow-[0_0_20px_rgba(0,252,67,0.4)] hover:shadow-[0_0_30px_rgba(0,252,67,0.65)]" href="#contact">
+<span class="">Ask for a quote</span>
+<svg class="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: Floating Glass Navigation -->
+<!-- BEGIN: Main Content Container with Hero Ambient Glow -->
+<main class="relative pt-36 md:pt-44 overflow-hidden hero-radial-glow" id="about">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full pb-20 md:pb-28" data-purpose="hero-about">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center relative z-10">
+<!-- Eyebrow Pill -->
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0d170f]/80 border border-[#00FC43]/40 backdrop-blur-md shadow-[0_0_15px_rgba(0,252,67,0.2)] mb-8">
+<span class="w-2 h-2 rounded-full bg-[#00FC43] shadow-[0_0_10px_#00FC43] animate-pulse"></span>
+<span class="text-xs uppercase font-semibold tracking-widest text-[#00FC43]">ABOUT TOTO DEVELOPMENT</span>
+</div>
+<!-- Main Confident Editorial Headline -->
+<h1 class="font-editorial text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white max-w-5xl tracking-tight leading-[1.1] mb-6 font-medium">
+        Building scalable digital solutions with ownership, 
+        <span class="italic text-[#00FC43] font-normal glow-text">precision &amp; vision.</span>
+</h1>
+<!-- Supporting Editorial Subtitle -->
+<p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-3xl leading-relaxed mb-4 font-light">
+        TOTO Development is a modern digital solutions consultancy engineering bespoke digital products, full-stack architectures, and high-conversion software for visionary businesses.
+      </p>
+<p class="text-xs sm:text-sm text-zinc-400 max-w-2xl leading-relaxed mb-12">
+        We bridge design craftsmanship, technical rigor, and deep commercial strategy to transform ideas into resilient engines of growth.
+      </p>
+<!-- Sleek Team Container with Electric Green Border Rim Light -->
+<div class="w-full relative rounded-2xl p-1 bg-gradient-to-b from-[#00FC43]/60 via-[#00FC43]/20 to-transparent shadow-[0_0_50px_rgba(0,252,67,0.25)]">
+<div class="relative w-full rounded-2xl overflow-hidden bg-[#070b08] border border-[#00FC43]/30">
+<img alt="TOTO Development collaborative engineering and product design team in high-end studio workshop" class="w-full h-auto max-h-[520px] object-cover object-center grayscale-[10%] contrast-[105%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Hh9C0kyLbfhPDhz_lu685v0qiiTldwfPnCUL6FopyF41oDo8EgNloXWFVyiEEmf4HI_qLtAcZPz8K_t0ouVesx0Ha2Qzw5s__I7DL_W8MjU1pEod3hFJqo2wli1Wj1fHt-juYAvqsZPvYyCtmpH4UCW5vbHD7OMF779K4XyB695XmiziMu3O1kE1VG1oXkEtn2vU31d2waYrsgD0OPFJu6DBf0gyPd2rE5xg1FLps3cx0Sgb32HPpuaWMRaic5QcIJI">
+<div class="absolute inset-0 bg-gradient-to-t from-[#050507] via-transparent to-transparent opacity-70"></div>
+<!-- Floating Editorial Metric Overlays -->
+<div class="absolute bottom-6 left-6 hidden sm:flex items-center gap-3 bg-[#0a120c]/90 border border-[#00FC43]/30 backdrop-blur-xl px-5 py-3 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+<span class="w-2.5 h-2.5 rounded-full bg-[#00FC43] shadow-[0_0_10px_#00FC43]"></span>
+<span class="text-xs sm:text-sm font-medium text-white tracking-wide">Active Global Engineering Hubs: <span class="text-[#00FC43] font-semibold">USA • UAE • BD</span></span>
+</div>
+<div class="absolute bottom-6 right-6 hidden md:flex items-center gap-3 bg-[#0a120c]/90 border border-[#00FC43]/30 backdrop-blur-xl px-5 py-3 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.8)]">
+<span class="text-base font-bold text-[#00FC43] glow-text">99.4%</span>
+<span class="text-xs font-semibold text-zinc-300 uppercase tracking-wider">Client On-Time Delivery</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. WHO WE ARE & ENGINEERING STATS -->
+<section class="py-24 bg-[#050507] border-t border-white/5 relative" data-purpose="who-we-are">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Editorial Manifesto -->
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#00FC43]">WHO WE ARE</span>
+</div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white leading-tight font-medium">
+            More Than Development. <br>
+            A Partner in <span class="italic text-[#00FC43] font-normal glow-text">Digital Growth.</span>
+</h2>
+<div class="space-y-4 text-zinc-300 text-sm sm:text-base leading-relaxed font-light">
+<p class="">
+              Successful digital solutions are not built through isolated services, rushed decisions, or short-term thinking. <span class="text-white font-medium">Businesses need partners</span> who understand strategy, technology, and execution &amp; who stay accountable long after launch.
+            </p>
+<p class="">
+              We work across the full digital lifecycle, helping teams move from uncertainty to clarity, from ideas to execution &amp; from early traction to highly resilient, scalable systems.
+            </p>
+</div>
+<!-- Feature Tag Pills -->
+<div class="flex flex-wrap gap-2.5 pt-4">
+<span class="px-3.5 py-1.5 rounded-full bg-[#0e1710] border border-[#00FC43]/30 text-[#00FC43] text-xs font-semibold tracking-wide">Cross-Functional Squads</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#0e1710] border border-[#00FC43]/30 text-[#00FC43] text-xs font-semibold tracking-wide">0% Vendor Lock-in</span>
+<span class="px-3.5 py-1.5 rounded-full bg-[#0e1710] border border-[#00FC43]/30 text-[#00FC43] text-xs font-semibold tracking-wide">Bespoke Clean Architecture</span>
+</div>
+</div>
+<!-- Right: Glass Bento Stat Highlights with Bracket Accents -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+<div class="p-6 rounded-2xl bg-[#0a100b]/80 border border-[#00FC43]/30 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:border-[#00FC43] transition-all group">
+<div class="text-3xl sm:text-4xl font-bold text-white mb-2 font-mono flex items-center">
+<span class="text-[#00FC43] glow-text">[</span><span class="text-[#00FC43] group-hover:scale-105 transition-transform">80+</span><span class="text-[#00FC43] glow-text">]</span>
+</div>
+<div class="text-sm font-semibold text-white mb-1">Products Engineered</div>
+<p class="text-xs text-zinc-400 leading-relaxed">High-performance digital products engineered and deployed globally on time.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#0a100b]/80 border border-[#00FC43]/30 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:border-[#00FC43] transition-all group">
+<div class="text-3xl sm:text-4xl font-bold text-white mb-2 font-mono flex items-center">
+<span class="text-[#00FC43] glow-text">[</span><span class="text-[#00FC43] group-hover:scale-105 transition-transform">50+</span><span class="text-[#00FC43] glow-text">]</span>
+</div>
+<div class="text-sm font-semibold text-white mb-1">Scaling Enterprises</div>
+<p class="text-xs text-zinc-400 leading-relaxed">Fast-scaling enterprises supported across North America, MENA, &amp; APAC.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#0a100b]/80 border border-[#00FC43]/30 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:border-[#00FC43] transition-all group">
+<div class="text-3xl sm:text-4xl font-bold text-white mb-2 font-mono flex items-center">
+<span class="text-[#00FC43] glow-text">[</span><span class="text-[#00FC43] group-hover:scale-105 transition-transform">98%</span><span class="text-[#00FC43] glow-text">]</span>
+</div>
+<div class="text-sm font-semibold text-white mb-1">Client Retention</div>
+<p class="text-xs text-zinc-400 leading-relaxed">Long-term advisory and engineering partnerships exceeding two continuous years.</p>
+</div>
+<div class="p-6 rounded-2xl bg-[#0a100b]/80 border border-[#00FC43]/30 backdrop-blur-md shadow-[0_8px_30px_rgba(0,0,0,0.6)] hover:border-[#00FC43] transition-all group">
+<div class="text-3xl sm:text-4xl font-bold text-white mb-2 font-mono flex items-center">
+<span class="text-[#00FC43] glow-text">[</span><span class="text-[#00FC43] group-hover:scale-105 transition-transform">12+</span><span class="text-[#00FC43] glow-text">]</span>
+</div>
+<div class="text-sm font-semibold text-white mb-1">Tech Sectors</div>
+<p class="text-xs text-zinc-400 leading-relaxed">Fintech, E-commerce, SaaS, Logistics, HealthTech, and AI automation domains.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. OUR JOURNEY (Diagonal Neon Line Graph Timeline) -->
+<section class="py-28 bg-[#050507] relative overflow-hidden" data-purpose="our-journey-timeline">
+<!-- Atmospheric Background Radial for Timeline -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_75%_35%,rgba(0,252,67,0.08),transparent_65%)] pointer-events-none"></div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-end justify-between mb-16 gap-4">
+<div>
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#00FC43]">OUR JOURNEY</span>
+</div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-medium">
+            Our <span class="italic text-[#00FC43] font-normal glow-text">Journey</span>
+</h2>
+</div>
+<p class="text-zinc-400 text-xs sm:text-sm max-w-sm">
+          From an agile regional engineering studio to an internationally trusted technology powerhouse.
+        </p>
+</div>
+<!-- Desktop Diagonal SVG Line Graphic Timeline (Exact aesthetic of Reference) -->
+<div class="relative w-full min-h-[580px] hidden lg:block">
+<!-- SVG Continuous Glowing Neon Line -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewBox="0 0 1000 550">
+<path d="M 40 470 L 260 380 L 580 250 L 920 110" stroke="rgba(0, 252, 67, 0.25)" stroke-linecap="round" stroke-width="8"></path>
+<path d="M 40 470 L 260 380 L 580 250 L 920 110" stroke="url(#electricGreenGradient)" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient id="electricGreenGradient" x1="0%" x2="100%" y1="100%" y2="0%">
+<stop offset="0%" stop-color="#00851e" stop-opacity="0.8"></stop>
+<stop offset="50%" stop-color="#00FC43" stop-opacity="1"></stop>
+<stop offset="100%" stop-color="#72ff72" stop-opacity="1"></stop>
+</linearGradient>
+</defs>
+</svg>
+<!-- Node 1: 2021 -->
+<div class="absolute left-6 top-[445px] flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-[#050507] border-2 border-[#00FC43] flex items-center justify-center shadow-[0_0_15px_#00FC43]">
+<div class="w-2.5 h-2.5 rounded-full bg-[#00FC43]"></div>
+</div>
+<span class="text-xl font-bold font-mono text-white">2021</span>
+</div>
+<!-- Card 1: 2021 -->
+<div class="absolute left-6 top-[240px] w-72 bg-[#0c140e]/90 border border-[#00FC43]/30 backdrop-blur-md p-5 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] hover:border-[#00FC43] transition-all">
+<div class="text-xs uppercase tracking-wider text-[#00FC43] font-semibold mb-1">INCEPTION</div>
+<h4 class="text-sm font-bold text-white mb-2">Where It All Began</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+            Founded as a dedicated engineering squad. We built bespoke web software, data workflows, and intuitive operational platforms for ambitious early adopters.
+          </p>
+</div>
+<!-- Node 2: 2023 -->
+<div class="absolute left-[245px] top-[355px] flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-[#050507] border-2 border-[#00FC43] flex items-center justify-center shadow-[0_0_15px_#00FC43]">
+<div class="w-2.5 h-2.5 rounded-full bg-[#00FC43]"></div>
+</div>
+<span class="text-xl font-bold font-mono text-white">2023</span>
+</div>
+<!-- Card 2: 2023 -->
+<div class="absolute left-[245px] top-[140px] w-72 bg-[#0c140e]/90 border border-[#00FC43]/30 backdrop-blur-md p-5 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] hover:border-[#00FC43] transition-all">
+<div class="text-xs uppercase tracking-wider text-[#00FC43] font-semibold mb-1">EXPANSION</div>
+<h4 class="text-sm font-bold text-white mb-2">Building Foundation</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+            Consolidated our methodology across mobile apps and cloud systems. Expanded cross-border delivery into the Gulf and North American technology markets.
+          </p>
+</div>
+<!-- Node 3: 2025 -->
+<div class="absolute left-[565px] top-[225px] flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-[#050507] border-2 border-[#00FC43] flex items-center justify-center shadow-[0_0_15px_#00FC43]">
+<div class="w-2.5 h-2.5 rounded-full bg-[#00FC43]"></div>
+</div>
+<span class="text-xl font-bold font-mono text-white">2025</span>
+</div>
+<!-- Card 3: 2025 -->
+<div class="absolute left-[565px] top-[30px] w-72 bg-[#0c140e]/90 border border-[#00FC43]/30 backdrop-blur-md p-5 rounded-2xl shadow-[0_0_30px_rgba(0,0,0,0.8)] hover:border-[#00FC43] transition-all">
+<div class="text-xs uppercase tracking-wider text-[#00FC43] font-semibold mb-1">SCALING</div>
+<h4 class="text-sm font-bold text-white mb-2">Growing Innovation</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+            Enterprise integrations, autonomous AI agents, and high-load web ecosystems. Formalized corporate operations in Sheridan, Wyoming and Banani, Dhaka.
+          </p>
+</div>
+<!-- Node 4: Present+ -->
+<div class="absolute left-[905px] top-[85px] flex items-center gap-3">
+<div class="w-7 h-7 rounded-full bg-[#050507] border-2 border-[#00FC43] flex items-center justify-center shadow-[0_0_20px_#00FC43]">
+<div class="w-3 h-3 rounded-full bg-[#00FC43] animate-ping"></div>
+</div>
+<span class="text-xl font-bold font-mono text-[#00FC43] glow-text">Present+</span>
+</div>
+<!-- Card 4: Present+ -->
+<div class="absolute right-0 top-[140px] w-80 bg-[#0e1c12]/95 border-2 border-[#00FC43] backdrop-blur-md p-6 rounded-2xl shadow-[0_0_40px_rgba(0,252,67,0.3)] transition-all">
+<div class="text-xs uppercase tracking-wider text-[#00FC43] font-bold mb-1 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#00FC43]"></span>
+            LOOKING FORWARD
+          </div>
+<h4 class="text-base font-bold text-white mb-2">What Comes Next</h4>
+<p class="text-xs text-zinc-200 leading-relaxed font-light">
+            Pioneering hyper-optimized interfaces, self-healing backends, and enduring digital partnerships that enable category-defining industry leadership.
+          </p>
+</div>
+</div>
+<!-- Mobile/Tablet Stacked Timeline View -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:hidden">
+<div class="bg-[#0c140e] border border-[#00FC43]/30 p-6 rounded-2xl">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xl font-bold font-mono text-white">2021</span>
+<span class="text-xs font-semibold text-[#00FC43] uppercase tracking-wider">INCEPTION</span>
+</div>
+<h4 class="text-base font-bold text-white mb-2">Where It All Began</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">Founded as a dedicated engineering squad. We built bespoke web software, data workflows, and intuitive operational platforms.</p>
+</div>
+<div class="bg-[#0c140e] border border-[#00FC43]/30 p-6 rounded-2xl">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xl font-bold font-mono text-white">2023</span>
+<span class="text-xs font-semibold text-[#00FC43] uppercase tracking-wider">EXPANSION</span>
+</div>
+<h4 class="text-base font-bold text-white mb-2">Building Foundation</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">Consolidated our methodology across mobile apps and cloud systems. Expanded delivery into Gulf &amp; North American markets.</p>
+</div>
+<div class="bg-[#0c140e] border border-[#00FC43]/30 p-6 rounded-2xl">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xl font-bold font-mono text-white">2025</span>
+<span class="text-xs font-semibold text-[#00FC43] uppercase tracking-wider">SCALING</span>
+</div>
+<h4 class="text-base font-bold text-white mb-2">Growing Innovation</h4>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">Enterprise integrations, autonomous AI agents, and high-load web ecosystems across Wyoming and Dhaka hubs.</p>
+</div>
+<div class="bg-[#0e1c12] border-2 border-[#00FC43] p-6 rounded-2xl shadow-[0_0_30px_rgba(0,252,67,0.25)]">
+<div class="flex items-center justify-between mb-3">
+<span class="text-xl font-bold font-mono text-[#00FC43]">Present+</span>
+<span class="text-xs font-bold text-[#00FC43] uppercase tracking-wider">LOOKING FORWARD</span>
+</div>
+<h4 class="text-base font-bold text-white mb-2">What Comes Next</h4>
+<p class="text-xs text-zinc-200 leading-relaxed font-light">Pioneering hyper-optimized interfaces, self-healing backends, and enduring digital partnerships that enable industry leadership.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. MISSION, VISION & VALUES (3 Luxury Frosted Emerald Cards) -->
+<section class="py-24 bg-[#050507] border-t border-white/5 relative" data-purpose="mission-vision-values">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-medium">
+          Mission, <span class="italic text-[#00FC43] font-normal glow-text">Vision</span> &amp; Values
+        </h2>
+<p class="text-zinc-400 text-xs sm:text-sm mt-3 font-light">
+          The principles and convictions that guide how we engineer software and build partnerships.
+        </p>
+</div>
+<!-- 3 Matching Luxury Emerald Cards Grid (Reference Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Our Mission -->
+<div class="card-ambient-green p-8 sm:p-10 rounded-3xl border border-[#00FC43]/30 hover:border-[#00FC43] shadow-[0_10px_40px_rgba(0,0,0,0.7)] hover:shadow-[0_0_40px_rgba(0,252,67,0.3)] transition-all flex flex-col justify-between group">
+<div>
+<!-- Custom Target SVG Icon with #00FC43 stroke -->
+<div class="w-14 h-14 rounded-2xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-8 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="10"></circle>
+<circle cx="12" cy="12" r="6"></circle>
+<circle cx="12" cy="12" r="2"></circle>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold text-white mb-3">
+              Our <span class="text-[#00FC43] font-medium glow-text">Mission</span>
+</h3>
+<p class="text-sm text-zinc-300 leading-relaxed font-light">
+              To empower businesses through purposeful digital solutions that combine creativity, modern engineering, and strategic thinking to deliver sustainable, long-term commercial results.
+            </p>
+</div>
+<div class="pt-8 flex items-center gap-2 text-xs font-semibold text-[#00FC43] group-hover:translate-x-1 transition-transform">
+<span class="">Delivering Outcome-First Value</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg>
+</div>
+</div>
+<!-- Card 2: Our Vision -->
+<div class="card-ambient-green p-8 sm:p-10 rounded-3xl border border-[#00FC43]/30 hover:border-[#00FC43] shadow-[0_10px_40px_rgba(0,0,0,0.7)] hover:shadow-[0_0_40px_rgba(0,252,67,0.3)] transition-all flex flex-col justify-between group">
+<div>
+<!-- Custom Eye SVG Icon with #00FC43 stroke -->
+<div class="w-14 h-14 rounded-2xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-8 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+<circle cx="12" cy="12" r="3"></circle>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold text-white mb-3">
+              Our <span class="text-[#00FC43] font-medium glow-text">Vision</span>
+</h3>
+<p class="text-sm text-zinc-300 leading-relaxed font-light">
+              To become a globally trusted digital solutions partner recognized for engineering quality, innovation, architectural resilience, and genuine dedication to our partners' exponential growth.
+            </p>
+</div>
+<div class="pt-8 flex items-center gap-2 text-xs font-semibold text-[#00FC43] group-hover:translate-x-1 transition-transform">
+<span class="">Engineering Lasting Influence</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg>
+</div>
+</div>
+<!-- Card 3: Our Values -->
+<div class="card-ambient-green p-8 sm:p-10 rounded-3xl border border-[#00FC43]/30 hover:border-[#00FC43] shadow-[0_10px_40px_rgba(0,0,0,0.7)] hover:shadow-[0_0_40px_rgba(0,252,67,0.3)] transition-all flex flex-col justify-between group">
+<div>
+<!-- Custom Hexagonal Cluster SVG Icon with #00FC43 stroke -->
+<div class="w-14 h-14 rounded-2xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-8 shadow-[0_0_15px_rgba(0,252,67,0.2)]">
+<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+<path d="M12 2l4 7h-8zM6 14l4 7H2zM18 14l4 7h-8z"></path>
+</svg>
+</div>
+<h3 class="text-2xl font-semibold text-white mb-3">
+              Our <span class="text-[#00FC43] font-medium glow-text">Values</span>
+</h3>
+<p class="text-sm text-zinc-300 leading-relaxed font-light mb-4">
+              We take ownership for outcomes, not just tasks. We prioritize clear thinking, clean systems, transparent communication, and continuous technical evolution.
+            </p>
+<div class="grid grid-cols-2 gap-2 pt-1 text-xs text-zinc-300">
+<div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span> Integrity</div>
+<div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span> Quality</div>
+<div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span> Innovation</div>
+<div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span> Accountability</div>
+</div>
+</div>
+<div class="pt-8 flex items-center gap-2 text-xs font-semibold text-[#00FC43] group-hover:translate-x-1 transition-transform">
+<span class="">Rooted in Shared Integrity</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path></svg>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. HOW WE THINK / FOUR-STEP PROCESS -->
+<section class="py-24 bg-[#050507] border-t border-white/5 relative" data-purpose="how-we-think-process">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#00FC43]">HOW WE THINK</span>
+</div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-medium">
+            Thoughtful Strategy. <br>
+<span class="italic text-[#00FC43] font-normal glow-text">Purposeful Execution.</span>
+</h2>
+</div>
+<p class="text-zinc-400 text-xs sm:text-sm max-w-sm">
+          A disciplined, phased engineering framework that converts conceptual ambiguity into high-performance digital engines.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 01 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] transition-all flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono font-bold text-[#00FC43] mb-4 flex items-center justify-between">
+<span class="">01</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Understand</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+              Deep discovery into target end-users, pain points, competitor gaps, and commercial targets before writing a single line of code.
+            </p>
+</div>
+<div class="mt-6 pt-3 border-t border-white/5 text-[11px] text-zinc-400 font-mono">
+            Discovery • User Flows • Scoping
+          </div>
+</div>
+<!-- Step 02 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] transition-all flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono font-bold text-[#00FC43] mb-4 flex items-center justify-between">
+<span class="">02</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Strategise</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+              Designing scalable system architecture, choosing optimal infrastructure stacks, and establishing realistic delivery milestones.
+            </p>
+</div>
+<div class="mt-6 pt-3 border-t border-white/5 text-[11px] text-zinc-400 font-mono">
+            System Design • Tech Stack • SLAs
+          </div>
+</div>
+<!-- Step 03 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] transition-all flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono font-bold text-[#00FC43] mb-4 flex items-center justify-between">
+<span class="">03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43]"></span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Design &amp; Develop</h3>
+<p class="text-xs text-zinc-300 leading-relaxed font-light">
+              Pairing bespoke editorial interfaces with clean, type-safe full-stack microservices engineered for extreme speed and accessibility.
+            </p>
+</div>
+<div class="mt-6 pt-3 border-t border-white/5 text-[11px] text-zinc-400 font-mono">
+            High-Fidelity UI • Microservices • CI/CD
+          </div>
+</div>
+<!-- Step 04 -->
+<div class="p-6 rounded-2xl bg-[#0e1c12] border-2 border-[#00FC43] shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all flex flex-col justify-between">
+<div>
+<div class="text-xs font-mono font-bold text-[#00FC43] mb-4 flex items-center justify-between">
+<span class="">04</span>
+<span class="w-2 h-2 rounded-full bg-[#00FC43] animate-pulse"></span>
+</div>
+<h3 class="text-lg font-bold text-white mb-2">Refine &amp; Scale</h3>
+<p class="text-xs text-zinc-200 leading-relaxed font-light">
+              Strenuous QA benchmarking, post-launch observability, real user telemetry, and proactive continuous maintenance cycles.
+            </p>
+</div>
+<div class="mt-6 pt-3 border-t border-[#00FC43]/30 text-[11px] text-[#00FC43] font-mono font-medium">
+            Telemetry • 90d Warranty • Scale
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. WHY CHOOSE US TRUST PILLARS -->
+<section class="py-24 bg-[#050507] border-t border-white/5 relative" data-purpose="why-choose-us">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 mb-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+<span class="text-xs font-bold uppercase tracking-widest text-[#00FC43]">WHY CHOOSE US</span>
+</div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-medium">
+          Built on Trust. Focused on <span class="italic text-[#00FC43] font-normal glow-text">Results.</span>
+</h2>
+<p class="text-zinc-400 text-xs sm:text-sm mt-3 font-light">
+          The engineering principles that separate our technical consultancy from generic software agencies.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- 01 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Business-Focused Thinking</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            We evaluate technical decisions against measurable business velocity, user retention, and commercial conversion.
+          </p>
+</div>
+<!-- 02 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Purposeful Design</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            Aesthetic excellence paired with fluid usability. Every component and interaction state reinforces brand credibility.
+          </p>
+</div>
+<!-- 03 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Modern Technology</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            Engineered with modern frameworks, headless APIs, and cloud-native security protocols that eradicate technical debt.
+          </p>
+</div>
+<!-- 04 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Transparent Communication</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            Direct collaboration with technical leads who write your code, backed by weekly async video briefs and shared tracking.
+          </p>
+</div>
+<!-- 05 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Quality-Driven Execution</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            Automated test suites, end-to-end load validation, and strict adherence to ISO &amp; OWASP web performance standards.
+          </p>
+</div>
+<!-- 06 -->
+<div class="p-6 rounded-2xl bg-[#090f0a] border border-[#00FC43]/20 hover:border-[#00FC43] hover:shadow-[0_0_25px_rgba(0,252,67,0.2)] transition-all">
+<div class="w-10 h-10 rounded-xl bg-[#00FC43]/10 border border-[#00FC43]/30 flex items-center justify-center text-[#00FC43] mb-4">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+</div>
+<h3 class="text-base font-bold text-white mb-2">Long-Term Partnership</h3>
+<p class="text-xs text-zinc-400 leading-relaxed font-light">
+            We operate as your dedicated external technology squad, supporting iterative product scaling and high-availability operations.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CLOSING CONVERSION CTA (3D Earth Globe Image & Metrics Reference) -->
+<section class="py-24 bg-[#050507] border-t border-white/5 relative overflow-hidden" data-purpose="closing-conversion-cta">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="relative py-6 sm:py-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+<div class="lg:col-span-7 space-y-6">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0d170f] border border-[#00FC43]/30 text-xs text-[#00FC43] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] animate-pulse"></span>
+              Our Mission With Every Partner
+            </div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl text-white font-medium leading-tight">
+              Let's Make Your Business <br>
+<span class="italic text-[#00FC43] font-normal glow-text">World-Class!</span>
+</h2>
+<p class="text-zinc-300 text-sm sm:text-base leading-relaxed font-light max-w-xl">
+              Whether you're a startup launching your flagship product or an enterprise ready to modernize legacy infrastructure, TOTO Development has delivered it before. Let's discuss your project and prepare a tailored roadmap within 48 hours.
+            </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-[#00FC43] text-[#050507] font-bold text-sm hover:bg-[#00e03a] shadow-[0_0_25px_rgba(0,252,67,0.4)] hover:shadow-[0_0_35px_rgba(0,252,67,0.65)] transition-all" href="#contact">
+<span class="">Start Your Project</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-7 py-3 rounded-full bg-white/5 border border-white/10 hover:border-[#00FC43]/50 text-white font-semibold text-sm hover:bg-white/10 transition-all" href="#contact">
+<span class="">Book a Strategy Call</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 text-xs text-zinc-300">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00FC43] text-[18px]">check_circle</span>
+<span class="">Free proposal with scope &amp; timeline in 48h</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00FC43] text-[18px]">check_circle</span>
+<span class="">Senior technical architect on discovery call</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00FC43] text-[18px]">check_circle</span>
+<span class="">Fixed-scope clarity — zero hidden fees</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#00FC43] text-[18px]">check_circle</span>
+<span class="">90-day post-launch warranty included</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center relative">
+<div class="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center"><div class="absolute -inset-10 rounded-full bg-[#00FC43]/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -inset-4 rounded-full bg-[radial-gradient(circle_at_center,rgba(0,252,67,0.22)_0%,transparent_70%)] pointer-events-none"></div>
+<div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-[0_0_50px_rgba(0,252,67,0.35)] border border-[#00FC43]/30 flex items-center justify-center bg-black">
+<img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDrNltWB4RuBfWJ2bswvX566UesyhiXlzvdIpeNM9b4XnsifYRfIKfbPBh9ap8KuJ4Cg3nWVoTnlGDw5T9xIBiPQwvIU37Flu5LjPtEujTo3DEf4vREB0UyMnIkr-MoWZHdqLTguCaGRnyXKPNN1V1mQeaifakll0ml4MEcvLW2wDjmhZdO6tgXQLDcCLRiv5or356o86v0cR-5y-S6SiHL3_32gbg9bhNSbhT1p4X71EL4QOLaqA7LNdA4nnNNc5ZBKg" alt="Global Scalable Digital Infrastructure Globe" class="w-full h-full object-cover rounded-full">
+</div>
+<div class="absolute top-4 -right-4 z-20 flex items-center gap-1.5 bg-[#08120a]/90 border border-[#00FC43]/40 px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.8)] backdrop-blur-md">
+<span class="text-[#00FC43] text-xs">✦</span>
+<span class="text-white text-xs font-semibold">Global Delivery</span>
+</div>
+<div class="absolute bottom-10 -left-6 z-20 flex items-center gap-1.5 bg-[#08120a]/90 border border-[#00FC43]/40 px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.8)] backdrop-blur-md">
+<span class="text-[#00FC43] text-xs">✦</span>
+<span class="text-white text-xs font-semibold">98% On-Time</span>
+</div>
+<div class="absolute bottom-0 right-4 z-20 flex items-center gap-1.5 bg-[#08120a]/90 border border-[#00FC43]/40 px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.8)] backdrop-blur-md">
+<span class="text-[#00FC43] text-xs">✦</span>
+<span class="text-white text-xs font-semibold">80+ Projects</span>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- END: Main Content Container -->
+<!-- BEGIN: ComparisonMatrixSection -->
+<section class="relative py-24 bg-[#050507] text-white border-t border-white/10 overflow-hidden" data-purpose="plan-comparison-matrix" id="pricing">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(0,252,67,0.06),transparent_65%)] pointer-events-none"></div>
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#00FC43]/30 bg-[#00FC43]/10 backdrop-blur-md mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]"></span>
+<span class="text-xs uppercase tracking-widest font-semibold text-[#00FC43]">Compare Packages</span>
+</div>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
+        Find the <span class="italic font-normal text-[#00FC43] glow-text">Right Solution</span> for Your Business.
+      </h2>
+<p class="text-zinc-400 mt-4 text-xs sm:text-sm leading-relaxed max-w-xl mx-auto font-light">
+        A side-by-side feature comparison to help you choose the tier matching your engineering ambitions.
+      </p>
+</div>
+<div class="rounded-3xl border border-white/10 bg-[#0a100b]/80 backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead>
+<tr class="border-b border-white/10 bg-white/[0.02]">
+<th class="py-6 px-6 font-semibold text-zinc-400 text-sm w-2/5">Deliverables &amp; Features</th>
+<th class="py-6 px-6 font-bold text-white text-center w-1/5 text-base">Digital Launch</th>
+<th class="py-6 px-6 font-bold text-white text-center w-1/5 bg-[#00FC43]/10 border-x border-[#00FC43]/30 relative">
+<div class="inline-flex items-center gap-1.5 bg-[#00FC43] text-[#041508] text-[10px] font-black tracking-wider uppercase px-2.5 py-0.5 rounded-full shadow-[0_0_12px_#00FC43] mb-1.5">
+                  Recommended
+                </div>
+<div class="text-base text-white font-bold">Business Growth</div>
+</th>
+<th class="py-6 px-6 font-bold text-white text-center w-1/5 text-base">Enterprise</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/5 text-sm">
+<tr class="bg-black/50">
+<td class="py-3 px-6 font-bold text-xs uppercase tracking-wider text-[#00FC43]" colspan="4">Branding &amp; User Experience</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">Brand Identity System</td>
+<td class="py-4 px-6 text-center text-zinc-400">Essential</td>
+<td class="py-4 px-6 text-center font-semibold text-white bg-[#00FC43]/5 border-x border-[#00FC43]/20">Comprehensive</td>
+<td class="py-4 px-6 text-center text-zinc-200 font-medium">Custom Corporate Design Language</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">UX/UI Prototype &amp; Research</td>
+<td class="py-4 px-6 text-center text-zinc-600">—</td>
+<td class="py-4 px-6 text-center bg-[#00FC43]/5 border-x border-[#00FC43]/20">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+</tr>
+<tr class="bg-black/50">
+<td class="py-3 px-6 font-bold text-xs uppercase tracking-wider text-[#00FC43]" colspan="4">Engineering &amp; Performance</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">Responsive Web Application</td>
+<td class="py-4 px-6 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+<td class="py-4 px-6 text-center bg-[#00FC43]/5 border-x border-[#00FC43]/20">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+<td class="py-4 px-6 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">Mobile Applications (iOS &amp; Android)</td>
+<td class="py-4 px-6 text-center text-zinc-600">—</td>
+<td class="py-4 px-6 text-center text-zinc-300 bg-[#00FC43]/5 border-x border-[#00FC43]/20">Optional Add-on</td>
+<td class="py-4 px-6 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">ERP &amp; CRM Integration</td>
+<td class="py-4 px-6 text-center text-zinc-600">—</td>
+<td class="py-4 px-6 text-center text-zinc-300 bg-[#00FC43]/5 border-x border-[#00FC43]/20">Standard APIs</td>
+<td class="py-4 px-6 text-center text-white font-medium">Custom Dedicated Pipelines</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">AI Automation &amp; Agent Workflows</td>
+<td class="py-4 px-6 text-center text-zinc-600">—</td>
+<td class="py-4 px-6 text-center text-zinc-300 bg-[#00FC43]/5 border-x border-[#00FC43]/20">Optional Add-on</td>
+<td class="py-4 px-6 text-center">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43]">
+<svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path></svg>
+</span>
+</td>
+</tr>
+<tr class="bg-black/50">
+<td class="py-3 px-6 font-bold text-xs uppercase tracking-wider text-[#00FC43]" colspan="4">Support, SEO &amp; Growth</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">Search Engine Optimization (SEO)</td>
+<td class="py-4 px-6 text-center text-zinc-400">Foundational</td>
+<td class="py-4 px-6 text-center text-white font-semibold bg-[#00FC43]/5 border-x border-[#00FC43]/20">Authority Architecture</td>
+<td class="py-4 px-6 text-center text-zinc-200 font-medium">Enterprise Dynamic Programmatic</td>
+</tr>
+<tr class="hover:bg-white/[0.02] transition-colors">
+<td class="py-4 px-6 text-zinc-300 font-medium">Post-Launch Warranty &amp; Support</td>
+<td class="py-4 px-6 text-center text-zinc-400">30 Days</td>
+<td class="py-4 px-6 text-center font-semibold text-white bg-[#00FC43]/5 border-x border-[#00FC43]/20">90 Days Priority</td>
+<td class="py-4 px-6 text-center text-zinc-200 font-medium">Dedicated 24/7 SLA</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="border-t border-white/10 bg-white/[0.02]">
+<td class="py-6 px-6"></td>
+<td class="py-6 px-6 text-center">
+<a class="inline-block px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/10" href="#contact">Select Plan</a>
+</td>
+<td class="py-6 px-6 text-center bg-[#00FC43]/10 border-x border-[#00FC43]/30">
+<a class="inline-block px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-[#041508] bg-[#00FC43] hover:bg-[#00e03a] rounded-full shadow-[0_0_20px_rgba(0,252,67,0.35)] transition-all" href="#contact">Get Growth</a>
+</td>
+<td class="py-6 px-6 text-center">
+<a class="inline-block px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-white/10 hover:bg-white/20 rounded-full transition-colors border border-white/10" href="#contact">Talk with us</a>
+</td>
+</tr>
+</tfoot>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ComparisonMatrixSection -->
+<!-- BEGIN: ContactAndAdvisorSection -->
+<section class="py-24 bg-[#050507] border-t border-white/10 relative" data-purpose="contact-and-consultation-form" id="contact">
+<div class="max-w-6xl mx-auto px-4 sm:px-6">
+<div class="bg-gradient-to-br from-[#0c140e] via-[#080d09] to-[#050507] border border-[#00FC43]/30 rounded-3xl p-8 sm:p-12 shadow-[0_0_50px_rgba(0,0,0,0.8)] grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Left: Value Statement & Advisor Call -->
+<div class="lg:col-span-5 space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#00FC43]/30 bg-[#00FC43]/10 text-xs text-[#00FC43] font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-[#00FC43] animate-pulse"></span>
+          Let's build together
+        </div>
+<h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-white">
+          Let’s Make Your <br>
+<span class="italic text-[#00FC43] glow-text font-normal">Business</span> World-Class!
+        </h2>
+<p class="text-zinc-300 text-sm leading-relaxed font-light">
+          Whether you're developing an MVP from scratch or upgrading an enterprise ecosystem, our technical leads evaluate your goals and chart the most cost-effective path forward.
+        </p>
+<!-- Direct Advisor Connect -->
+<div class="pt-4 border-t border-white/10">
+<div class="bg-[#0e1710] border border-[#00FC43]/30 rounded-2xl p-4 flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<img alt="Business Transformation Advisor" class="w-11 h-11 rounded-full object-cover border border-[#00FC43]/50 shadow-[0_0_10px_rgba(0,252,67,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFEqJIb62FvygbCI_Ycyja7jHpo8CsfVqPh5CpQO4Hvra6J-ss34n_abPZ-GBbY3-giBF86RSbksuK3sj2OdeUq-qf_YwCFMobfuOzTiCE8iQ37FSVgei7EkwRwYxve_IWzbETwE1hqAHLCrw4Ey0K28fj68fL0U8ONQmyVo1qB41poeYB-qS_OsFkZL1tg8kLkuKPtlPNNAkvWEumZhfpAiZGuOBFxdZEXUcIOdUnvxeOA_hL0X1Sfw">
+<div>
+<h4 class="text-sm font-bold text-white">Asifur Rahman</h4>
+<p class="text-[11px] text-zinc-400">Business Transformation Advisor</p>
+</div>
+</div>
+<a class="px-4 py-2 rounded-full bg-[#00FC43] text-[#050507] font-bold text-xs hover:bg-[#00e03a] transition-all flex items-center gap-1 shadow-[0_0_15px_rgba(0,252,67,0.3)] shrink-0" href="#advisor-calendar">
+<span class="">Book call</span>
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<!-- Right: Direct Inquiry Form -->
+<div class="lg:col-span-7 bg-[#070b08]/80 border border-[#00FC43]/20 rounded-2xl p-6 sm:p-8">
+<h3 class="text-xl font-bold text-white mb-6">Start a conversation</h3>
+<form action="#" class="space-y-4" method="POST">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="full-name">
+                Your name <span class="text-[#00FC43]">*</span>
+</label>
+<input class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="full-name" placeholder="John Doe" required="" type="text">
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="company-name">Company name</label>
+<input class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="company-name" placeholder="Acme Corp" type="text">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="phone-number">Phone number</label>
+<input class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="phone-number" placeholder="+1 (555) 000-0000" type="tel">
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="work-email">
+                Work email <span class="text-[#00FC43]">*</span>
+</label>
+<input class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="work-email" placeholder="john@company.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="service-needed">What do you need?</label>
+<select class="w-full bg-[#0a0f0b] border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="service-needed">
+<option disabled="" selected="" value="">Select your service</option>
+<option value="digital-launch">Digital Launch Suite ($3,499+)</option>
+<option value="growth">Business Growth Partnership ($6,999+)</option>
+<option value="enterprise">Enterprise Custom Architecture</option>
+<option value="ai-consulting">Custom AI / Automation Workflows</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="project-budget">Project budget</label>
+<select class="w-full bg-[#0a0f0b] border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="project-budget">
+<option disabled="" selected="" value="">Select your range</option>
+<option value="3k-5k">$3,500 - $6,000</option>
+<option value="6k-12k">$6,000 - $12,000</option>
+<option value="12k-25k">$12,000 - $25,000</option>
+<option value="25k-plus">$25,000+</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block text-xs font-semibold text-zinc-300 mb-1.5" for="project-overview">Brief project overview</label>
+<textarea class="w-full bg-white/5 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-[#00FC43] focus:ring-1 focus:ring-[#00FC43] transition-all" id="project-overview" placeholder="Tell us about your technical goals, target delivery date, or business challenges..." rows="3"></textarea>
+</div>
+<button class="w-full py-3.5 px-6 rounded-full bg-[#00FC43] text-[#050507] font-bold text-sm hover:bg-[#00e03a] transition-all shadow-[0_0_20px_rgba(0,252,67,0.35)] flex items-center justify-center gap-2" type="submit">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="">Send Message</span>
+</button>
+<p class="text-center text-[11px] text-zinc-400 pt-1">
+            🔒 We reply within 24 hours. Your information is strictly confidential. No spam, ever.
+          </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContactAndAdvisorSection -->
+<!-- BEGIN: Dark Immersive FAQ Section -->
+<section class="py-24 bg-[#050507] text-white border-t border-white/10" data-purpose="pricing-faqs">
+<div class="max-w-4xl mx-auto px-4 sm:px-6">
+<div class="text-center mb-16">
+<span class="text-xs uppercase tracking-widest font-bold text-[#00FC43] bg-[#00FC43]/10 border border-[#00FC43]/30 px-3.5 py-1.5 rounded-full">Got Questions?</span>
+<h2 class="font-editorial text-3xl sm:text-4xl md:text-5xl font-semibold text-white mt-4">
+        Frequently Asked <span class="italic text-[#00FC43] glow-text font-normal">Questions</span>
+</h2>
+<p class="text-zinc-400 text-xs sm:text-sm mt-2 font-light">
+        Everything you need to know about our fee structure, scoping, and collaboration process.
+      </p>
+</div>
+<!-- Accordion Grid -->
+<div class="space-y-4" data-purpose="accordion-group">
+<details class="group border border-white/10 rounded-2xl bg-[#090f0a] p-6 transition-all [&amp;_summary::-webkit-details-marker]:none">
+<summary class="flex items-center justify-between cursor-pointer list-none text-white font-semibold text-base sm:text-lg">
+<span class="">How are initial project costs estimated?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] transition-transform duration-300 group-open:rotate-180">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-white/10 pt-4 font-light">
+          Our starting figures reflect standard scope deployments. During our 30-minute discovery call, we unpack your design requirements, third-party integrations, custom backend logic, and compliance rules to produce an exact, fixed-cost proposal with zero hidden surprises.
+        </div>
+</details>
+<details class="group border border-white/10 rounded-2xl bg-[#090f0a] p-6 transition-all [&amp;_summary::-webkit-details-marker]:none">
+<summary class="flex items-center justify-between cursor-pointer list-none text-white font-semibold text-base sm:text-lg">
+<span class="">Can we customize features between different tiers?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] transition-transform duration-300 group-open:rotate-180">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-white/10 pt-4 font-light">
+          Yes, absolutely. The packages act as proven architectural baselines. If you require the Digital Launch suite with custom ERP integrations or specialized mobile app bridges, we add modular add-ons rather than forcing you into an unneeded enterprise tier.
+        </div>
+</details>
+<details class="group border border-white/10 rounded-2xl bg-[#090f0a] p-6 transition-all [&amp;_summary::-webkit-details-marker]:none">
+<summary class="flex items-center justify-between cursor-pointer list-none text-white font-semibold text-base sm:text-lg">
+<span class="">What are your typical payment schedules and milestones?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] transition-transform duration-300 group-open:rotate-180">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-white/10 pt-4 font-light">
+          Standard projects are typically broken down into milestone-based schedules: 40% initial commitment upon kickoff, 30% upon approval of UX/UI prototypes and core system staging, and 30% upon final testing, deployment, and handover.
+        </div>
+</details>
+<details class="group border border-white/10 rounded-2xl bg-[#090f0a] p-6 transition-all [&amp;_summary::-webkit-details-marker]:none">
+<summary class="flex items-center justify-between cursor-pointer list-none text-white font-semibold text-base sm:text-lg">
+<span class="">Who owns the intellectual property and code?</span>
+<span class="ml-4 flex-shrink-0 text-[#00FC43] transition-transform duration-300 group-open:rotate-180">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</span>
+</summary>
+<div class="mt-4 text-zinc-400 text-sm leading-relaxed border-t border-white/10 pt-4 font-light">
+          You do 100%. Upon completion of payment milestones, all repositories, design source files, database assets, and codebases are transferred directly to your organization. No vendor lock-in, ever.
+        </div>
+</details>
+</div>
+</div>
+</section>
+<!-- END: FAQ Section -->
+<!-- BEGIN: CredibilityCertificationsBar -->
+<section class="py-14 bg-[#050507] border-t border-white/10" data-purpose="certifications-and-trust">
+<div class="max-w-6xl mx-auto px-4 text-center">
+<div class="relative flex items-center justify-center mb-8">
+<div class="absolute inset-x-0 h-px bg-white/10"></div>
+<span class="relative bg-[#050507] px-4 text-xs font-semibold uppercase tracking-wider text-zinc-400">
+        Recognized Standards &amp; Industry Partnerships
+      </span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center opacity-90">
+<div class="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-center justify-center">
+<span class="font-bold text-white text-base tracking-wider">BASIS <span class="text-xs text-[#00FC43] font-normal">Member</span></span>
+</div>
+<div class="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-center justify-center">
+<span class="font-bold text-white text-base tracking-wider">DUNS® <span class="text-xs text-zinc-400 font-normal">Registered</span></span>
+</div>
+<div class="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-center justify-center">
+<span class="font-bold text-white text-base tracking-wider">Clutch <span class="text-[#00FC43]">★★★★★</span></span>
+</div>
+<div class="p-4 rounded-xl border border-white/10 bg-white/[0.02] flex items-center justify-center">
+<span class="font-bold text-white text-base tracking-wider">Cloudflare <span class="text-xs text-[#00FC43]">Verified</span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: CredibilityCertificationsBar -->
+<!-- BEGIN: GlobalOfficeHubs -->
+
+<!-- END: GlobalOfficeHubs -->
+<!-- BEGIN: MainFooter -->
+<footer class="relative bg-[#040805] text-zinc-300 overflow-hidden pt-28 pb-12 border-t border-white/5" data-purpose="site-footer" style="background: radial-gradient(130% 85% at 50% 100%, rgba(0, 252, 67, 0.26) 0%, rgba(0, 252, 67, 0.08) 45%, rgba(4, 8, 5, 0.98) 85%);">
+  <!-- Massive Watermark Wordmark / Logo matching reference style -->
+  <div class="absolute top-10 inset-x-0 flex items-center justify-center pointer-events-none select-none overflow-hidden z-0 opacity-15">
+    <div class="flex items-center gap-6 whitespace-nowrap px-4">
+      <div class="w-24 h-24 sm:w-36 sm:h-36 rounded-full border-[8px] sm:border-[12px] border-white flex items-center justify-center font-black text-white">
+        <span class="text-4xl sm:text-6xl font-black tracking-tighter">T</span>
+      </div>
+      <span class="text-7xl sm:text-9xl md:text-[140px] font-black tracking-tight text-white uppercase">TOTO</span>
+    </div>
+  </div>
+
+  <!-- Office Cards Container -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+      <!-- USA Office Card -->
+      <div class="p-8 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-[0_10px_35px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,252,67,0.2)] group">
+        <div class="w-9 h-6 mb-5 flex items-center justify-center overflow-hidden rounded shadow-sm text-2xl">
+          🇺🇸
+        </div>
+        <h3 class="text-white font-semibold text-lg tracking-wide mb-3">USA</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed max-w-[220px] mb-4 font-light">
+          STE 60005, 30 N Gould st,<br>Sheridan, WY 82801
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-xs text-zinc-300 hover:text-[#00FC43] transition-colors mb-1">consult@totodevelopment.com</a>
+        <span class="text-xs text-zinc-400">+1 (307) 400-1899</span>
+      </div>
+
+      <!-- Dubai Office Card -->
+      <div class="p-8 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-[0_10px_35px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,252,67,0.2)] group">
+        <div class="w-9 h-6 mb-5 flex items-center justify-center overflow-hidden rounded shadow-sm text-2xl">
+          🇦🇪
+        </div>
+        <h3 class="text-white font-semibold text-lg tracking-wide mb-3">Dubai</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed max-w-[240px] mb-4 font-light">
+          Dubai Food District, Shop No. 40, Building 01, Al Aweer, Ras Al Khor, Dubai, UAE
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-xs text-zinc-300 hover:text-[#00FC43] transition-colors mb-1">consult@totodevelopment.com</a>
+        <span class="text-xs text-zinc-400">+971 55 614 4097</span>
+      </div>
+
+      <!-- Dhaka Office Card -->
+      <div class="p-8 rounded-2xl bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-[#00FC43]/40 transition-all duration-300 flex flex-col items-center text-center shadow-[0_10px_35px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(0,252,67,0.2)] group">
+        <div class="w-9 h-6 mb-5 flex items-center justify-center overflow-hidden rounded shadow-sm text-2xl">
+          🇧🇩
+        </div>
+        <h3 class="text-white font-semibold text-lg tracking-wide mb-3">Dhaka</h3>
+        <p class="text-xs text-zinc-400 leading-relaxed max-w-[240px] mb-4 font-light">
+          Ventura Iconia, Level 3, House 37, Road 11, Block H, Banani C/A, Dhaka, Bangladesh
+        </p>
+        <a href="mailto:consult@totodevelopment.com" class="text-xs text-zinc-300 hover:text-[#00FC43] transition-colors mb-1">consult@totodevelopment.com</a>
+        <span class="text-xs text-zinc-400">+880 16118 14937</span>
+      </div>
+    </div>
+
+    <!-- Fine Divider -->
+    <div class="w-full h-px bg-white/10 mb-8"></div>
+
+    <!-- Bottom Copyright & Circular Social Media Icons -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
+      <div class="">
+        © 2022–2026 TOTO Development LLC, All Rights Reserved.
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Facebook -->
+        <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:text-[#00FC43] hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 hover:shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:text-[#00FC43] hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 hover:shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:text-[#00FC43] hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 hover:shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+        </a>
+        <!-- X Twitter -->
+        <a href="#" aria-label="X Twitter" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:text-[#00FC43] hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 hover:shadow-[0_0_15px_rgba(0,252,67,0.3)] transition-all">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END: MainFooter -->
+
+
+
+
+
+
+
+
+</body></html>
