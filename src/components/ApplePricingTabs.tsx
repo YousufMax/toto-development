@@ -15,7 +15,7 @@ interface ApplePricingTabsProps {
 const TABS = [
   {
     id: 'combo' as const,
-    label: 'Combos',
+    label: 'Design & Video',
     fullLabel: 'Design & Video Combos',
     price: '৳৯,৯৯৯+',
     badge: 'Best Value',
@@ -26,8 +26,8 @@ const TABS = [
   },
   {
     id: 'graphic-design' as const,
-    label: 'Design',
-    fullLabel: 'Creative Design',
+    label: 'Creative Design',
+    fullLabel: 'Creative Graphic Design',
     price: '৳২,০৯৯+',
     badge: 'Popular',
     icon: Palette,
@@ -37,8 +37,8 @@ const TABS = [
   },
   {
     id: 'business-ads' as const,
-    label: 'Ads',
-    fullLabel: 'Commercial Ads',
+    label: 'Commercial Ads',
+    fullLabel: 'Commercial Video Ads',
     price: '৳৬,০০০+',
     badge: '20% OFF',
     icon: Film,
@@ -52,12 +52,12 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
   const currentTab = TABS.find((t) => t.id === activeTab) || TABS[0];
 
   return (
-    <div className="max-w-3xl mx-auto mb-10 sm:mb-14 px-2 w-full">
+    <div className="max-w-4xl mx-auto mb-10 sm:mb-14 px-2 w-full">
       {/* ========================================================================= */}
       {/* 01. APPLE VISIONOS FLOATING SEGMENTED CAPSULE                             */}
       {/* ========================================================================= */}
       <div className="relative p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-[#060a08]/90 border border-white/12 shadow-[0_20px_60px_rgba(0,0,0,0.92),inset_0_1px_1px_rgba(255,255,255,0.12)] backdrop-blur-2xl w-full">
-        <div className="grid grid-cols-3 gap-1 relative w-full">
+        <div className="grid grid-cols-3 gap-1 sm:gap-2 relative w-full">
           {TABS.map((tab) => {
             const Icon = tab.icon;
             const isActive = activeTab === tab.id;
@@ -67,7 +67,7 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
                 key={tab.id}
                 type="button"
                 onClick={() => onChange(tab.id)}
-                className="relative py-2 sm:py-3 px-1 sm:px-4 rounded-xl sm:rounded-full flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2.5 cursor-pointer text-center select-none transition-all duration-200 outline-none group active:scale-[0.98] min-w-0"
+                className="relative py-2 sm:py-3 px-1.5 sm:px-3 md:px-4 rounded-xl sm:rounded-full flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 cursor-pointer text-center select-none transition-all duration-200 outline-none group active:scale-[0.98] min-w-0"
               >
                 {/* Smooth Sliding Active Thumb (Apple Liquid Tab Spring Physics) */}
                 {isActive && (
@@ -87,10 +87,10 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
                 )}
 
                 {/* Tab Icon and Label */}
-                <div className="relative z-10 flex items-center justify-center gap-1 sm:gap-2 min-w-0">
+                <div className="relative z-10 flex items-center justify-center gap-1 sm:gap-1.5 min-w-0">
                   <div
                     className={clsx(
-                      'w-5 h-5 sm:w-7 sm:h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-105',
+                      'w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-105',
                       isActive
                         ? 'bg-[#00FC43]/20 text-[#00FC43] border border-[#00FC43]/50 shadow-[0_0_12px_rgba(0,252,67,0.4)]'
                         : 'bg-white/5 text-neutral-400 border border-white/5 group-hover:text-white group-hover:bg-white/10'
@@ -101,20 +101,19 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
 
                   <span
                     className={clsx(
-                      'text-xs sm:text-xs md:text-sm font-bold tracking-tight transition-colors duration-200 whitespace-nowrap',
+                      'text-[11px] sm:text-xs md:text-sm font-bold tracking-tight transition-colors duration-200 truncate',
                       isActive ? 'text-white' : 'text-neutral-400 group-hover:text-neutral-200'
                     )}
                   >
-                    <span className="sm:hidden">{tab.label}</span>
-                    <span className="hidden sm:inline md:hidden">{tab.label}</span>
-                    <span className="hidden md:inline">{tab.fullLabel}</span>
+                    <span className="md:hidden">{tab.label}</span>
+                    <span className="hidden md:inline">{tab.label}</span>
                   </span>
                 </div>
 
                 {/* Apple Micro-Price Capsule */}
                 <span
                   className={clsx(
-                    'relative z-10 text-[9px] sm:text-[11px] font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full transition-all duration-200 whitespace-nowrap shrink-0',
+                    'relative z-10 text-[9px] sm:text-[10px] md:text-[11px] font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full transition-all duration-200 whitespace-nowrap shrink-0 ml-0.5 sm:ml-1',
                     isActive
                       ? 'bg-[#00FC43] text-[#041608] shadow-[0_0_12px_rgba(0,252,67,0.5)]'
                       : 'bg-white/5 text-neutral-400 group-hover:bg-white/10 group-hover:text-white'

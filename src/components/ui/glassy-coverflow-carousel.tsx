@@ -111,11 +111,23 @@ export default function GlassyCarousel({ items, initialIndex = 0, layout = "webs
     return () => media.removeEventListener("change", update);
   }, []);
   useEffect(() => {
-    if (!stage.current) return;
-    const measure = () => setStageSize({ width: stage.current!.clientWidth, height: stage.current!.clientHeight });
+    const el = stage.current;
+    if (!el) return;
+    const measure = () => {
+      if (stage.current) {
+        setStageSize({ width: stage.current.clientWidth, height: stage.current.clientHeight });
+      }
+    };
     measure();
-    const observer = new ResizeObserver(measure);
-    observer.observe(stage.current);
+    const observer = new ResizeObserver((entries) => {
+      if (entries && entries[0]) {
+        const { width, height } = entries[0].contentRect;
+        setStageSize({ width, height });
+      } else if (stage.current) {
+        measure();
+      }
+    });
+    observer.observe(el);
     return () => observer.disconnect();
   }, [items.length > 0]);
   useEffect(() => {
