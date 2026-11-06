@@ -773,7 +773,11 @@ export default function HomePage() {
                 ? GRAPHIC_DESIGN_PLANS
                 : BUSINESS_AD_PLANS
               ).map((plan) => (
-                <PricingCard key={plan.id} plan={plan} />
+                <PricingCard
+                  key={plan.id}
+                  plan={plan}
+                  onOpenPurchaseModal={(pkg) => setActivePurchasePackage(pkg)}
+                />
               ))}
             </div>
           </div>
