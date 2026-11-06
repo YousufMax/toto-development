@@ -6,7 +6,8 @@ export const AtmosphericBackground: React.FC = () => {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden select-none bg-[#030504]"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden select-none bg-[#030504] transform-gpu will-change-transform"
+      style={{ contain: 'paint layout' }}
     >
       {/* ========================================================================= */}
       {/* 01. FULL-VIEWPORT MULTI-TONE COSMIC MESH AURORA GRADIENT OVERLAY          */}

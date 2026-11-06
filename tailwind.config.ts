@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['var(--font-playfair)', 'var(--font-cormorant)', '"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['var(--font-sans)', 'var(--font-inter)', '"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: "rgba(255, 255, 255, 0.12)",
@@ -66,8 +66,8 @@ const config: Config = {
           "50%": { transform: "translateY(-14px) scale(1.02)" },
         },
         pulseGlow: {
-          "0%, 100%": { opacity: "0.6", filter: "drop-shadow(0 0 15px rgba(0, 252, 67, 0.35))" },
-          "50%": { opacity: "0.95", filter: "drop-shadow(0 0 35px rgba(0, 252, 67, 0.75))" },
+          "0%, 100%": { opacity: "0.6", transform: "scale(1)" },
+          "50%": { opacity: "0.95", transform: "scale(1.03)" },
         },
         radarPulse: {
           "0%": { transform: "scale(0.95)", opacity: "0.8" },

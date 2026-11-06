@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { clsx } from 'clsx';
 import {
   ArrowRight,
@@ -21,7 +22,6 @@ import {
   Palette,
   Film,
 } from 'lucide-react';
-import { gsap, ScrollTrigger } from '@/lib/gsap';
 import {
   GLOBAL_METRICS,
   SERVICES_LIST,
@@ -44,8 +44,17 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { ProjectCard } from '@/components/ProjectCard';
 import { PricingCard } from '@/components/PricingCard';
 import { FAQAccordion } from '@/components/FAQAccordion';
-import { ContactModal } from '@/components/ContactModal';
-import { PackagePurchaseModal, PurchasePackageData } from '@/components/PackagePurchaseModal';
+import type { PurchasePackageData } from '@/components/PackagePurchaseModal';
+
+const ContactModal = dynamic(
+  () => import('@/components/ContactModal').then((m) => m.ContactModal),
+  { ssr: false }
+);
+
+const PackagePurchaseModal = dynamic(
+  () => import('@/components/PackagePurchaseModal').then((m) => m.PackagePurchaseModal),
+  { ssr: false }
+);
 import { parseBengaliPrice } from '@/lib/utils';
 import { HeroEarthGlobe } from '@/components/HeroEarthGlobe';
 import { BrandMarquee } from '@/components/BrandMarquee';

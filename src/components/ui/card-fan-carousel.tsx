@@ -214,19 +214,24 @@ export function CardFanCarousel({ cards, className }: CardFanCarouselProps) {
               visibility = "hidden";
             }
 
+            const webpUrl = card.imgUrl.replace(/\.(jpe?g|png)$/i, '.webp');
             const cardInner = (
               <div className="relative w-full h-full overflow-hidden group/card select-none">
-                <img
-                  src={card.imgUrl}
-                  loading={isVisible ? "eager" : "lazy"}
-                  alt={card.alt || card.title || `Brand Card ${index}`}
-                  className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-500 group-hover/card:scale-105"
-                  onError={(e) => {
-                    if (card.cdnUrl && e.currentTarget.src !== card.cdnUrl) {
-                      e.currentTarget.src = card.cdnUrl;
-                    }
-                  }}
-                />
+                <picture className="absolute inset-0 w-full h-full">
+                  <source srcSet={webpUrl} type="image/webp" />
+                  <img
+                    src={card.imgUrl}
+                    loading={isVisible ? "eager" : "lazy"}
+                    decoding="async"
+                    alt={card.alt || card.title || `Brand Card ${index}`}
+                    className="absolute inset-0 w-full h-full object-cover z-10 transition-transform duration-500 group-hover/card:scale-105"
+                    onError={(e) => {
+                      if (card.cdnUrl && e.currentTarget.src !== card.cdnUrl) {
+                        e.currentTarget.src = card.cdnUrl;
+                      }
+                    }}
+                  />
+                </picture>
                 {/* Ambient vignette */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent z-20 pointer-events-none" />
 

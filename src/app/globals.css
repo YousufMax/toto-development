@@ -20,7 +20,7 @@
   body {
     background-color: #050705;
     color: #dae6d3;
-    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: var(--font-sans), 'Plus Jakarta Sans', var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     position: relative;
     selection-background-color: #00FC43;
@@ -74,7 +74,7 @@
 
 /* Luxury Editorial Serif Typography */
 .editorial-serif {
-  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  font-family: var(--font-playfair), 'Playfair Display', var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
   letter-spacing: -0.015em;
 }
 

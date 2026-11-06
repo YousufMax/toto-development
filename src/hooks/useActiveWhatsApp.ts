@@ -33,10 +33,16 @@ const DEFAULT_STATE: ActiveWhatsAppState = {
     'https://wa.me/8801800942868?text=Hi%20TOTO%20Development%2C%20I%20would%20like%20to%20consult%20on%20your%20agency%20services%20%26%20packages.',
 };
 
-export function useActiveWhatsApp() {
-  const [waState, setWaState] = useState<ActiveWhatsAppState>(DEFAULT_STATE);
+let sharedState: ActiveWhatsAppState = DEFAULT_STATE;
+let hasInitialized = false;
+let pendingFetchPromise: Promise<ActiveWhatsAppState> | null = null;
+const listeners = new Set<(state: ActiveWhatsAppState) => void>();
+let globalIntervalStarted = false;
 
-  const fetchActiveWhatsApp = useCallback(async () => {
+async function executeSharedFetch(): Promise<ActiveWhatsAppState> {
+  if (pendingFetchPromise) return pendingFetchPromise;
+
+  pendingFetchPromise = (async () => {
     try {
       const res = await fetch('/api/whatsapp/active', { cache: 'no-store' });
       if (res.ok) {
@@ -45,7 +51,7 @@ export function useActiveWhatsApp() {
         const message = data.prefilledMessage || DEFAULT_STATE.prefilledMessage;
         const url = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(message)}`;
 
-        setWaState({
+        sharedState = {
           agentId: data.agentId,
           agentName: data.agentName || 'TOTO Senior Consultant',
           phoneNumber: data.phoneNumber || '+8801800942868',
@@ -54,20 +60,49 @@ export function useActiveWhatsApp() {
           isOverride: !!data.isOverride,
           isLoading: false,
           whatsappUrl: url,
-        });
+        };
+        hasInitialized = true;
+        listeners.forEach((fn) => fn(sharedState));
+        return sharedState;
       }
     } catch (err) {
       console.warn('Could not load dynamic WhatsApp number, using system default.', err);
-      setWaState((prev) => ({ ...prev, isLoading: false }));
+      sharedState = { ...sharedState, isLoading: false };
+      hasInitialized = true;
+      listeners.forEach((fn) => fn(sharedState));
+    } finally {
+      pendingFetchPromise = null;
     }
-  }, []);
+    return sharedState;
+  })();
+
+  return pendingFetchPromise;
+}
+
+function startGlobalPolling() {
+  if (globalIntervalStarted || typeof window === 'undefined') return;
+  globalIntervalStarted = true;
+  setInterval(executeSharedFetch, 5 * 60 * 1000);
+}
+
+export function useActiveWhatsApp() {
+  const [waState, setWaState] = useState<ActiveWhatsAppState>(() => sharedState);
 
   useEffect(() => {
-    fetchActiveWhatsApp();
-    // Poll every 5 minutes to stay aligned with shift rotations
-    const interval = setInterval(fetchActiveWhatsApp, 5 * 60 * 1000);
-    return () => clearInterval(interval);
-  }, [fetchActiveWhatsApp]);
+    listeners.add(setWaState);
+
+    if (!hasInitialized && !pendingFetchPromise) {
+      executeSharedFetch();
+    } else if (hasInitialized && waState.isLoading && !sharedState.isLoading) {
+      setWaState(sharedState);
+    }
+
+    startGlobalPolling();
+
+    return () => {
+      listeners.delete(setWaState);
+    };
+  }, [waState.isLoading]);
 
   const openWhatsApp = useCallback(
     async (source: string = 'website_button', extraMeta?: ExtraTrackMeta | string) => {
@@ -178,6 +213,6 @@ export function useActiveWhatsApp() {
     ...waState,
     openWhatsApp,
     getDynamicWhatsAppUrl,
-    refreshWhatsApp: fetchActiveWhatsApp,
+    refreshWhatsApp: executeSharedFetch,
   };
 }

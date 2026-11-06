@@ -180,6 +180,8 @@ export const CircularTestimonials = ({
               key={`${testimonial.src}-${index}`}
               src={testimonial.src}
               alt={testimonial.name}
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
               className="testimonial-image absolute inset-0 w-full h-full object-cover object-top rounded-3xl"
               data-index={index}
               style={getImageStyle(index)}
