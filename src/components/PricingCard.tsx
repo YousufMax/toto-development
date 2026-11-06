@@ -84,10 +84,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({
         className={clsx(
           'group relative rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 flex flex-col justify-between transition-all duration-500 backdrop-blur-2xl',
           isVoltGold
-            ? 'border-2 border-[#00FC43] shadow-[0_20px_50px_rgba(0,0,0,0.96),0_0_40px_rgba(0,252,67,0.35),0_0_20px_rgba(245,158,11,0.20),inset_1.5px_1.5px_2px_rgba(255,255,255,0.6),inset_0_0_30px_rgba(0,252,67,0.18)] lg:-translate-y-2 lg:scale-[1.02] z-20'
+            ? 'border-2 border-[#00FC43] shadow-[0_20px_50px_rgba(0,0,0,0.96),0_0_35px_rgba(0,252,67,0.30),0_0_15px_rgba(245,158,11,0.15),inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_0_25px_rgba(0,252,67,0.12)] lg:-translate-y-2 lg:scale-[1.02] z-20'
             : isRoyalViolet
-            ? 'border border-violet-500/35 hover:border-violet-400/80 shadow-[0_15px_45px_rgba(0,0,0,0.94),0_0_35px_rgba(139,92,246,0.22),inset_1.5px_1.5px_2px_rgba(255,255,255,0.45),inset_0_0_25px_rgba(99,102,241,0.18)] hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(0,0,0,0.98),0_0_40px_rgba(139,92,246,0.32)] z-10'
-            : 'border border-emerald-500/25 hover:border-emerald-400/70 shadow-[0_15px_45px_rgba(0,0,0,0.92),inset_1.5px_1.5px_2px_rgba(255,255,255,0.4),inset_0_0_20px_rgba(0,252,67,0.15),inset_-1px_-1px_15px_rgba(0,210,255,0.06)] hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(0,0,0,0.98),0_0_35px_rgba(0,252,67,0.28)] z-10',
+            ? 'border border-violet-500/30 hover:border-violet-400/60 shadow-[0_15px_45px_rgba(0,0,0,0.94),0_0_25px_rgba(139,92,246,0.16),inset_0_1px_1px_rgba(255,255,255,0.25),inset_0_0_20px_rgba(99,102,241,0.12)] hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(0,0,0,0.98),0_0_35px_rgba(139,92,246,0.25)] z-10'
+            : 'border border-emerald-500/20 hover:border-emerald-400/50 shadow-[0_15px_45px_rgba(0,0,0,0.92),inset_0_1px_1px_rgba(255,255,255,0.2),inset_0_0_18px_rgba(16,185,129,0.10)] hover:-translate-y-1 hover:shadow-[0_25px_55px_rgba(0,0,0,0.98),0_0_30px_rgba(16,185,129,0.20)] z-10',
           className
         )}
       >
@@ -97,11 +97,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({
             className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none -z-10"
             style={{
               background:
-                'radial-gradient(circle at 10% 8%, rgba(0, 252, 67, 0.45) 0%, rgba(0, 252, 67, 0.15) 30%, transparent 58%), radial-gradient(circle at 90% 12%, rgba(255, 255, 255, 0.30) 0%, transparent 45%), radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.22) 0%, transparent 55%), linear-gradient(145deg, rgba(16, 28, 20, 0.92) 0%, rgba(8, 15, 11, 0.96) 50%, rgba(3, 7, 5, 0.99) 100%)',
+                'radial-gradient(circle at 10% 8%, rgba(0, 252, 67, 0.40) 0%, rgba(0, 252, 67, 0.12) 30%, transparent 60%), radial-gradient(circle at 90% 12%, rgba(255, 255, 255, 0.25) 0%, transparent 45%), radial-gradient(circle at 90% 90%, rgba(245, 158, 11, 0.16) 0%, transparent 55%), linear-gradient(145deg, rgba(14, 26, 18, 0.95) 0%, rgba(7, 14, 10, 0.98) 50%, rgba(3, 7, 5, 0.99) 100%)',
             }}
           >
-            <div className="absolute -top-24 -left-16 w-88 h-88 rounded-full bg-[#00FC43]/35 blur-[95px]" />
-            <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-amber-400/22 blur-[90px]" />
+            <div className="absolute -top-24 -left-16 w-88 h-88 rounded-full bg-[#00FC43]/30 blur-[95px]" />
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-amber-400/18 blur-[90px]" />
           </div>
         )}
 
@@ -110,11 +110,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({
             className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none -z-10"
             style={{
               background:
-                'radial-gradient(circle at 10% 8%, rgba(139, 92, 246, 0.42) 0%, rgba(99, 102, 241, 0.15) 30%, transparent 58%), radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.26) 0%, transparent 45%), radial-gradient(circle at 90% 92%, rgba(244, 63, 94, 0.18) 0%, transparent 55%), linear-gradient(145deg, rgba(18, 14, 32, 0.92) 0%, rgba(10, 8, 20, 0.96) 50%, rgba(4, 3, 10, 0.99) 100%)',
+                'radial-gradient(circle at 10% 8%, rgba(139, 92, 246, 0.35) 0%, rgba(99, 102, 241, 0.14) 32%, transparent 60%), radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.22) 0%, transparent 45%), radial-gradient(circle at 90% 92%, rgba(99, 102, 241, 0.14) 0%, transparent 55%), linear-gradient(145deg, rgba(16, 14, 28, 0.95) 0%, rgba(9, 8, 18, 0.98) 50%, rgba(4, 3, 10, 0.99) 100%)',
             }}
           >
-            <div className="absolute -top-24 -left-16 w-88 h-88 rounded-full bg-violet-500/30 blur-[95px] group-hover:bg-violet-500/40 transition-all duration-500" />
-            <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-rose-500/18 blur-[90px]" />
+            <div className="absolute -top-24 -left-16 w-88 h-88 rounded-full bg-violet-500/25 blur-[95px] group-hover:bg-violet-500/35 transition-all duration-500" />
+            <div className="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-indigo-600/15 blur-[90px]" />
           </div>
         )}
 
@@ -123,11 +123,11 @@ export const PricingCard: React.FC<PricingCardProps> = ({
             className="absolute inset-0 rounded-2xl sm:rounded-3xl overflow-hidden pointer-events-none -z-10"
             style={{
               background:
-                'radial-gradient(circle at 10% 8%, rgba(0, 252, 67, 0.35) 0%, rgba(16, 185, 129, 0.12) 28%, transparent 58%), radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.22) 0%, transparent 45%), radial-gradient(circle at 90% 92%, rgba(6, 182, 212, 0.15) 0%, transparent 55%), linear-gradient(145deg, rgba(10, 24, 16, 0.90) 0%, rgba(6, 14, 10, 0.94) 50%, rgba(2, 6, 4, 0.98) 100%)',
+                'radial-gradient(circle at 10% 8%, rgba(16, 185, 129, 0.28) 0%, rgba(5, 150, 105, 0.10) 30%, transparent 60%), radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.18) 0%, transparent 45%), radial-gradient(circle at 90% 92%, rgba(16, 185, 129, 0.12) 0%, transparent 55%), linear-gradient(145deg, rgba(8, 20, 14, 0.95) 0%, rgba(5, 12, 8, 0.98) 50%, rgba(2, 6, 4, 0.99) 100%)',
             }}
           >
-            <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-emerald-400/25 blur-[85px] group-hover:bg-[#00FC43]/35 transition-all duration-500" />
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-cyan-400/15 blur-[85px]" />
+            <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-emerald-400/20 blur-[85px] group-hover:bg-[#00FC43]/25 transition-all duration-500" />
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 rounded-full bg-emerald-600/12 blur-[85px]" />
           </div>
         )}
 
@@ -196,10 +196,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({
                   className={clsx(
                     'text-[10px] sm:text-[11px] font-bold font-mono px-2 sm:px-2.5 py-0.5 rounded-full border shadow-sm',
                     isVoltGold
-                      ? 'text-amber-300 bg-amber-500/15 border-amber-400/35'
+                      ? 'text-amber-300 bg-amber-500/15 border-amber-400/35 shadow-[0_0_10px_rgba(245,158,11,0.2)]'
                       : isRoyalViolet
-                      ? 'text-pink-300 bg-pink-500/15 border-pink-400/35'
-                      : 'text-emerald-300 bg-emerald-500/15 border-emerald-500/35'
+                      ? 'text-violet-200 bg-violet-500/15 border-violet-400/30 shadow-[0_0_10px_rgba(139,92,246,0.2)]'
+                      : 'text-emerald-300 bg-emerald-500/15 border-emerald-500/35 shadow-[0_0_10px_rgba(16,185,129,0.15)]'
                   )}
                 >
                   {plan.savingsText}
@@ -309,10 +309,10 @@ export const PricingCard: React.FC<PricingCardProps> = ({
               className={clsx(
                 'w-full flex items-center justify-center gap-2 py-3 sm:py-3.5 px-5 sm:px-6 rounded-xl sm:rounded-full font-bold text-xs sm:text-sm transition-all duration-300 active:scale-95 select-none group/btn cursor-pointer min-h-[44px]',
                 isVoltGold
-                  ? 'brand-glow-button text-[#041608] font-extrabold shadow-[0_0_35px_rgba(0,252,67,0.6)] hover:shadow-[0_0_50px_rgba(0,252,67,0.85)]'
+                  ? 'brand-glow-button text-[#041608] font-extrabold shadow-[0_0_30px_rgba(0,252,67,0.55)] hover:shadow-[0_0_45px_rgba(0,252,67,0.8)]'
                   : isRoyalViolet
-                  ? 'bg-gradient-to-r from-violet-600 via-indigo-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white font-bold shadow-[0_0_25px_rgba(139,92,246,0.4)]'
-                  : 'bg-white text-black hover:bg-neutral-200'
+                  ? 'bg-gradient-to-r from-violet-600 via-indigo-600 to-violet-700 hover:from-violet-500 hover:to-indigo-500 text-white font-bold shadow-[0_4px_25px_rgba(124,58,237,0.35)] border border-violet-400/30'
+                  : 'bg-white text-[#050705] hover:bg-neutral-100 font-bold shadow-[0_4px_20px_rgba(255,255,255,0.12)] border border-white/20'
               )}
             >
               <span>{plan.ctaText || 'Get This Package'}</span>
