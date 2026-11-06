@@ -194,12 +194,12 @@ export const TECH_BENCHMARK_METRICS: MetricItem[] = [
 
 export const SERVICES_PAGE_METRICS: MetricItem[] = [
   {
-    value: '80+',
-    numericValue: 80,
+    value: '500+',
+    numericValue: 500,
     suffix: '+',
-    label: 'Digital Solutions',
-    sublabel: 'Successfully shipped across software, web & creative',
-    highlightTag: 'Proven Delivery',
+    label: 'Production Deliveries',
+    sublabel: 'Software, Web & Creative Pods',
+    highlightTag: 'Track Record',
   },
   {
     value: '5.2×',

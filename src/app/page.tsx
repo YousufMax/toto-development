@@ -318,7 +318,7 @@ export default function HomePage() {
             <span className="text-neutral-700 hidden xs:inline">·</span>
             <div className="flex items-center gap-1">
               <CheckCircle2 className="w-3.5 h-3.5 text-[#00FC43]" />
-              <span>80+ Projects Shipped</span>
+              <span>500+ Production Deliveries</span>
             </div>
             <span className="text-neutral-700 hidden sm:inline">·</span>
             <div className="hidden sm:flex items-center gap-1">
@@ -336,7 +336,7 @@ export default function HomePage() {
             <span className="text-neutral-700">|</span>
             <div className="flex items-center gap-1 text-neutral-300">
               <span className="text-neutral-400">Track Record:</span>
-              <span className="text-[#00FC43] font-mono font-bold">80+ Shipped</span>
+              <span className="text-[#00FC43] font-mono font-bold">500+ Shipped</span>
             </div>
             <span className="text-neutral-700 hidden xs:inline">|</span>
             <div className="hidden xs:flex items-center gap-1 text-neutral-300">

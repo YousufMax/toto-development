@@ -181,11 +181,11 @@ export default function AboutPage() {
       <section className="relative bg-[#080d09] border-y border-[#00FC43]/20 py-16 px-4 mb-24">
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/10 text-center">
           <StatsCounter
-            value={80}
+            value={500}
             suffix="+"
-            label="Projects Delivered"
-            sublabel="Software, Web & Creative"
-            tag="Proven Delivery"
+            label="Production Deliveries"
+            sublabel="Software, Web & Creative Pods"
+            tag="Track Record"
           />
           <StatsCounter
             value={5.2}

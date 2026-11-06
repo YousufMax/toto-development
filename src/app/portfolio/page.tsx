@@ -187,10 +187,10 @@ export default function PortfolioPage() {
 
         <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-white/10 text-center">
           <StatsCounter
-            value={80}
+            value={500}
             suffix="+"
-            label="Production Deployments"
-            sublabel="Software, Web & Creative Retainers"
+            label="Production Deliveries"
+            sublabel="Software, Web & Creative Pods"
             tag="Track Record"
           />
           <StatsCounter
