@@ -208,7 +208,7 @@ export default function HomePage() {
           regularPrice: numOrig,
           discountedPrice: numPrice,
           currencySymbol: '৳',
-          customPriceLabel: foundPlan.period || 'মাস',
+          customPriceLabel: foundPlan.period || 'month',
           hasDiscount: !!foundPlan.discountBadge,
           savingsAmount: numOrig > numPrice ? numOrig - numPrice : undefined,
           features: foundPlan.features?.map((f) => f.name),
@@ -754,7 +754,7 @@ export default function HomePage() {
 
             {/* Bundle Name Pill Bar */}
             <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-5 px-5 py-2 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.5)]">
-              <span className="text-sm sm:text-base font-bold text-white tracking-wide">স্বপ্ন থেকে সাফল্যে</span>
+              <span className="text-sm sm:text-base font-bold text-white tracking-wide">From Vision to Success</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]" />
               <span className="text-xs sm:text-sm font-mono text-[#00FC43] font-semibold">Creative Design & Video Packages</span>
             </div>

@@ -57,7 +57,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     regularPrice: numericOriginal || numericPrice,
     discountedPrice: numericPrice,
     currencySymbol: '৳',
-    customPriceLabel: plan.period || 'মাস',
+    customPriceLabel: plan.period || 'month',
     hasDiscount: !!plan.discountBadge,
     savingsAmount: numericOriginal > numericPrice ? numericOriginal - numericPrice : undefined,
     features: plan.features?.map((f) => f.name),
