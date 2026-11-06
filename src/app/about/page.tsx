@@ -168,7 +168,7 @@ export default function AboutPage() {
 
           <Link
             href="/services/"
-            className="px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-white/5 border border-white/15 hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 transition-all backdrop-blur-md"
+            className="px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-white/5 border border-white/15 hover:border-[#00FC43]/50 hover:bg-[#00FC43]/10 transition-colors duration-200 backdrop-blur-md"
           >
             View our capabilities →
           </Link>
@@ -423,8 +423,8 @@ export default function AboutPage() {
 
             <div className="text-left sm:text-right">
               <span className="text-[11px] font-mono text-neutral-400 block">Visiting & Support Hours:</span>
-              <span className="text-sm font-semibold text-white block mt-0.5">09:00 AM – 08:00 PM</span>
-              <span className="text-xs text-neutral-400 font-mono block">Saturday – Thursday</span>
+              <span className="text-sm font-semibold text-white block mt-0.5">09:00 AM to 08:00 PM</span>
+              <span className="text-xs text-neutral-400 font-mono block">Saturday to Thursday</span>
             </div>
           </div>
 

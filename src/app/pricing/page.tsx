@@ -860,7 +860,7 @@ export default function PricingPage() {
                           Starting Investment: {selectedSoftwareSolution.startingPrice}
                         </span>
                         <span className="text-xs font-mono text-neutral-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
-                          Estimated Delivery: 20–25 Business Days
+                          Estimated Delivery: 20 to 25 Business Days
                         </span>
                         <span className="text-xs font-mono text-neutral-300 bg-white/5 px-3 py-1 rounded-full border border-white/10">
                           45 Days Bug Support
@@ -1112,7 +1112,7 @@ export default function PricingPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Upgrade Path */}
           <div className="p-8 rounded-3xl bg-[#08100b] border border-white/10">
-            <Badge variant="subtle">SEAMLESS UPGRADE</Badge>
+            <Badge variant="subtle">MODULAR ARCHITECTURE</Badge>
             <h3 className="editorial-serif text-2xl sm:text-3xl font-bold text-white mt-3">
               Future-Ready <span className="italic text-[#00FC43]">Upgrade Path</span>
             </h3>
@@ -1131,7 +1131,7 @@ export default function PricingPage() {
                 <span className="w-6 h-6 rounded-full bg-[#00FC43]/20 text-[#00FC43] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">2</span>
                 <div>
                   <h4 className="text-sm font-bold text-white">Upgrade Without Data Loss</h4>
-                  <p className="text-xs text-neutral-400 mt-0.5">Preserve all registered accounts, past orders, and product catalogs seamlessly.</p>
+                  <p className="text-xs text-neutral-400 mt-0.5">Preserve all registered accounts, past orders, and product catalogs reliably without friction.</p>
                 </div>
               </div>
               <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5 flex items-start gap-3">

@@ -14,6 +14,7 @@
     background-color: #050705;
     color: #dae6d3;
     color-scheme: dark;
+    overflow-x: clip;
   }
 
   body {
@@ -24,6 +25,28 @@
     position: relative;
     selection-background-color: #00FC43;
     selection-color: #041608;
+    overflow-x: clip;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+
+  /* Universal WCAG AAA Instant Focus-Visible Ring (Hallmark Floor Rule 26a) */
+  :focus-visible {
+    outline: 2px solid #00FC43 !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 12px rgba(0, 252, 67, 0.45) !important;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #00FC43 !important;
+    outline-offset: 2px !important;
   }
 
   ::selection {
@@ -159,7 +182,7 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background-color 0.25s ease;
 }
 
 .tactile-bento-tile:active {
@@ -183,7 +206,7 @@
     inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.38),
     inset 0 0 24px 0 rgba(0, 252, 67, 0.14),
     inset -1px -1px 18px 0 rgba(0, 210, 255, 0.05);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.35s ease;
 }
 
 .glass-card:hover {
@@ -223,7 +246,7 @@
     inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.50),
     inset 0 0 30px 0 rgba(0, 252, 67, 0.22),
     inset -1px -1px 25px 0 rgba(0, 210, 255, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
   overflow: hidden;
 }
 
@@ -248,7 +271,7 @@
     inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.50),
     inset 0 0 30px 0 rgba(0, 252, 67, 0.22),
     inset -1px -1px 25px 0 rgba(0, 210, 255, 0.08);
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
   overflow: hidden;
 }
 
@@ -297,7 +320,7 @@
 .brand-glow-button {
   background: linear-gradient(135deg, #00FC43 0%, #00e63c 50%, #00ba32 100%);
   color: #041608;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, filter 0.2s ease;
   box-shadow: 0 0 25px rgba(0, 252, 67, 0.45);
   position: relative;
   overflow: hidden;
@@ -329,7 +352,7 @@
 .btn-shimmer {
   position: relative;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
 }
 
 .btn-shimmer::after {
@@ -617,4 +640,26 @@
 }
 .admin-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* =========================================================================
+   Reduced Motion Accessibility (Hallmark Floor Rule 27 & WCAG AAA)
+   ========================================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .brand-marquee-track,
+  .animate-marquee,
+  .animate-marquee-vertical,
+  .animate-float-slow,
+  .animate-float-reverse,
+  .animate-pulse {
+    animation: none !important;
+  }
 }

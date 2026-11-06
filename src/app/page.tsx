@@ -226,7 +226,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section
         ref={heroRef}
-        className="relative pt-24 xs:pt-28 sm:pt-36 md:pt-44 pb-14 xs:pb-16 sm:pb-24 md:pb-32 overflow-hidden text-center px-4 z-10 flex flex-col items-center justify-center min-h-[90svh] sm:min-h-[92vh]"
+        className="relative pt-24 xs:pt-28 sm:pt-36 md:pt-44 pb-14 xs:pb-16 sm:pb-24 md:pb-32 overflow-hidden text-center px-4 z-10 flex flex-col items-center justify-center min-h-[90svh] sm:min-h-[92dvh]"
       >
         {/* Professional 3D Cybernetic Planetary Earth Horizon Background */}
         <HeroEarthGlobe />
@@ -256,7 +256,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto flex flex-col items-center relative z-10 w-full">
           {/* Eyebrow Pill */}
           <div className="hero-stagger mb-4 sm:mb-7">
-            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#00FC43]/10 border border-[#00FC43]/35 text-[11px] sm:text-xs font-medium text-[#00FC43] shadow-[0_0_20px_rgba(0,252,67,0.2)] backdrop-blur-md hover:border-[#00FC43]/60 transition-all">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-[#00FC43]/10 border border-[#00FC43]/35 text-[11px] sm:text-xs font-medium text-[#00FC43] shadow-[0_0_20px_rgba(0,252,67,0.2)] backdrop-blur-md hover:border-[#00FC43]/60 transition-colors duration-200">
               <span className="font-semibold tracking-wide text-white">Full-Stack Digital Solutions</span>
               <span className="text-white/30 hidden xs:inline">·</span>
               <span className="text-[#00FC43] font-mono text-[10px] sm:text-[11px] hidden xs:inline">Engineering Tomorrow</span>
@@ -274,7 +274,7 @@ export default function HomePage() {
 
           {/* Subtitle */}
           <p className="hero-stagger text-xs sm:text-base md:text-lg text-neutral-300 max-w-xl mt-3 sm:mt-5 font-normal leading-relaxed text-center font-sans drop-shadow-[0_2px_16px_rgba(0,0,0,0.95)] px-2 sm:px-0">
-            We empower ambitious businesses with custom software, high-speed web platforms, performance marketing, high-ROAS ads, commercial video reels, and brand design systems.
+            Engineering custom software, high-speed web platforms, performance marketing, high-ROAS ads, commercial video reels, and brand design systems for ambitious businesses.
           </p>
 
           {/* Action CTAs (Mobile-First Layout: Prominent primary + 2-col secondary row on mobile) */}
@@ -282,7 +282,7 @@ export default function HomePage() {
             {/* Primary Strategy Button */}
             <button
               onClick={() => openQuote()}
-              className="brand-glow-button w-full sm:w-auto px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-bold inline-flex items-center justify-center gap-2 text-[#041608] transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer shadow-[0_0_30px_rgba(0,252,67,0.6)] border border-[#00FC43]/60 group"
+              className="brand-glow-button w-full sm:w-auto px-7 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-bold inline-flex items-center justify-center gap-2 text-[#041608] transition-transform duration-200 transform hover:scale-105 active:scale-95 cursor-pointer shadow-[0_0_30px_rgba(0,252,67,0.6)] border border-[#00FC43]/60 group"
             >
               <span>Book a strategy call</span>
               <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1" />
@@ -292,7 +292,7 @@ export default function HomePage() {
             <div className="grid grid-cols-2 gap-2 w-full sm:w-auto sm:flex sm:items-center sm:gap-3">
               <Link
                 href="/services/"
-                className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-1.5 text-white bg-white/5 border border-white/15 hover:border-[#00FC43]/60 hover:text-[#00FC43] hover:bg-[#00FC43]/10 transition-all duration-300 backdrop-blur-md group"
+                className="w-full sm:w-auto px-4 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-1.5 text-white bg-white/5 border border-white/15 hover:border-[#00FC43]/60 hover:text-[#00FC43] hover:bg-[#00FC43]/10 transition-colors duration-200 backdrop-blur-md group"
               >
                 <span>Services</span>
                 <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -300,7 +300,7 @@ export default function HomePage() {
 
               <Link
                 href="/portfolio/"
-                className="w-full sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-1.5 text-neutral-300 bg-white/[0.04] border border-white/10 hover:border-[#00FC43]/50 hover:text-white transition-all backdrop-blur-md group"
+                className="w-full sm:w-auto px-4 sm:px-5 py-2.5 sm:py-3 rounded-full text-xs font-semibold inline-flex items-center justify-center gap-1.5 text-neutral-300 bg-white/[0.04] border border-white/10 hover:border-[#00FC43]/50 hover:text-white transition-colors duration-200 backdrop-blur-md group"
               >
                 <Layers className="w-3.5 h-3.5 text-[#00FC43] transition-transform group-hover:scale-110" />
                 <span>Our Work</span>
@@ -883,7 +883,7 @@ export default function HomePage() {
               Frequently Asked <span className="italic text-[#00FC43]">Questions</span>
             </h2>
             <p className="text-neutral-400 text-sm sm:text-base max-w-xl mx-auto mt-4">
-              Everything you need to know about our engineering standards, timelines, and engagement
+              Clear, verified answers on our engineering standards, deployment timelines, and client engagement
               process.
             </p>
           </div>

@@ -387,7 +387,7 @@ module.exports = nextConfig;`}</code>
           </div>
           <Link
             href="/portfolio/"
-            className="text-xs font-mono uppercase tracking-widest text-[#00FC43] hover:underline underline-offset-4 inline-flex items-center gap-1.5"
+            className="text-xs sm:text-sm font-semibold text-[#00FC43] hover:underline underline-offset-4 inline-flex items-center gap-1.5 transition-colors duration-150"
           >
             <span>Explore all case studies</span>
             <ArrowRight className="w-3.5 h-3.5" />
