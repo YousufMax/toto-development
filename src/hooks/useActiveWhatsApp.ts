@@ -85,6 +85,8 @@ function startGlobalPolling() {
   setInterval(executeSharedFetch, 5 * 60 * 1000);
 }
 
+const fetchActiveWhatsApp = executeSharedFetch;
+
 export function useActiveWhatsApp() {
   const [waState, setWaState] = useState<ActiveWhatsAppState>(() => sharedState);
 
@@ -213,6 +215,7 @@ export function useActiveWhatsApp() {
     ...waState,
     openWhatsApp,
     getDynamicWhatsAppUrl,
-    refreshWhatsApp: executeSharedFetch,
+    refreshWhatsApp: fetchActiveWhatsApp,
+    fetchActiveWhatsApp,
   };
 }
