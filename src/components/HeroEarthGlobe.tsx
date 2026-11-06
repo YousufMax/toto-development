@@ -28,12 +28,7 @@ export const HeroEarthGlobe: React.FC<HeroEarthGlobeProps> = ({ className = '' }
         <div className="relative w-full h-full rounded-full overflow-hidden flex items-center justify-center shadow-[0_-20px_50px_rgba(0,252,67,0.4),0_-40px_90px_rgba(2,132,199,0.22),inset_0_25px_60px_rgba(0,252,67,0.4)] border-t-2 border-t-[#00FC43]/70 border-x border-x-[#00FC43]/25 border-b-transparent">
           
           {/* Pure Earth Asset with Screen Blending & Soft Radial Feather */}
-          <div
-            className="w-full h-full flex items-center justify-center"
-            style={{
-              animation: 'spinSlow 240s linear infinite',
-            }}
-          >
+          <div className="w-full h-full flex items-center justify-center animate-spin-globe">
             <Image
               src="/images/earth-globe.png"
               alt="3D Cybernetic Planetary Earth Horizon"

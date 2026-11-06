@@ -98,16 +98,21 @@ export const CircularTestimonials = ({
   }, []);
 
   // Autoplay
-  useEffect(() => {
+  const resetAutoplay = useCallback(() => {
+    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
     if (autoplay && testimonialsLength > 0) {
       autoplayIntervalRef.current = setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % testimonialsLength);
-      }, 5000);
+      }, 4500);
     }
+  }, [autoplay, testimonialsLength]);
+
+  useEffect(() => {
+    resetAutoplay();
     return () => {
       if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
     };
-  }, [autoplay, testimonialsLength]);
+  }, [resetAutoplay]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -123,13 +128,13 @@ export const CircularTestimonials = ({
   // Navigation handlers
   const handleNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % testimonialsLength);
-    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
-  }, [testimonialsLength]);
+    resetAutoplay();
+  }, [testimonialsLength, resetAutoplay]);
 
   const handlePrev = useCallback(() => {
     setActiveIndex((prev) => (prev - 1 + testimonialsLength) % testimonialsLength);
-    if (autoplayIntervalRef.current) clearInterval(autoplayIntervalRef.current);
-  }, [testimonialsLength]);
+    resetAutoplay();
+  }, [testimonialsLength, resetAutoplay]);
 
   if (!validTestimonials || validTestimonials.length === 0) return null;
 

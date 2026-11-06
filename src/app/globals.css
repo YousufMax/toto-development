@@ -98,11 +98,29 @@
 }
 
 .animate-marquee {
-  animation: marquee var(--duration, 40s) linear infinite;
+  display: flex;
+  flex-shrink: 0;
+  will-change: transform;
+  animation: marquee var(--duration, 35s) linear infinite !important;
 }
 
 .animate-marquee-vertical {
-  animation: marquee-vertical var(--duration, 40s) linear infinite;
+  animation: marquee-vertical var(--duration, 40s) linear infinite !important;
+}
+
+/* Continuous 3D Planetary Earth Spin */
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-globe {
+  animation: spinSlow 60s linear infinite !important;
+  will-change: transform;
 }
 
 /* Tailwind v4 to v3 compatibility aliases */
@@ -640,26 +658,4 @@
 }
 .admin-scrollbar::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.25);
-}
-
-/* =========================================================================
-   Reduced Motion Accessibility (Hallmark Floor Rule 27 & WCAG AAA)
-   ========================================================================= */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-  .brand-marquee-track,
-  .animate-marquee,
-  .animate-marquee-vertical,
-  .animate-float-slow,
-  .animate-float-reverse,
-  .animate-pulse {
-    animation: none !important;
-  }
 }
