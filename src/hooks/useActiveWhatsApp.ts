@@ -38,7 +38,7 @@ export function useActiveWhatsApp() {
 
   const fetchActiveWhatsApp = useCallback(async () => {
     try {
-      const res = await fetch('/api/whatsapp/active/', { cache: 'no-store' });
+      const res = await fetch('/api/whatsapp/active', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
         const cleanPhone = (data.phoneNumber || '+8801800942868').replace(/[^\d]/g, '');
