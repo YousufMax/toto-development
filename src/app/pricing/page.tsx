@@ -35,6 +35,7 @@ import {
   Kanban,
   Utensils,
   GraduationCap,
+  Calendar,
 } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { Badge } from '@/components/Badge';
@@ -42,6 +43,7 @@ import { PricingCard } from '@/components/PricingCard';
 import { FAQAccordion } from '@/components/FAQAccordion';
 import { ContactModal } from '@/components/ContactModal';
 import { PackagePurchaseModal, PurchasePackageData } from '@/components/PackagePurchaseModal';
+import { CalendlyModal } from '@/components/CalendlyModal';
 import { AppleSegmentedControl } from '@/components/AppleSegmentedControl';
 import { TiltedGridHero } from '@/components/ui/tilted-grid-hero';
 import { CardFanCarousel } from '@/components/ui/card-fan-carousel';
@@ -186,6 +188,8 @@ export default function PricingPage() {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
   const [selectedPlanForModal, setSelectedPlanForModal] = useState('');
   const [activePurchasePackage, setActivePurchasePackage] = useState<PurchasePackageData | null>(null);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
+  const [calendlyTopic, setCalendlyTopic] = useState('');
 
   const selectedSoftwareSolution =
     SOFTWARE_SOLUTIONS_CATALOGUE.find((s) => s.id === selectedSoftwareSolutionId) ||
@@ -880,12 +884,24 @@ export default function PricingPage() {
 
                       <button
                         type="button"
+                        onClick={() => {
+                          setCalendlyTopic(selectedSoftwareSolution.title);
+                          setIsCalendlyOpen(true);
+                        }}
+                        className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-white/5 hover:bg-indigo-500/15 border border-white/15 hover:border-indigo-400/40 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
+                      >
+                        <Calendar className="w-4 h-4 text-indigo-400" />
+                        <span>Book 30-Min Call</span>
+                      </button>
+
+                      <button
+                        type="button"
                         onClick={() =>
                           openWhatsApp('pricing_software_summary', {
                             customMessage: `Hi TOTO Development, I would like to consult on the "${selectedSoftwareSolution.title}" software solution (${selectedSoftwareSolution.startingPrice}).`,
                           })
                         }
-                        className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/15 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
+                        className="w-full sm:w-auto px-6 py-3.5 rounded-full text-xs font-semibold text-white bg-white/5 hover:bg-[#00FC43]/10 border border-white/15 hover:border-[#00FC43]/40 transition-all inline-flex items-center justify-center gap-2 cursor-pointer"
                       >
                         <FaWhatsapp className="w-4 h-4 text-[#00FC43]" />
                         <span>Discuss on WhatsApp</span>
@@ -1204,6 +1220,13 @@ export default function PricingPage() {
         isOpen={isQuoteModalOpen}
         onClose={() => setIsQuoteModalOpen(false)}
         defaultPlan={selectedPlanForModal}
+      />
+
+      {/* Calendly Consultation Modal */}
+      <CalendlyModal
+        isOpen={isCalendlyOpen}
+        onClose={() => setIsCalendlyOpen(false)}
+        packageName={calendlyTopic}
       />
     </div>
   );
