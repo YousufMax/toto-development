@@ -15,8 +15,9 @@ interface ApplePricingTabsProps {
 const TABS = [
   {
     id: 'combo' as const,
-    label: 'Design & Video',
-    fullLabel: 'Design & Video Combos',
+    mobileLabel: 'Combos',
+    tabletLabel: 'Design & Video',
+    desktopLabel: 'Design & Video Combos',
     price: '৳৯,৯৯৯+',
     badge: 'Best Value',
     icon: Sparkles,
@@ -26,8 +27,9 @@ const TABS = [
   },
   {
     id: 'graphic-design' as const,
-    label: 'Creative Design',
-    fullLabel: 'Creative Graphic Design',
+    mobileLabel: 'Design',
+    tabletLabel: 'Creative Design',
+    desktopLabel: 'Creative Graphic Design',
     price: '৳২,০৯৯+',
     badge: 'Popular',
     icon: Palette,
@@ -37,8 +39,9 @@ const TABS = [
   },
   {
     id: 'business-ads' as const,
-    label: 'Commercial Ads',
-    fullLabel: 'Commercial Video Ads',
+    mobileLabel: 'Ads',
+    tabletLabel: 'Commercial Ads',
+    desktopLabel: 'Commercial Video Ads',
     price: '৳৬,০০০+',
     badge: '20% OFF',
     icon: Film,
@@ -56,7 +59,7 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
       {/* ========================================================================= */}
       {/* 01. APPLE VISIONOS FLOATING SEGMENTED CAPSULE                             */}
       {/* ========================================================================= */}
-      <div className="relative p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-[#060a08]/90 border border-white/12 shadow-[0_20px_60px_rgba(0,0,0,0.92),inset_0_1px_1px_rgba(255,255,255,0.12)] backdrop-blur-2xl w-full">
+      <div className="relative p-1 sm:p-2 rounded-2xl sm:rounded-full bg-[#060a08]/95 border border-white/12 shadow-[0_20px_60px_rgba(0,0,0,0.92),inset_0_1px_1px_rgba(255,255,255,0.12)] backdrop-blur-2xl w-full">
         <div className="grid grid-cols-3 gap-1 sm:gap-2 relative w-full">
           {TABS.map((tab) => {
             const Icon = tab.icon;
@@ -67,7 +70,7 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
                 key={tab.id}
                 type="button"
                 onClick={() => onChange(tab.id)}
-                className="relative py-2 sm:py-3 px-1.5 sm:px-3 md:px-4 rounded-xl sm:rounded-full flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 cursor-pointer text-center select-none transition-all duration-200 outline-none group active:scale-[0.98] min-w-0"
+                className="relative py-2 sm:py-3 px-1 sm:px-2.5 md:px-4 rounded-xl sm:rounded-full flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-2 cursor-pointer text-center select-none transition-colors transition-transform duration-200 outline-none focus-visible:ring-2 focus-visible:ring-[#00FC43] focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed group active:scale-[0.98] min-w-0 w-full overflow-hidden"
               >
                 {/* Smooth Sliding Active Thumb (Apple Liquid Tab Spring Physics) */}
                 {isActive && (
@@ -82,38 +85,40 @@ export function ApplePricingTabs({ activeTab, onChange }: ApplePricingTabsProps)
                     className="absolute inset-0 rounded-xl sm:rounded-full bg-gradient-to-b from-[#112a1b] via-[#09170e] to-[#040805] border border-[#00FC43]/60 shadow-[inset_0_1px_0_rgba(255,255,255,0.22),0_10px_25px_rgba(0,0,0,0.7),0_0_25px_rgba(0,252,67,0.3)] z-0"
                   >
                     {/* Apple Subtle Bottom Glow Accent */}
-                    <span className="absolute bottom-1 inset-x-4 sm:inset-x-10 h-[2px] bg-gradient-to-r from-transparent via-[#00FC43] to-transparent rounded-full pointer-events-none" />
+                    <span className="absolute bottom-1 inset-x-3 sm:inset-x-10 h-[2px] bg-gradient-to-r from-transparent via-[#00FC43] to-transparent rounded-full pointer-events-none" />
                   </motion.div>
                 )}
 
                 {/* Tab Icon and Label */}
-                <div className="relative z-10 flex items-center justify-center gap-1 sm:gap-1.5 min-w-0">
+                <div className="relative z-10 flex items-center justify-center gap-1 sm:gap-1.5 min-w-0 max-w-full">
                   <div
                     className={clsx(
-                      'w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 group-hover:scale-105',
+                      'w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-105',
                       isActive
                         ? 'bg-[#00FC43]/20 text-[#00FC43] border border-[#00FC43]/50 shadow-[0_0_12px_rgba(0,252,67,0.4)]'
                         : 'bg-white/5 text-neutral-400 border border-white/5 group-hover:text-white group-hover:bg-white/10'
                     )}
                   >
-                    <Icon className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                    <Icon className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   </div>
 
                   <span
                     className={clsx(
-                      'text-[11px] sm:text-xs md:text-sm font-bold tracking-tight transition-colors duration-200 truncate',
+                      'text-[10px] sm:text-xs md:text-sm font-bold tracking-tight transition-colors duration-200 truncate',
                       isActive ? 'text-white' : 'text-neutral-400 group-hover:text-neutral-200'
                     )}
                   >
-                    <span className="md:hidden">{tab.label}</span>
-                    <span className="hidden md:inline">{tab.label}</span>
+                    {/* Clean breakpoint-driven labels: Never overlap, never bleed */}
+                    <span className="sm:hidden">{tab.mobileLabel}</span>
+                    <span className="hidden sm:inline md:hidden">{tab.tabletLabel}</span>
+                    <span className="hidden md:inline">{tab.desktopLabel}</span>
                   </span>
                 </div>
 
                 {/* Apple Micro-Price Capsule */}
                 <span
                   className={clsx(
-                    'relative z-10 text-[9px] sm:text-[10px] md:text-[11px] font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full transition-all duration-200 whitespace-nowrap shrink-0 ml-0.5 sm:ml-1',
+                    'relative z-10 text-[9px] sm:text-[10px] md:text-[11px] font-mono font-bold px-1.5 sm:px-2 py-0.5 rounded-full transition-colors duration-200 whitespace-nowrap shrink-0 mt-0.5 sm:mt-0',
                     isActive
                       ? 'bg-[#00FC43] text-[#041608] shadow-[0_0_12px_rgba(0,252,67,0.5)]'
                       : 'bg-white/5 text-neutral-400 group-hover:bg-white/10 group-hover:text-white'
