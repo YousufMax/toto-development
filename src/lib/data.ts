@@ -94,6 +94,7 @@ export const SITE_CONFIG = {
   accentColor: '#00FC43',
   contactEmail: 'hello@totodevelopment.com',
   contactPhone: '+880 1410-003423',
+  calendlyUrl: 'https://calendly.com/yousuf91013/30min',
   offices: [
     {
       city: 'Khulna (Headquarters)',

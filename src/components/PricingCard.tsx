@@ -2,10 +2,11 @@
 
 import React, { useState } from 'react';
 import { clsx } from 'clsx';
-import { Check, ArrowRight, Sparkles, Clock, ShieldCheck, RotateCcw } from 'lucide-react';
+import { Check, ArrowRight, Sparkles, Clock, ShieldCheck, RotateCcw, Calendar } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { PricingPlan } from '@/lib/data';
 import { PackagePurchaseModal, PurchasePackageData } from './PackagePurchaseModal';
+import { CalendlyModal } from './CalendlyModal';
 import { useActiveWhatsApp } from '@/hooks/useActiveWhatsApp';
 import { parseBengaliPrice } from '@/lib/utils';
 
@@ -21,6 +22,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
   onOpenPurchaseModal,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCalendlyOpen, setIsCalendlyOpen] = useState(false);
   const { openWhatsApp } = useActiveWhatsApp();
 
   const isVoltGold =
@@ -300,7 +302,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
             {plan.description}
           </p>
 
-          {/* Dual Action Buttons */}
+          {/* Action Buttons: Primary Booking + Secondary (Schedule Call + WhatsApp) */}
           <div className="flex flex-col gap-2 sm:gap-2.5 mb-6 sm:mb-8">
             {/* Button 1: Get This Package */}
             <button
@@ -319,15 +321,30 @@ export const PricingCard: React.FC<PricingCardProps> = ({
               <ArrowRight className="w-3.5 sm:w-4 h-3.5 sm:h-4 transition-transform group-hover/btn:translate-x-1" />
             </button>
 
-            {/* Button 2: Discuss on WhatsApp */}
-            <button
-              type="button"
-              onClick={handleDiscussOnWhatsApp}
-              className="w-full flex items-center justify-center gap-2 py-2.5 sm:py-3 px-4 sm:px-5 rounded-xl sm:rounded-full text-xs font-semibold text-white bg-white/5 hover:bg-[#00FC43]/10 border border-white/10 hover:border-[#00FC43]/40 transition-all active:scale-95 cursor-pointer backdrop-blur-md min-h-[40px]"
-            >
-              <FaWhatsapp className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#00FC43]" />
-              <span>Discuss on WhatsApp</span>
-            </button>
+            {/* Secondary Action Row: 30-Min Call + WhatsApp */}
+            <div className="grid grid-cols-2 gap-2">
+              {/* Button 2: Schedule 30-Min Call */}
+              <button
+                type="button"
+                onClick={() => setIsCalendlyOpen(true)}
+                className="flex items-center justify-center gap-1.5 py-2.5 px-2.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-semibold text-white bg-white/5 hover:bg-indigo-500/15 border border-white/10 hover:border-indigo-400/40 transition-colors duration-200 active:scale-95 cursor-pointer backdrop-blur-md min-h-[40px] group/cal min-w-0"
+                title="Schedule 30-Min 1-on-1 Strategy Call on Calendly"
+              >
+                <Calendar className="w-3.5 h-3.5 text-indigo-400 group-hover/cal:text-indigo-300 shrink-0" />
+                <span className="truncate">Schedule Call</span>
+              </button>
+
+              {/* Button 3: Discuss on WhatsApp */}
+              <button
+                type="button"
+                onClick={handleDiscussOnWhatsApp}
+                className="flex items-center justify-center gap-1.5 py-2.5 px-2.5 sm:px-3 rounded-xl sm:rounded-full text-[11px] sm:text-xs font-semibold text-white bg-white/5 hover:bg-[#00FC43]/10 border border-white/10 hover:border-[#00FC43]/40 transition-colors duration-200 active:scale-95 cursor-pointer backdrop-blur-md min-h-[40px] group/wa min-w-0"
+                title="Direct WhatsApp Consultation"
+              >
+                <FaWhatsapp className="w-3.5 h-3.5 text-[#00FC43] shrink-0" />
+                <span className="truncate">WhatsApp</span>
+              </button>
+            </div>
           </div>
 
           {/* Features list */}
@@ -368,6 +385,13 @@ export const PricingCard: React.FC<PricingCardProps> = ({
           packageData={packageDataForModal}
         />
       )}
+
+      {/* Calendly 30-Min Strategy Call Modal */}
+      <CalendlyModal
+        isOpen={isCalendlyOpen}
+        onClose={() => setIsCalendlyOpen(false)}
+        packageName={plan.name}
+      />
     </>
   );
 };

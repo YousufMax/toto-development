@@ -16,6 +16,7 @@ import {
   HelpCircle,
   Clock,
   AlertCircle,
+  Calendar,
 } from 'lucide-react';
 import { FaWhatsapp } from 'react-icons/fa6';
 import { captureAttribution } from '@/lib/session';
@@ -322,6 +323,24 @@ export function PackagePurchaseModal({
               ))}
             </div>
           )}
+
+          {/* Calendly Consultation Helper Strip */}
+          <div className="px-5 sm:px-6 py-2 bg-[#070d10] border-b border-indigo-500/20 flex items-center justify-between gap-3 text-xs flex-shrink-0">
+            <span className="text-neutral-300 text-[11px] sm:text-xs truncate">
+              Prefer to discuss custom scope with our consultant first?
+            </span>
+            <a
+              href={`https://calendly.com/yousuf91013/30min?a1=${encodeURIComponent(
+                packageData.title
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#00FC43] hover:underline font-bold text-[11px] sm:text-xs inline-flex items-center gap-1 shrink-0 cursor-pointer"
+            >
+              <Calendar className="w-3.5 h-3.5 text-indigo-400" />
+              <span>Book 30-Min Call →</span>
+            </a>
+          </div>
 
           {/* Modal Body */}
           <div className="p-5 sm:p-6 overflow-y-auto space-y-4">
