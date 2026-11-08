@@ -1,27 +1,11 @@
 "use client";
 
 import React from "react";
-import dynamic from "next/dynamic";
 import { Badge } from "@/components/Badge";
-import { type GlassyCarouselItem } from "@/components/ui/glassy-coverflow-carousel";
+import GlassyCarousel, { type GlassyCarouselItem } from "@/components/ui/glassy-coverflow-carousel";
 import { Film, Sparkles, Smartphone, ArrowRight } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useActiveWhatsApp } from "@/hooks/useActiveWhatsApp";
-
-const GlassyCarousel = dynamic(
-  () => import("@/components/ui/glassy-coverflow-carousel"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] flex items-center justify-center bg-[#070d08]/80 rounded-3xl border border-white/5 animate-pulse">
-        <div className="text-center">
-          <div className="w-10 h-10 mx-auto rounded-full border-2 border-[#00FC43] border-t-transparent animate-spin mb-3" />
-          <p className="text-xs text-neutral-400 font-mono tracking-wider uppercase">Loading 3D Commercial Showcase...</p>
-        </div>
-      </div>
-    ),
-  }
-);
 
 export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
   {

@@ -17,7 +17,7 @@ export const HeroEarthGlobe: React.FC<HeroEarthGlobeProps> = ({ className = '' }
       {/* 01. GRAND AMBIENT PLANETARY CORONA & SPACE HORIZON BLOOM                   */}
       {/* ========================================================================= */}
       {/* Soft emerald & sapphire space horizon ambient bloom radiating behind the planet crest */}
-      <div className="absolute bottom-[4%] sm:bottom-[6%] left-1/2 -translate-x-1/2 w-[95vw] max-w-[1300px] h-[220px] xs:h-[280px] sm:h-[450px] md:h-[550px] rounded-full bg-gradient-to-t from-[#00FC43]/20 via-[#0284c7]/15 to-transparent blur-[60px] sm:blur-[110px] pointer-events-none animate-pulse-glow" />
+      <div className="absolute bottom-[4%] sm:bottom-[6%] left-1/2 -translate-x-1/2 w-[95vw] max-w-[1300px] h-[220px] xs:h-[280px] sm:h-[450px] md:h-[550px] rounded-full bg-gradient-to-t from-[#00FC43]/20 via-[#0284c7]/15 to-transparent blur-[60px] sm:blur-[110px] pointer-events-none" />
 
       {/* ========================================================================= */}
       {/* 02. CLEAN, MAJESTIC HALF-EARTH HORIZON (PURE PLANETARY VISUAL)            */}

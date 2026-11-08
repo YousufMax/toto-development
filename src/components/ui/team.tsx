@@ -146,7 +146,7 @@ export function Team({
           <div className="pointer-events-none absolute top-0 left-0 z-20 h-full w-24 sm:w-36 md:w-56 bg-gradient-to-r from-[#050705] via-[#050705]/85 to-transparent" />
           <div className="pointer-events-none absolute top-0 right-0 z-20 h-full w-24 sm:w-36 md:w-56 bg-gradient-to-l from-[#050705] via-[#050705]/85 to-transparent" />
 
-          <Marquee className="[--gap:2rem] py-4" pauseOnHover>
+          <Marquee className="[--gap:2rem] py-4" pauseOnHover repeat={2}>
             {members.map((member) => (
               <div
                 className="group flex w-[270px] sm:w-[310px] md:w-[330px] shrink-0 flex-col select-none cursor-default"

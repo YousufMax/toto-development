@@ -29,67 +29,67 @@ import {
 
 const PORTFOLIO_GALLERY_IMAGES = [
   {
-    src: '/portfolio-3d/3d-5.png',
+    src: '/portfolio-3d/3d-5.webp',
     title: 'E-Commerce',
     alt: 'TOTO Elite Mart — Premier E-Commerce Online Shopping Platform',
   },
   {
-    src: '/portfolio-3d/3d-4.png',
+    src: '/portfolio-3d/3d-4.webp',
     title: 'Software',
     alt: 'Onnow Multi-Outlet SaaS Software & Live Order ERP Dashboard',
   },
   {
-    src: '/portfolio-3d/3d-1.png',
+    src: '/portfolio-3d/3d-1.webp',
     title: 'Software',
     alt: 'Custom Streaming & Media SaaS Software Application',
   },
   {
-    src: '/portfolio-3d/3d-10.png',
+    src: '/portfolio-3d/3d-10.webp',
     title: 'E-Commerce',
     alt: 'Marketo Fashion & Sportswear E-Commerce Storefront',
   },
   {
-    src: '/portfolio-3d/3d-13.png',
+    src: '/portfolio-3d/3d-13.webp',
     title: 'Software',
     alt: 'Texon Enterprise Digital Business Software Platform',
   },
   {
-    src: '/portfolio-3d/3d-11.png',
+    src: '/portfolio-3d/3d-11.webp',
     title: 'E-Commerce',
     alt: 'Marketo Organic Grocery & Daily Essentials E-Commerce Store',
   },
   {
-    src: '/portfolio-3d/3d-2.png',
+    src: '/portfolio-3d/3d-2.webp',
     title: 'Software',
     alt: 'POC Academy Admin Management Portal & EdTech Software',
   },
   {
-    src: '/portfolio-3d/3d-8.png',
+    src: '/portfolio-3d/3d-8.webp',
     title: 'E-Commerce',
     alt: 'Marketo Smart Audio & Electronics E-Commerce Platform',
   },
   {
-    src: '/portfolio-3d/3d-12.png',
+    src: '/portfolio-3d/3d-12.webp',
     title: 'E-Commerce',
     alt: 'Marketo Smart Security Tech & Electronics Storefront',
   },
   {
-    src: '/portfolio-3d/3d-6.png',
+    src: '/portfolio-3d/3d-6.webp',
     title: 'E-Commerce',
     alt: 'High-Conversion Modern Digital E-Commerce Web Application',
   },
   {
-    src: '/portfolio-3d/3d-7.png',
+    src: '/portfolio-3d/3d-7.webp',
     title: 'Software',
     alt: 'Custom Enterprise Software Architecture & Management Suite',
   },
   {
-    src: '/portfolio-3d/3d-9.png',
+    src: '/portfolio-3d/3d-9.webp',
     title: 'E-Commerce',
     alt: 'Interactive E-Commerce Web Store & High-Speed Checkout',
   },
   {
-    src: '/portfolio-3d/3d-3.png',
+    src: '/portfolio-3d/3d-3.webp',
     title: 'Software',
     alt: 'Custom SaaS Analytics & Software Application Interface',
   },

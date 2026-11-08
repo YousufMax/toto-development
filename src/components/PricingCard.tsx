@@ -84,7 +84,7 @@ export const PricingCard: React.FC<PricingCardProps> = ({
     <>
       <div
         className={clsx(
-          'group relative rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 flex flex-col justify-between transition-all duration-500 backdrop-blur-2xl',
+          'group relative rounded-2xl sm:rounded-3xl p-5 sm:p-7 md:p-8 flex flex-col justify-between transition-all duration-500',
           isVoltGold
             ? 'border-2 border-[#00FC43] shadow-[0_20px_50px_rgba(0,0,0,0.96),0_0_35px_rgba(0,252,67,0.30),0_0_15px_rgba(245,158,11,0.15),inset_0_1px_1px_rgba(255,255,255,0.4),inset_0_0_25px_rgba(0,252,67,0.12)] lg:-translate-y-2 lg:scale-[1.02] z-20'
             : isRoyalViolet

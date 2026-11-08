@@ -31,6 +31,11 @@
     min-width: 0;
   }
 
+  /* Progressive Content Delivery & Fast-Scroll Visibility Assurance */
+  section {
+    content-visibility: visible !important;
+  }
+
   /* Universal WCAG AAA Instant Focus-Visible Ring (Hallmark Floor Rule 26a) */
   :focus-visible {
     outline: 2px solid #00FC43 !important;
@@ -278,8 +283,6 @@
     inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.50),
     inset 0 0 30px 0 rgba(0, 252, 67, 0.22),
     inset -1px -1px 25px 0 rgba(0, 210, 255, 0.08);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
   overflow: hidden;
 }
 
