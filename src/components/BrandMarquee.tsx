@@ -91,9 +91,8 @@ interface BrandMarqueeProps {
 }
 
 export const BrandMarquee: React.FC<BrandMarqueeProps> = ({ className }) => {
-  // Duplicate for seamless 100% infinite continuous loop
+  // Duplicate 2 times so transform: translate3d(-50%, 0, 0) loops 100% seamlessly
   const duplicatedBrands = [
-    ...CURATED_BANGLADESH_BRANDS,
     ...CURATED_BANGLADESH_BRANDS,
     ...CURATED_BANGLADESH_BRANDS,
   ];

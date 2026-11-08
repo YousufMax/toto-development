@@ -13,7 +13,7 @@ const GlassyCarousel = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="w-full h-[540px] sm:h-[620px] flex items-center justify-center bg-[#070d08]/80 rounded-3xl border border-white/5 animate-pulse">
+      <div className="w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] flex items-center justify-center bg-[#070d08]/80 rounded-3xl border border-white/5 animate-pulse">
         <div className="text-center">
           <div className="w-10 h-10 mx-auto rounded-full border-2 border-[#00FC43] border-t-transparent animate-spin mb-3" />
           <p className="text-xs text-neutral-400 font-mono tracking-wider uppercase">Loading 3D Commercial Showcase...</p>
@@ -28,7 +28,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "cyberpunk-supercar-cgi",
     title: "Cyberpunk 3D Supercar Reveal",
     subtitle: "4K CGI · Automotive Commercial Teaser",
-    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=720&q=75",
     accent: "#00FC43",
     description: "Ray-traced automotive teaser with cinematic emerald volumetric lighting, exploded carbon-fiber assembly, and sub-second cutaways.",
     trailerUrl: "https://www.youtube.com/watch?v=7X8II6J-6mU",
@@ -39,7 +39,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "lumina-cosmetics-splash",
     title: "Lumina Eau De Parfum & Fluid Splash",
     subtitle: "Luxury Cosmetics · Liquid Simulation CGI",
-    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=720&q=75",
     accent: "#eab308",
     description: "Photorealistic fluid dynamics and ray-traced glass dispersion engineered for luxury beauty and skincare commercial conversions.",
     trailerUrl: "https://www.youtube.com/watch?v=wb49-oV0F78",
@@ -50,7 +50,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "apex-energy-drink",
     title: "Apex Citrus Energy Elixir 1000fps",
     subtitle: "FMCG Commercial · High-Speed Splash Physics",
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=720&q=75",
     accent: "#06b6d4",
     description: "1000fps high-speed fluid physics, aluminum can condensation droplets, and dynamic fruit slice explosion built for high-converting social ads.",
     trailerUrl: "https://www.youtube.com/watch?v=j7jPnwVGdZ8",
@@ -61,7 +61,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "vortex-titanium-audio",
     title: "Vortex Pro Titanium Wireless Audio",
     subtitle: "Consumer Tech · 3D Product Exploded View",
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=720&q=75",
     accent: "#8b5cf6",
     description: "High-precision CAD rendering, exploded driver assembly, and spatial soundwaves for international tech hardware launches.",
     trailerUrl: "https://www.youtube.com/watch?v=qEVUtrk8_B4",
@@ -72,7 +72,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "agrona-heritage-oil",
     title: "Agrona Pure Heritage Culinary Oil",
     subtitle: "Brand Heritage · 4K Commercial Brand Film",
-    image: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?auto=format&fit=crop&w=720&q=75",
     accent: "#f97316",
     description: "Authentic cinematic food storytelling combining farm-fresh heritage with warm golden hues to maximize FMCG buyer trust and retail sell-through.",
     trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8",
@@ -83,7 +83,7 @@ export const COMMERCIAL_VIDEO_REELS: GlassyCarouselItem[] = [
     id: "nova-fintech-explainer",
     title: "Nova Cloud FinTech Kinetic Explainer",
     subtitle: "SaaS Motion · Kinetic Typography & UI Flythrough",
-    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=720&q=75",
     accent: "#10b981",
     description: "High-retention kinetic typography and futuristic dashboard UI fly-throughs delivering 3.4x higher conversion for enterprise software.",
     trailerUrl: "https://www.youtube.com/watch?v=Y274jZs5s7s",

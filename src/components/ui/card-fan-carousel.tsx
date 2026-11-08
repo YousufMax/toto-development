@@ -32,17 +32,18 @@ const FAN_POSITIONS = [
 ];
 
 function getResponsiveMultiplier(width: number) {
-  if (width < 480) return 0.28;
-  if (width < 640) return 0.38;
-  if (width < 768) return 0.52;
-  if (width < 1024) return 0.75;
+  if (width < 380) return 0.18;
+  if (width < 480) return 0.22;
+  if (width < 640) return 0.32;
+  if (width < 768) return 0.46;
+  if (width < 1024) return 0.70;
   return 1.0;
 }
 
 function getHeightMultiplier(width: number) {
-  if (width < 480) return 0.72;
-  if (width < 640) return 0.82;
-  if (width < 768) return 0.90;
+  if (width < 480) return 0.68;
+  if (width < 640) return 0.78;
+  if (width < 768) return 0.88;
   if (width < 1024) return 0.95;
   return 1.0;
 }
@@ -56,7 +57,9 @@ export function CardFanCarousel({ cards, className }: CardFanCarouselProps) {
   const [centerIndex, setCenterIndex] = useState(totalCards > MAX_VISIBLE ? 3 : totalCards >> 1);
   const [selectedCard, setSelectedCard] = useState<CardItem | null>(null);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const [windowWidth, setWindowWidth] = useState(1200);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
 
   const touchStartX = useRef<number | null>(null);
 
@@ -147,11 +150,11 @@ export function CardFanCarousel({ cards, className }: CardFanCarouselProps) {
 
   return (
     <section
-      className={`flex flex-col items-center w-full py-6 lg:py-10 px-4 md:px-8 relative z-20 select-none ${className || ""}`}
+      className={`flex flex-col items-center w-full py-6 lg:py-10 px-2 sm:px-4 md:px-8 relative z-20 select-none overflow-hidden max-w-full ${className || ""}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      <div className="flex items-center justify-center w-full max-w-[90rem]">
+      <div className="flex items-center justify-center w-full max-w-[90rem] overflow-hidden">
         <div className="fan-layout flex relative justify-center items-center w-full max-w-[80rem]">
           {cards.map((card, index) => {
             // Compute shortest circular offset from centerIndex

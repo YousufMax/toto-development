@@ -74,8 +74,9 @@ function measure(
   const unit = deg(h / radius);
   const pitch = (aspect + gap / 100) * unit;
   const limit = deg(bend) + (aspect * unit) / 2;
-  // Capped so a hero squeezed to a sliver can't mount thousands of tiles.
-  const columns = Math.min(60, Math.max(2, Math.ceil((2 * limit) / pitch)));
+  // Capped so a hero squeezed to a sliver or on mobile cannot mount excessive tiles.
+  const maxCols = width < 640 ? 14 : 60;
+  const columns = Math.min(maxCols, Math.max(2, Math.ceil((2 * limit) / pitch)));
   const round = (n: number) => +n.toFixed(4);
   const sweep = round((columns * pitch) / 2);
   return {
@@ -146,11 +147,15 @@ export function TiltedGridHero({
   const tile = `tgh-t-${id}`;
   const bend = (Math.min(85, Math.max(5, curve)) * Math.PI) / 180;
 
-  // Null until the observer has measured the hero. The band stays hidden
-  // until then, so a first paint laid out for the wrong size never shows.
-  const [layout, setLayout] = React.useState<ReturnType<typeof measure> | null>(
-    null,
-  );
+  // Pre-initialize on client to avoid blank flash on initial render / slow webviews
+  const [layout, setLayout] = React.useState<ReturnType<typeof measure> | null>(() => {
+    if (typeof window !== "undefined") {
+      const w = window.innerWidth || 1200;
+      const h = w < 640 ? 460 : w < 768 ? 540 : 600;
+      return measure(w, h, tileHeight, aspectRatio, gap, bend);
+    }
+    return measure(1200, 560, tileHeight, aspectRatio, gap, bend);
+  });
 
   // The image each tile shows, as a position in the run of images. It
   // only changes when the tile wraps, which is out of sight, so a resize
@@ -295,6 +300,7 @@ export function TiltedGridHero({
                       src={img.src}
                       alt={k === 0 ? (img.alt ?? "") : ""}
                       draggable={false}
+                      decoding="async"
                       className="absolute top-0 max-w-none object-cover"
                       style={{
                         left: u(-k * share),

@@ -385,7 +385,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section
         id="services"
-        className="relative py-24 px-4 sm:px-6 lg:px-8 transition-colors z-20"
+        className="relative py-14 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 transition-colors z-20"
         style={{
           background:
             'radial-gradient(circle at 50% 0%, rgba(0, 252, 67, 0.08) 0%, rgba(4, 7, 5, 0.5) 45%, transparent 100%)',
@@ -433,7 +433,7 @@ export default function HomePage() {
           {/* ========================================================================= */}
           {/* Frosted Glassmorphism 1-by-1 Stacking Cards System                        */}
           {/* ========================================================================= */}
-          <div className="relative flex flex-col space-y-14 sm:space-y-20 max-w-5xl mx-auto pb-12 sm:pb-16">
+          <div className="relative flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 max-w-5xl mx-auto pb-8 sm:pb-14">
             {filteredServices.map((service, index) => {
               const isDev = service.category === 'development';
               const isMkt = service.category === 'marketing';
@@ -593,7 +593,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 04. PORTFOLIO SHOWCASE                                                    */}
       {/* ========================================================================= */}
-      <section id="portfolio" className="py-24 px-4 text-white relative z-20">
+      <section id="portfolio" className="py-14 sm:py-20 lg:py-24 px-4 text-white relative z-20">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}
           <div className="text-center mb-14 sm:mb-16">
@@ -732,7 +732,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 06. TRANSPARENT PRICING GRID                                              */}
       {/* ========================================================================= */}
-      <section id="pricing" className="py-24 px-4 relative z-20 overflow-hidden">
+      <section id="pricing" className="py-14 sm:py-20 lg:py-24 px-4 relative z-20 overflow-hidden">
         {/* Ambient Multi-Point Mesh & Radial Glows behind Pricing Section */}
         <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[950px] h-[550px] bg-[#00FC43]/12 blur-[170px] pointer-events-none -z-10" />
         <div className="absolute -top-20 -left-36 w-[580px] h-[580px] bg-[#00FC43]/10 blur-[150px] pointer-events-none -z-10" />
@@ -840,13 +840,13 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section
         id="reviews"
-        className="py-24 px-4 relative z-20 border-t border-white/10"
+        className="py-14 sm:py-20 lg:py-24 px-4 relative z-20 border-t border-white/10"
         style={{
           background: 'radial-gradient(circle at 50% 20%, rgba(0, 252, 67, 0.05) 0%, rgba(5, 7, 5, 0.8) 50%, #050705 100%)',
         }}
       >
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10 sm:mb-14">
             <Badge variant="emerald">VERIFIED CLIENT SUCCESS</Badge>
             <h2 className="editorial-serif text-3xl sm:text-5xl font-normal text-white mt-4 tracking-tight">
               Trusted by Ambitious Brands Across <span className="italic text-[#00FC43]">Bangladesh</span>
@@ -884,13 +884,13 @@ export default function HomePage() {
       {/* ========================================================================= */}
       <section
         id="faq"
-        className="py-24 px-4 relative z-20 border-t border-white/10"
+        className="py-14 sm:py-20 lg:py-24 px-4 relative z-20 border-t border-white/10"
         style={{
           background: 'radial-gradient(circle at 50% 0%, rgba(0, 252, 67, 0.06) 0%, rgba(5, 8, 6, 0.5) 45%, transparent 100%)',
         }}
       >
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 sm:mb-16">
             <Badge variant="emerald">QUESTIONS & CLARITY</Badge>
             <h2 className="editorial-serif text-3xl sm:text-5xl font-normal text-white mt-4 tracking-tight">
               Frequently Asked <span className="italic text-[#00FC43]">Questions</span>
@@ -908,7 +908,7 @@ export default function HomePage() {
       {/* ========================================================================= */}
       {/* 08. FINAL CALL TO ACTION & ADVISOR INQUIRY SECTION                        */}
       {/* ========================================================================= */}
-      <section id="contact" className="py-24 px-4 relative z-20 overflow-hidden">
+      <section id="contact" className="py-14 sm:py-20 lg:py-24 px-4 relative z-20 overflow-hidden">
         {/* Glow behind contact */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[850px] h-[550px] bg-[#00FC43]/12 blur-[160px] pointer-events-none" />
 

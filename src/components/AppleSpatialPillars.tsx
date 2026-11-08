@@ -45,6 +45,7 @@ function CompactSpatialCard({
   className,
 }: SpatialCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const rafId = useRef<number | null>(null);
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [glarePosition, setGlarePosition] = useState({ x: 50, y: 50, opacity: 0 });
@@ -52,28 +53,39 @@ function CompactSpatialCard({
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    const clientX = e.clientX;
+    const clientY = e.clientY;
+    if (rafId.current !== null) return;
+    rafId.current = requestAnimationFrame(() => {
+      rafId.current = null;
+      if (!cardRef.current) return;
+      const rect = cardRef.current.getBoundingClientRect();
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
 
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
 
-    // Subtle Apple-grade constraint (-5 to 5 deg)
-    const rotX = ((y - centerY) / centerY) * -5;
-    const rotY = ((x - centerX) / centerX) * 5;
+      // Subtle Apple-grade constraint (-5 to 5 deg)
+      const rotX = ((y - centerY) / centerY) * -5;
+      const rotY = ((x - centerX) / centerX) * 5;
 
-    setRotateX(rotX);
-    setRotateY(rotY);
-    setGlarePosition({
-      x: (x / rect.width) * 100,
-      y: (y / rect.height) * 100,
-      opacity: 0.16,
+      setRotateX(rotX);
+      setRotateY(rotY);
+      setGlarePosition({
+        x: (x / rect.width) * 100,
+        y: (y / rect.height) * 100,
+        opacity: 0.16,
+      });
     });
   };
 
   const handleMouseEnter = () => setIsHovered(true);
   const handleMouseLeave = () => {
+    if (rafId.current !== null) {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = null;
+    }
     setIsHovered(false);
     setRotateX(0);
     setRotateY(0);
