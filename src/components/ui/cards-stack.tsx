@@ -9,6 +9,15 @@ interface CardStickyProps extends HTMLMotionProps<"div"> {
   index: number
   incrementY?: number
   incrementZ?: number
+  /**
+   * Optional custom sticky top offset on desktop.
+   */
+  topOffset?: number | string
+  /**
+   * If true, keeps sticky enabled on mobile as well.
+   * Default false ensures mobile uses clean, accessible fluid flow without overlapping.
+   */
+  mobileSticky?: boolean
 }
 
 const ContainerScroll = React.forwardRef<
@@ -34,6 +43,8 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
       index,
       incrementY = 10,
       incrementZ = 10,
+      topOffset,
+      mobileSticky = false,
       children,
       className,
       style,
@@ -49,12 +60,17 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
         ref={ref}
         layout="position"
         style={{
-          top: y,
-          z,
+          ["--card-stack-offset" as string]: `${y}px`,
+          ["--card-stack-z" as string]: `${z}px`,
           backfaceVisibility: "hidden",
+          ...(mobileSticky ? { top: topOffset ?? y, z } : { z }),
           ...style,
         }}
-        className={cn("sticky", className)}
+        className={cn(
+          "transition-all duration-300",
+          mobileSticky ? "sticky" : "relative lg:sticky",
+          className
+        )}
         {...props}
       >
         {children}
@@ -67,4 +83,3 @@ CardSticky.displayName = "CardSticky"
 
 export { ContainerScroll, CardSticky }
 export default CardSticky
-

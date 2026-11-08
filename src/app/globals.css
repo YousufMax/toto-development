@@ -297,6 +297,7 @@
   .frosted-glass-stack-card {
     position: relative !important;
     top: auto !important;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -304,6 +305,7 @@
   .frosted-glass-stack-card {
     position: sticky !important;
     top: calc(88px + var(--stack-offset, 0px)) !important;
+    margin-bottom: 0;
   }
 }
 

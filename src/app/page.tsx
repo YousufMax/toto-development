@@ -441,7 +441,7 @@ export default function HomePage() {
           {/* ========================================================================= */}
           {/* Frosted Glassmorphism 1-by-1 Stacking Cards System                        */}
           {/* ========================================================================= */}
-          <ContainerScroll className="relative flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 max-w-5xl mx-auto pb-8 sm:pb-14">
+          <ContainerScroll className="relative flex flex-col space-y-6 sm:space-y-10 lg:space-y-16 max-w-5xl mx-auto pb-8 sm:pb-14">
             {filteredServices.map((service, index) => {
               const isDev = service.category === 'development';
               const isMkt = service.category === 'marketing';
@@ -453,42 +453,42 @@ export default function HomePage() {
                 <CardSticky
                   key={service.id}
                   index={index}
-                  incrementY={8}
+                  incrementY={10}
                   incrementZ={10}
-                  className="frosted-glass-stack-card rounded-3xl p-6 sm:p-9 lg:p-11 transition-all duration-300 group overflow-hidden"
+                  className="frosted-glass-stack-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-11 transition-all duration-300 group overflow-hidden"
                   style={{
                     zIndex: 10 + index,
-                    ['--stack-offset' as string]: `${index * 8}px`,
+                    ['--stack-offset' as string]: `${index * 10}px`,
                   }}
                 >
-                  {/* 3-Sided Asymmetric Ambient Light Glow System */}
+                  {/* 3-Sided Asymmetric Ambient Light Glow System (Optimized for Mobile GPU Fill) */}
                   {/* Side 1: Top-Left High Light Spotlight (Brand Green) */}
                   <div
-                    className="absolute -top-16 -left-16 w-80 h-80 rounded-full blur-[70px] pointer-events-none opacity-80"
+                    className="absolute -top-12 -left-12 sm:-top-16 sm:-left-16 w-36 h-36 sm:w-60 sm:h-60 lg:w-80 lg:h-80 rounded-full blur-[40px] sm:blur-[60px] lg:blur-[70px] pointer-events-none opacity-80"
                     style={{ backgroundColor: 'rgba(0, 252, 67, 0.28)' }}
                   />
                   {/* Side 2: Top-Right Specular Diamond Rim (White) */}
                   <div
-                    className="absolute -top-10 -right-10 w-64 h-64 rounded-full blur-[65px] pointer-events-none opacity-40"
+                    className="absolute -top-8 -right-8 sm:-top-10 sm:-right-10 w-28 h-28 sm:w-48 sm:h-48 lg:w-64 lg:h-64 rounded-full blur-[35px] sm:blur-[50px] lg:blur-[65px] pointer-events-none opacity-40"
                     style={{ backgroundColor: 'rgba(255, 255, 255, 0.18)' }}
                   />
                   {/* Side 3: Bottom-Right Low Light Ambient Fill (Soft Mint/Cyan) */}
                   <div
-                    className="absolute -bottom-16 -right-16 w-72 h-72 rounded-full blur-[80px] pointer-events-none opacity-50"
+                    className="absolute -bottom-12 -right-12 sm:-bottom-16 sm:-right-16 w-32 h-32 sm:w-52 sm:h-52 lg:w-72 lg:h-72 rounded-full blur-[40px] sm:blur-[65px] lg:blur-[80px] pointer-events-none opacity-50"
                     style={{ backgroundColor: isMkt ? 'rgba(255, 184, 0, 0.14)' : 'rgba(0, 210, 255, 0.12)' }}
                   />
 
                   {/* Glass Specular Top Bevel Sheen */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.12] via-transparent to-black/40 pointer-events-none rounded-3xl" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/[0.12] via-transparent to-black/40 pointer-events-none rounded-2xl sm:rounded-3xl" />
 
                   {/* Card Content Grid: Balanced Narrative + High-Resolution Visual Showcase */}
-                  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+                  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 items-center">
                     {/* Left Column: Narrative, Description, Capabilities, and CTA */}
                     <div className="lg:col-span-7 flex flex-col justify-between">
                       <div>
                         {/* Category Label */}
                         <div
-                          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono mb-4 border transition-colors"
+                          className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono mb-3 sm:mb-4 border transition-colors"
                           style={{
                             backgroundColor: `${primaryAccent}15`,
                             borderColor: `${primaryAccent}40`,
@@ -503,25 +503,25 @@ export default function HomePage() {
                               style={{ backgroundColor: primaryAccent }}
                             />
                           )}
-                          <span>{service.id.toUpperCase().replace('-', ' ')}</span>
+                          <span>0{index + 1} / {service.id.toUpperCase().replace('-', ' ')}</span>
                         </div>
 
                         {/* Service Title */}
-                        <h3 className="editorial-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-white tracking-tight leading-[1.2] mb-4 group-hover:text-[#00FC43] transition-colors duration-300">
+                        <h3 className="editorial-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-white tracking-tight leading-[1.2] mb-3 sm:mb-4 group-hover:text-[#00FC43] transition-colors duration-300">
                           {service.title}
                         </h3>
 
                         {/* Service Description (Crisp White High-Contrast Typography) */}
-                        <p className="text-white/95 text-sm sm:text-base leading-relaxed font-normal mb-6 max-w-xl">
+                        <p className="text-white/95 text-xs sm:text-sm lg:text-base leading-relaxed font-normal mb-5 sm:mb-6 max-w-xl">
                           {service.description}
                         </p>
 
                         {/* Sleek Key Capabilities Pills (Pure White Text with Brand Green Dot) */}
-                        <div className="flex flex-wrap gap-2 sm:gap-2.5 mb-8">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2.5 mb-6 sm:mb-8">
                           {service.capabilities.map((cap, i) => (
                             <span
                               key={i}
-                              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/15 hover:border-[#00FC43]/60 text-xs font-semibold text-white backdrop-blur-md transition-all shadow-sm"
+                              className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white/[0.06] border border-white/15 hover:border-[#00FC43]/60 text-[11px] sm:text-xs font-semibold text-white backdrop-blur-md transition-all shadow-sm"
                             >
                               <span className="w-1.5 h-1.5 rounded-full bg-[#00FC43] shadow-[0_0_8px_#00FC43]" />
                               <span>{cap}</span>
@@ -531,10 +531,10 @@ export default function HomePage() {
                     </div>
 
                     {/* CTA Action Button */}
-                    <div className="flex flex-wrap items-center gap-3.5 pt-1">
+                    <div className="flex flex-wrap items-center gap-2.5 sm:gap-3.5 pt-1">
                       <a
                         href="#contact"
-                        className="brand-glow-button text-xs sm:text-sm font-semibold rounded-full px-7 py-2.5 inline-flex items-center gap-2 cursor-pointer shadow-md hover:shadow-[0_0_30px_rgba(0,252,67,0.55)] transition-all"
+                        className="brand-glow-button text-xs sm:text-sm font-semibold rounded-full px-5 sm:px-7 py-2.5 min-h-[44px] inline-flex items-center justify-center gap-2 cursor-pointer shadow-md hover:shadow-[0_0_30px_rgba(0,252,67,0.55)] transition-all"
                       >
                         <span>Initiate Project</span>
                         <ArrowUpRight className="w-4 h-4 font-bold" />
@@ -542,13 +542,13 @@ export default function HomePage() {
                       {service.href && (
                         <Link
                           href={service.href}
-                          className="px-5 py-2.5 rounded-full text-xs font-semibold text-neutral-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-[#00FC43]/40 transition-all inline-flex items-center gap-1.5 backdrop-blur-sm group/btn"
+                          className="px-4 sm:px-5 py-2.5 min-h-[44px] rounded-full text-xs font-semibold text-neutral-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 hover:border-[#00FC43]/40 transition-all inline-flex items-center justify-center gap-1.5 backdrop-blur-sm group/btn"
                         >
                           <span>Explore Details</span>
                           <ArrowRight className="w-3.5 h-3.5 text-[#00FC43] transition-transform group-hover/btn:translate-x-0.5" />
                         </Link>
                       )}
-                      <span className="text-xs text-neutral-400 font-mono flex items-center gap-2">
+                      <span className="text-[11px] sm:text-xs text-neutral-400 font-mono flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-[#00FC43] animate-pulse" />
                         <span>Dedicated Tech Team</span>
                       </span>
@@ -557,24 +557,24 @@ export default function HomePage() {
 
                   {/* Right Column: High-Resolution Visual Showcase in a Sleek Glass Browser Frame */}
                   <div className="lg:col-span-5">
-                    <div className="relative rounded-2xl overflow-hidden border border-white/15 bg-black/60 shadow-[0_20px_45px_rgba(0,0,0,0.7)] group/window backdrop-blur-md">
+                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-white/15 bg-black/60 shadow-[0_20px_45px_rgba(0,0,0,0.7)] group/window backdrop-blur-md">
                       {/* Window Header Bar */}
-                      <div className="flex items-center justify-between px-4 py-2.5 bg-white/[0.04] border-b border-white/10">
+                      <div className="flex items-center justify-between px-3.5 sm:px-4 py-2 sm:py-2.5 bg-white/[0.04] border-b border-white/10">
                         <div className="flex items-center gap-1.5">
-                          <span className="w-2.5 h-2.5 rounded-full bg-red-500/80 shadow-[0_0_6px_rgba(239,68,68,0.4)]" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/80 shadow-[0_0_6px_rgba(234,179,8,0.4)]" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-green-500/80 shadow-[0_0_6px_rgba(34,197,94,0.4)]" />
+                          <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-red-500/80 shadow-[0_0_6px_rgba(239,68,68,0.4)]" />
+                          <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-yellow-500/80 shadow-[0_0_6px_rgba(234,179,8,0.4)]" />
+                          <span className="w-2 sm:w-2.5 h-2 sm:h-2.5 rounded-full bg-green-500/80 shadow-[0_0_6px_rgba(34,197,94,0.4)]" />
                         </div>
-                        <div className="flex items-center gap-1.5 px-3 py-0.5 rounded-md bg-white/[0.04] border border-white/10">
+                        <div className="flex items-center gap-1.5 px-2.5 sm:px-3 py-0.5 rounded-md bg-white/[0.04] border border-white/10">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#00FC43] animate-pulse" />
-                          <span className="text-[10px] font-mono text-neutral-300 tracking-wider">
+                          <span className="text-[9px] sm:text-[10px] font-mono text-neutral-300 tracking-wider">
                             {service.windowLabel}
                           </span>
                         </div>
                       </div>
 
                       {/* Image Preview Container */}
-                      <div className="relative aspect-[16/11] w-full overflow-hidden bg-neutral-950">
+                      <div className="relative aspect-[16/10] sm:aspect-[16/11] w-full overflow-hidden bg-neutral-950">
                         <Image
                           src={service.image}
                           alt={service.title}

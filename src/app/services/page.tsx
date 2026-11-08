@@ -15,6 +15,8 @@ import {
   Database,
   Shield,
   Zap,
+  Film,
+  Palette,
 } from 'lucide-react';
 import { Badge } from '@/components/Badge';
 import { StatsCounter } from '@/components/StatsCounter';
@@ -26,6 +28,15 @@ import {
   FAQS_LIST,
   PORTFOLIO_PROJECTS,
 } from '@/lib/data';
+
+const SERVICE_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  'custom-software': Cpu,
+  'web-development': Globe2,
+  'digital-marketing': TrendingUp,
+  'paid-advertising': Zap,
+  'video-motion': Film,
+  'brand-design': Palette,
+};
 
 export default function ServicesPage() {
   const [activeTab, setActiveTab] = useState<string>('all');
@@ -133,6 +144,7 @@ export default function ServicesPage() {
             const isDev = service.category === 'development';
             const isMkt = service.category === 'marketing';
             const primaryAccent = isDev ? '#00FC43' : isMkt ? '#00E5FF' : '#A855F7';
+            const IconComponent = SERVICE_ICONS[service.id];
             const bgGradient = isDev
               ? 'from-[#0e1c13]/95 via-[#08120e]/90 to-[#040806]/95 border-[#00FC43]/25 hover:border-[#00FC43]/70 hover:shadow-[0_0_40px_rgba(0,252,67,0.22)]'
               : isMkt
@@ -143,19 +155,19 @@ export default function ServicesPage() {
               <div
                 key={service.id}
                 id={service.id}
-                className="asymmetric-glass-card p-8 sm:p-10 rounded-3xl transition-all duration-500 shadow-2xl hover:-translate-y-2 flex flex-col justify-between group relative overflow-hidden"
+                className="asymmetric-glass-card p-5 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl transition-all duration-500 shadow-2xl hover:-translate-y-2 flex flex-col justify-between group relative overflow-hidden"
               >
-                {/* 3-Sided Ambient Radial Light Layers */}
+                {/* 3-Sided Ambient Radial Light Layers (Responsive GPU Sizing) */}
                 <div
-                  className="absolute -top-12 -left-12 w-64 h-64 rounded-full blur-[60px] pointer-events-none opacity-80"
+                  className="absolute -top-12 -left-12 w-36 h-36 sm:w-64 sm:h-64 rounded-full blur-[40px] sm:blur-[60px] pointer-events-none opacity-80"
                   style={{ backgroundColor: 'rgba(0, 252, 67, 0.28)' }}
                 />
                 <div
-                  className="absolute -top-8 -right-8 w-52 h-52 rounded-full blur-[55px] pointer-events-none opacity-35"
+                  className="absolute -top-8 -right-8 w-28 h-28 sm:w-52 sm:h-52 rounded-full blur-[35px] sm:blur-[55px] pointer-events-none opacity-35"
                   style={{ backgroundColor: 'rgba(255, 255, 255, 0.18)' }}
                 />
                 <div
-                  className="absolute -bottom-12 -right-12 w-60 h-60 rounded-full blur-[70px] pointer-events-none opacity-45"
+                  className="absolute -bottom-12 -right-12 w-32 h-32 sm:w-60 sm:h-60 rounded-full blur-[40px] sm:blur-[70px] pointer-events-none opacity-45"
                   style={{ backgroundColor: isMkt ? 'rgba(255, 184, 0, 0.12)' : 'rgba(0, 210, 255, 0.10)' }}
                 />
 
@@ -170,10 +182,14 @@ export default function ServicesPage() {
                         color: primaryAccent,
                       }}
                     >
-                      <span
-                        className="w-1.5 h-1.5 rounded-full animate-pulse"
-                        style={{ backgroundColor: primaryAccent }}
-                      />
+                      {IconComponent ? (
+                        <IconComponent className="w-3.5 h-3.5 text-current" />
+                      ) : (
+                        <span
+                          className="w-1.5 h-1.5 rounded-full animate-pulse"
+                          style={{ backgroundColor: primaryAccent }}
+                        />
+                      )}
                       <span>
                         {service.number} / {service.categoryTag}
                       </span>
@@ -232,7 +248,7 @@ export default function ServicesPage() {
                 <div className="flex flex-wrap items-center justify-between gap-3">
                   <button
                     onClick={() => openQuoteWithService(service.title)}
-                    className="brand-glow-button px-5 py-2.5 rounded-full text-xs font-bold text-[#041608] inline-flex items-center gap-1.5 shadow-[0_0_15px_rgba(0,252,67,0.4)] cursor-pointer active:scale-95 transition-all"
+                    className="brand-glow-button px-5 py-2.5 min-h-[44px] rounded-full text-xs font-bold text-[#041608] inline-flex items-center gap-1.5 shadow-[0_0_15px_rgba(0,252,67,0.4)] cursor-pointer active:scale-95 transition-all"
                   >
                     <span>Book This Service</span>
                     <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.5]" />
