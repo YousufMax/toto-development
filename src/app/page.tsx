@@ -61,6 +61,7 @@ import { BrandMarquee } from '@/components/BrandMarquee';
 import { Team } from '@/components/ui/team';
 import { AppleSpatialPillars } from '@/components/AppleSpatialPillars';
 import { ApplePricingTabs } from '@/components/ApplePricingTabs';
+import { ContainerScroll, CardSticky } from '@/components/ui/cards-stack';
 
 interface AgencyService {
   id: string;
@@ -71,6 +72,7 @@ interface AgencyService {
   image: string;
   windowLabel: string;
   href: string;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 const TOTO_SERVICES: AgencyService[] = [
@@ -88,6 +90,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: 'https://cdn.jsdelivr.net/gh/YousufMax/image-server-001@main/software.jpeg',
     windowLabel: 'system.toto.io/core',
     href: '/services/custom-software/',
+    icon: Cpu,
   },
   {
     id: 'web-engineering',
@@ -103,6 +106,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: 'https://cdn.jsdelivr.net/gh/YousufMax/image-server-001@main/web%20development.jpeg',
     windowLabel: 'experience.toto.io/live',
     href: '/services/web-development/',
+    icon: Globe2,
   },
   {
     id: 'digital-strategy',
@@ -118,6 +122,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: 'https://cdn.jsdelivr.net/gh/YousufMax/image-server-001@main/digital.jpeg',
     windowLabel: 'growth.toto.io/metrics',
     href: '/services/digital-marketing/',
+    icon: TrendingUp,
   },
   {
     id: 'paid-advertising',
@@ -133,6 +138,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: 'https://cdn.jsdelivr.net/gh/YousufMax/image-server-001@main/ads.jpeg',
     windowLabel: 'ads.toto.io/campaigns',
     href: '/services/paid-ads/',
+    icon: Zap,
   },
   {
     id: 'motion-production',
@@ -148,6 +154,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: '/images/services/video-editing.jpg',
     windowLabel: 'motion.toto.io/studio',
     href: '/services/video-motion/',
+    icon: Film,
   },
   {
     id: 'creative-design',
@@ -163,6 +170,7 @@ const TOTO_SERVICES: AgencyService[] = [
     image: '/images/services/graphic-design.jpg',
     windowLabel: 'identity.toto.io/design',
     href: '/services/brand-design/',
+    icon: Palette,
   },
 ];
 
@@ -433,16 +441,20 @@ export default function HomePage() {
           {/* ========================================================================= */}
           {/* Frosted Glassmorphism 1-by-1 Stacking Cards System                        */}
           {/* ========================================================================= */}
-          <div className="relative flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 max-w-5xl mx-auto pb-8 sm:pb-14">
+          <ContainerScroll className="relative flex flex-col space-y-8 sm:space-y-14 lg:space-y-20 max-w-5xl mx-auto pb-8 sm:pb-14">
             {filteredServices.map((service, index) => {
               const isDev = service.category === 'development';
               const isMkt = service.category === 'marketing';
               const primaryAccent = isDev ? '#00FC43' : isMkt ? '#00E5FF' : '#A855F7';
               const secondaryAccent = isDev ? '#06B6D4' : isMkt ? '#F59E0B' : '#00FC43';
+              const ServiceIcon = service.icon;
 
               return (
-                <article
+                <CardSticky
                   key={service.id}
+                  index={index}
+                  incrementY={8}
+                  incrementZ={10}
                   className="frosted-glass-stack-card rounded-3xl p-6 sm:p-9 lg:p-11 transition-all duration-300 group overflow-hidden"
                   style={{
                     zIndex: 10 + index,
@@ -483,10 +495,14 @@ export default function HomePage() {
                             color: primaryAccent,
                           }}
                         >
-                          <span
-                            className="w-1.5 h-1.5 rounded-full animate-pulse"
-                            style={{ backgroundColor: primaryAccent }}
-                          />
+                          {ServiceIcon ? (
+                            <ServiceIcon className="w-3.5 h-3.5 text-current" />
+                          ) : (
+                            <span
+                              className="w-1.5 h-1.5 rounded-full animate-pulse"
+                              style={{ backgroundColor: primaryAccent }}
+                            />
+                          )}
                           <span>{service.id.toUpperCase().replace('-', ' ')}</span>
                         </div>
 
@@ -573,9 +589,9 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-              </article>
+              </CardSticky>
             ); })}
-          </div>
+          </ContainerScroll>
 
           {/* Bottom Action Button */}
           <div className="text-center mt-14">

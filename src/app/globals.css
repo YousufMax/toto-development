@@ -293,10 +293,17 @@
   overflow: hidden;
 }
 
+@media (max-width: 1023px) {
+  .frosted-glass-stack-card {
+    position: relative !important;
+    top: auto !important;
+  }
+}
+
 @media (min-width: 1024px) {
   .frosted-glass-stack-card {
-    position: sticky;
-    top: calc(88px + var(--stack-offset, 0px));
+    position: sticky !important;
+    top: calc(88px + var(--stack-offset, 0px)) !important;
   }
 }
 
