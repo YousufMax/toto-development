@@ -83,9 +83,10 @@ export default function WhatsAppSchedulerPage() {
 
       if (agentsRes.ok) {
         const aData = await agentsRes.json();
-        setAgents(aData);
-        if (aData.length > 0 && !agentId) {
-          setAgentId(aData[0].id);
+        const aList = Array.isArray(aData) ? aData : aData.agents || [];
+        setAgents(aList);
+        if (aList.length > 0 && !agentId) {
+          setAgentId(aList[0].id);
         }
       }
     } catch (e) {

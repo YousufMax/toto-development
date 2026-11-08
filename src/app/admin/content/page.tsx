@@ -36,7 +36,7 @@ export default function WebsiteContentManagerPage() {
       const res = await fetch('/api/admin/content/', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        setBlocks(data);
+        setBlocks(Array.isArray(data) ? data : data.blocks || []);
       }
     } catch (e) {
       console.error(e);

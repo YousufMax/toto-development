@@ -57,6 +57,7 @@ export async function POST(req: NextRequest) {
     }
 
     const cleanCode = String(code).trim().toUpperCase();
+    const normalizedDiscountType = discount_type === 'fixed_amount' ? 'fixed' : discount_type;
 
     // Check duplicate
     const checkDup = await query('SELECT id FROM coupons WHERE UPPER(code) = $1', [cleanCode]);
@@ -74,7 +75,7 @@ export async function POST(req: NextRequest) {
       RETURNING *`,
       [
         cleanCode,
-        discount_type,
+        normalizedDiscountType,
         parseFloat(discount_value),
         max_discount_amount ? parseFloat(max_discount_amount) : null,
         min_order_amount ? parseFloat(min_order_amount) : 0,
@@ -98,7 +99,7 @@ export async function POST(req: NextRequest) {
       [
         auth.user?.name || 'Admin',
         String(res.rows[0].id),
-        JSON.stringify({ code: cleanCode, discount_type, discount_value }),
+        JSON.stringify({ code: cleanCode, discount_type: normalizedDiscountType, discount_value }),
       ]
     );
 

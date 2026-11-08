@@ -4,12 +4,12 @@ import { query } from '@/lib/db';
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const auth = await requireAdmin(req);
   if ('error' in auth) return auth.error;
 
-  const requestId = params.id;
+  const { id: requestId } = await Promise.resolve(params);
 
   try {
     const res = await query(
@@ -45,12 +45,12 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const auth = await requireAdmin(req);
   if ('error' in auth) return auth.error;
 
-  const requestId = params.id;
+  const { id: requestId } = await Promise.resolve(params);
 
   try {
     const body = await req.json();
@@ -113,9 +113,15 @@ export async function PUT(
       ]
     );
 
-    return NextResponse.json(res.rows[0]);
+    return NextResponse.json({
+      success: true,
+      request: res.rows[0],
+      ...res.rows[0],
+    });
   } catch (err: any) {
     console.error('Error updating purchase request:', err);
     return NextResponse.json({ error: 'Failed to update request' }, { status: 500 });
   }
 }
+
+export { PUT as PATCH };

@@ -33,7 +33,7 @@ export default function ActivityLogsPage() {
       const res = await fetch('/api/admin/activity-logs/?limit=100', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        setLogs(data);
+        setLogs(Array.isArray(data) ? data : data.logs || []);
       }
     } catch (e) {
       console.error(e);

@@ -72,11 +72,11 @@ export default function EngagementPopupsPage() {
 
       if (pRes.ok) {
         const pData = await pRes.json();
-        setPopups(pData);
+        setPopups(Array.isArray(pData) ? pData : pData.popups || []);
       }
       if (aRes.ok) {
         const aData = await aRes.json();
-        setAgents(aData);
+        setAgents(Array.isArray(aData) ? aData : aData.agents || []);
       }
     } catch (e) {
       console.error(e);

@@ -72,7 +72,7 @@ export default function PackageManagementPage() {
   const [subtitle, setSubtitle] = useState('');
   const [description, setDescription] = useState('');
   const [regularPrice, setRegularPrice] = useState('25000');
-  const [customPriceLabel, setCustomPriceLabel] = useState('মাসিক');
+  const [customPriceLabel, setCustomPriceLabel] = useState('month');
   const [billingType, setBillingType] = useState('monthly');
   const [timeline, setTimeline] = useState('Monthly Rolling');
   const [idealFor, setIdealFor] = useState('Growing Brands & E-Commerce');
@@ -93,7 +93,7 @@ export default function PackageManagementPage() {
       const res = await fetch('/api/admin/packages/', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        setPackages(data);
+        setPackages(Array.isArray(data) ? data : data.packages || []);
       }
     } catch (e) {
       console.error('Failed to load packages', e);
@@ -114,7 +114,7 @@ export default function PackageManagementPage() {
     setSubtitle('');
     setDescription('');
     setRegularPrice('25000');
-    setCustomPriceLabel('মাসিক');
+    setCustomPriceLabel('month');
     setBillingType('monthly');
     setTimeline('Monthly Rolling');
     setIdealFor('Modern Businesses & Brands');
@@ -137,7 +137,7 @@ export default function PackageManagementPage() {
     setSubtitle(pkg.subtitle || '');
     setDescription(pkg.description || '');
     setRegularPrice(pkg.regular_price);
-    setCustomPriceLabel(pkg.custom_price_label || 'মাসিক');
+    setCustomPriceLabel(pkg.custom_price_label || 'month');
     setBillingType(pkg.billing_type || 'monthly');
     setTimeline(pkg.timeline || '');
     setIdealFor(pkg.ideal_for || '');

@@ -162,7 +162,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     const timer = setTimeout(async () => {
       setIsSearching(true);
       try {
-        const res = await fetch(`/api/admin/search?q=${encodeURIComponent(searchQuery)}`);
+        const res = await fetch(`/api/admin/search/?q=${encodeURIComponent(searchQuery)}`);
         if (res.ok) {
           const data = await res.json();
           setSearchResults(data.results || []);

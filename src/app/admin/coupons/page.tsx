@@ -23,7 +23,7 @@ import {
 interface CouponItem {
   id: number;
   code: string;
-  discount_type: 'percentage' | 'fixed_amount';
+  discount_type: 'percentage' | 'fixed' | 'fixed_amount';
   discount_value: string;
   max_discount_amount: string | null;
   min_order_amount: string;
@@ -54,7 +54,7 @@ export default function AdminCouponsPage() {
   const [formError, setFormError] = useState('');
 
   const [formCode, setFormCode] = useState('');
-  const [formType, setFormType] = useState<'percentage' | 'fixed_amount'>('percentage');
+  const [formType, setFormType] = useState<'percentage' | 'fixed'>('percentage');
   const [formValue, setFormValue] = useState('');
   const [formMaxCap, setFormMaxCap] = useState('');
   const [formLimit, setFormLimit] = useState('');
@@ -67,7 +67,7 @@ export default function AdminCouponsPage() {
       const res = await fetch('/api/admin/coupons/');
       if (res.ok) {
         const data = await res.json();
-        setCoupons(data.coupons || []);
+        setCoupons(Array.isArray(data?.coupons) ? data.coupons : Array.isArray(data) ? data : []);
       }
     } catch (e) {
       console.error('Error fetching coupons:', e);
@@ -474,7 +474,7 @@ export default function AdminCouponsPage() {
                     className="w-full px-3.5 py-2.5 rounded-lg bg-[#0c140e] border border-white/10 focus:border-[#00FC43] focus:outline-none text-white"
                   >
                     <option value="percentage">Percentage (%)</option>
-                    <option value="fixed_amount">Fixed Amount (৳)</option>
+                    <option value="fixed">Fixed Amount (৳)</option>
                   </select>
                 </div>
 

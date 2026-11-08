@@ -41,7 +41,7 @@ export default function ConversionAnalyticsPage() {
   const fetchFunnel = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/admin/analytics/conversions?period=${period}`);
+      const res = await fetch(`/api/admin/analytics/conversions/?period=${period}`);
       if (res.ok) {
         const data = await res.json();
         setFunnel(data.funnel || []);

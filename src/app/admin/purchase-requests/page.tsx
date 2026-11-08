@@ -98,7 +98,7 @@ export default function PurchaseRequestsPage() {
       });
       if (res.ok) {
         const data = await res.json();
-        setRequests(data);
+        setRequests(Array.isArray(data) ? data : data.requests || []);
       }
     } catch (e) {
       console.error('Failed to load purchase requests', e);
@@ -149,7 +149,7 @@ export default function PurchaseRequestsPage() {
 
       if (res.ok) {
         const updated = await res.json();
-        setSelectedRequest(updated.request);
+        setSelectedRequest(updated.request || updated);
         fetchRequests();
         setNewInternalNote('');
 

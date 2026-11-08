@@ -72,7 +72,7 @@ export default function WhatsAppIntelligencePage() {
   const fetchMetrics = async (targetAgentId?: number) => {
     setIsLoading(true);
     try {
-      const url = `/api/admin/whatsapp/intelligence?period=${period}${
+      const url = `/api/admin/whatsapp/intelligence/?period=${period}${
         targetAgentId ? `&agentId=${targetAgentId}` : ''
       }`;
       const res = await fetch(url);

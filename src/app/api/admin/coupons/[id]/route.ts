@@ -4,14 +4,14 @@ import { verifyAuth } from '@/lib/auth';
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const auth = await verifyAuth(req);
   if (!auth.authenticated) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { id } = await params;
+  const { id } = await Promise.resolve(params);
 
   try {
     const couponRes = await query(`SELECT * FROM coupons WHERE id = $1`, [id]);
@@ -41,14 +41,14 @@ export async function GET(
 
 export async function PUT(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const auth = await verifyAuth(req);
   if (!auth.authenticated) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { id } = await params;
+  const { id } = await Promise.resolve(params);
 
   try {
     const body = await req.json();
@@ -64,6 +64,8 @@ export async function PUT(
       allowed_package_ids,
       notes,
     } = body;
+
+    const normalizedDiscountType = discount_type === 'fixed_amount' ? 'fixed' : (discount_type || null);
 
     const res = await query(
       `UPDATE coupons 
@@ -83,7 +85,7 @@ export async function PUT(
       [
         is_active !== undefined ? is_active : null,
         discount_value !== undefined ? parseFloat(discount_value) : null,
-        discount_type || null,
+        normalizedDiscountType,
         max_discount_amount ? parseFloat(max_discount_amount) : null,
         usage_limit_total ? parseInt(usage_limit_total, 10) : null,
         starts_at || null,
@@ -108,14 +110,14 @@ export async function PUT(
 
 export async function DELETE(
   req: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> | { id: string } }
 ) {
   const auth = await verifyAuth(req);
   if (!auth.authenticated) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const { id } = await params;
+  const { id } = await Promise.resolve(params);
 
   try {
     // Check if it has redemptions

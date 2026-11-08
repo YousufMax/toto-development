@@ -53,7 +53,7 @@ export default function PricingDiscountsPage() {
       const res = await fetch('/api/admin/packages/', { cache: 'no-store' });
       if (res.ok) {
         const data = await res.json();
-        setPackages(data);
+        setPackages(Array.isArray(data) ? data : data.packages || []);
       }
     } catch (e) {
       console.error('Failed to load packages', e);

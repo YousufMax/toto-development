@@ -42,7 +42,7 @@ export default function VisitorAnalyticsPage() {
   const fetchAnalytics = async () => {
     setIsLoading(true);
     try {
-      const res = await fetch(`/api/admin/analytics/visitors?period=${period}`);
+      const res = await fetch(`/api/admin/analytics/visitors/?period=${period}`);
       if (res.ok) {
         const json = await res.json();
         setData(json);
