@@ -441,7 +441,7 @@ export default function HomePage() {
           {/* ========================================================================= */}
           {/* Frosted Glassmorphism 1-by-1 Stacking Cards System                        */}
           {/* ========================================================================= */}
-          <ContainerScroll className="relative flex flex-col space-y-6 sm:space-y-10 lg:space-y-16 max-w-5xl mx-auto pb-8 sm:pb-14">
+          <ContainerScroll className="relative flex flex-col space-y-12 sm:space-y-16 lg:space-y-24 max-w-5xl mx-auto pb-16 sm:pb-24 lg:pb-32">
             {filteredServices.map((service, index) => {
               const isDev = service.category === 'development';
               const isMkt = service.category === 'marketing';
@@ -453,12 +453,12 @@ export default function HomePage() {
                 <CardSticky
                   key={service.id}
                   index={index}
-                  incrementY={10}
+                  incrementY={8}
                   incrementZ={10}
                   className="frosted-glass-stack-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-11 transition-all duration-300 group overflow-hidden"
                   style={{
                     zIndex: 10 + index,
-                    ['--stack-offset' as string]: `${index * 10}px`,
+                    ['--stack-offset' as string]: `${index * 8}px`,
                   }}
                 >
                   {/* 3-Sided Asymmetric Ambient Light Glow System (Optimized for Mobile GPU Fill) */}

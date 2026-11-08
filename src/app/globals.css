@@ -293,19 +293,26 @@
   overflow: hidden;
 }
 
+/* One-by-one Card Stacking Architecture (Mobile & Desktop) */
+.frosted-glass-stack-card {
+  position: sticky !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #070b09 !important; /* 100% solid opaque obsidian - prevents any underlying text bleed */
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  will-change: transform, top;
+}
+
 @media (max-width: 1023px) {
   .frosted-glass-stack-card {
-    position: relative !important;
-    top: auto !important;
-    margin-bottom: 1.5rem;
+    top: calc(72px + var(--stack-offset, 0px)) !important;
   }
 }
 
 @media (min-width: 1024px) {
   .frosted-glass-stack-card {
-    position: sticky !important;
     top: calc(88px + var(--stack-offset, 0px)) !important;
-    margin-bottom: 0;
   }
 }
 
