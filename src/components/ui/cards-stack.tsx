@@ -10,17 +10,18 @@ interface CardStickyProps extends HTMLMotionProps<"div"> {
   incrementY?: number
   incrementZ?: number
   topOffset?: number | string
+  enableLayout?: boolean
 }
 
 const ContainerScroll = React.forwardRef<
   HTMLDivElement,
   React.HTMLProps<HTMLDivElement>
->(({ children, className, ...props }, ref) => {
+>(({ children, className, style, ...props }, ref) => {
   return (
     <div
       ref={ref}
       className={cn("relative w-full", className)}
-      style={{ perspective: "1000px", ...props.style }}
+      style={{ ...style }}
       {...props}
     >
       {children}
@@ -36,6 +37,7 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
       incrementY = 8,
       incrementZ = 10,
       topOffset,
+      enableLayout = false,
       children,
       className,
       style,
@@ -49,7 +51,7 @@ const CardSticky = React.forwardRef<HTMLDivElement, CardStickyProps>(
     return (
       <motion.div
         ref={ref}
-        layout="position"
+        layout={enableLayout ? "position" : false}
         style={{
           top: topOffset !== undefined ? topOffset : undefined,
           ["--card-stack-offset" as string]: `${y}px`,

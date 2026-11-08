@@ -14,7 +14,6 @@
     background-color: #050705;
     color: #dae6d3;
     color-scheme: dark;
-    overflow-x: clip;
   }
 
   body {
@@ -25,7 +24,6 @@
     position: relative;
     selection-background-color: #00FC43;
     selection-color: #041608;
-    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -268,64 +266,33 @@
   overflow: hidden;
 }
 
+/* Mobbin-Grade 1-by-1 Frosted Glassmorphism Card Stacking System */
 .frosted-glass-stack-card {
-  position: relative;
-  top: auto;
-  background: 
-    /* Side 1: Top-Left High Light (Brand Green Spotlight) */
-    radial-gradient(circle at 8% 8%, rgba(0, 252, 67, 0.34) 0%, rgba(0, 252, 67, 0.12) 28%, transparent 58%),
-    /* Side 2: Top-Right Specular (Diamond Edge) */
-    radial-gradient(circle at 92% 10%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.03) 24%, transparent 50%),
-    /* Side 3: Bottom-Right Low Light (Soft Ambient Fill) */
-    radial-gradient(circle at 92% 92%, rgba(0, 210, 255, 0.12) 0%, rgba(0, 180, 80, 0.05) 32%, transparent 62%),
-    /* 100% Solid Obsidian Dark Base - Prevents Any Text Bleed */
-    linear-gradient(145deg, rgba(12, 18, 14, 0.98) 0%, rgba(7, 12, 9, 0.99) 50%, rgba(4, 7, 5, 1) 100%);
-  backdrop-filter: blur(28px);
-  -webkit-backdrop-filter: blur(28px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  background: #070b09 !important; /* 100% solid opaque obsidian - prevents underlying text bleed */
+  border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 
     0 25px 60px -15px rgba(0, 0, 0, 0.96),
     0 0 35px -5px rgba(0, 252, 67, 0.18),
     inset 1.5px 1.5px 2px 0 rgba(255, 255, 255, 0.50),
     inset 0 0 30px 0 rgba(0, 252, 67, 0.22),
     inset -1px -1px 25px 0 rgba(0, 210, 255, 0.08);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   overflow: hidden;
-}
-
-/* One-by-one Card Stacking Architecture (Mobile & Desktop) */
-.frosted-glass-stack-card {
-  position: sticky !important;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: #070b09 !important; /* 100% solid opaque obsidian - prevents any underlying text bleed */
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  will-change: transform, top;
 }
 
 @media (max-width: 1023px) {
   .frosted-glass-stack-card {
-    top: calc(72px + var(--stack-offset, 0px)) !important;
+    top: calc(64px + var(--stack-offset, var(--card-stack-offset, 0px))) !important;
   }
 }
 
 @media (min-width: 1024px) {
   .frosted-glass-stack-card {
-    top: calc(88px + var(--stack-offset, 0px)) !important;
+    top: calc(88px + var(--stack-offset, var(--card-stack-offset, 0px))) !important;
   }
-}
-
-.asymmetric-glass-card:hover,
-.frosted-glass-stack-card:hover {
-  border-color: rgba(0, 252, 67, 0.65);
-  box-shadow: 
-    0 35px 75px -15px rgba(0, 0, 0, 0.98),
-    0 0 55px 0 rgba(0, 252, 67, 0.32),
-    inset 1.5px 1.5px 3px 0 rgba(255, 255, 255, 0.70),
-    inset 0 0 40px 0 rgba(0, 252, 67, 0.30),
-    inset -1px -1px 30px 0 rgba(0, 210, 255, 0.14);
-  transform: translateY(-6px);
 }
 
 .frosted-glass-stack-card::before {
@@ -342,13 +309,18 @@
   transition: opacity 0.5s ease;
 }
 
-.frosted-glass-stack-card:hover {
-  border-color: rgba(0, 252, 67, 0.8);
-  box-shadow: 
-    0 30px 70px -15px rgba(0, 0, 0, 0.98),
-    0 0 55px rgba(0, 252, 67, 0.35),
-    inset 0 1px 2px 0 rgba(255, 255, 255, 0.45),
-    inset 0 0 45px rgba(0, 252, 67, 0.16);
+@media (hover: hover) and (pointer: fine) {
+  .asymmetric-glass-card:hover,
+  .frosted-glass-stack-card:hover {
+    border-color: rgba(0, 252, 67, 0.75);
+    box-shadow: 
+      0 35px 75px -15px rgba(0, 0, 0, 0.98),
+      0 0 55px 0 rgba(0, 252, 67, 0.32),
+      inset 1.5px 1.5px 3px 0 rgba(255, 255, 255, 0.70),
+      inset 0 0 40px 0 rgba(0, 252, 67, 0.30),
+      inset -1px -1px 30px 0 rgba(0, 210, 255, 0.14);
+    transform: translateY(-4px);
+  }
 }
 
 /* Primary Neon Glow CTA Button */
